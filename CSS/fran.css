@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("roboto/Roboto-Black.ttf") format("ttf");
+    src: url("roboto/Roboto-BlackItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-Bold.ttf") format("ttf");
+    src: url("roboto/Roboto-BoldCondensed.ttf") format("ttf");
+    src: url("roboto/Roboto-BoldCondensedItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-BoldItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-Condensed.ttf") format("ttf");
+    src: url("roboto/Roboto-CondensedItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-Italic.ttf") format("ttf");
+    src: url("roboto/Roboto-Light.ttf") format("ttf");
+    src: url("roboto/Roboto-LightItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-Medium.ttf") format("ttf");
+    src: url("roboto/Roboto-MediumItalic.ttf") format("ttf");
+    src: url("roboto/Roboto-Regular.ttf") format("ttf");
+    src: url("roboto/Roboto-Thin.ttf") format("ttf");
+    src: url("roboto/Roboto-ThinItalic.ttf") format("ttf");
+    src: url("roboto/Roboto_Specimen_Book.pdf") format("ttf");
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("shrikhand/Shrikhand-Regular.otf") format("otf");
+    src: url("shrikhand/shrikhand.ttf") format("ttf");
+}
+
+body {
+    margin: 0;
+    background-color: hsl(210, 4%, 93%);
+}
+
+/**
+Le header
+**/
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0 22px 0;
+}
+
+.logo button a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo button {
+    border: white none 1px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fa-arrow-left {
+    font-size: 45px;
+    display: flex;
+}
+
+img .logo-menus {
+   width: 30%;
+   margin-right: 0;
+   display: flex;
+   flex-grow: 3;
+   object-fit: cover;
+}
+
+/**
+Le contenu
+**/
+
+.bckg-color {
+    background-color: hsl(210, 4%, 93%);
+}
+
+.img-fr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.menus-french {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menus-french h2 {
+    font-size: 75px;
+    font-weight: bold;
+    font-family: shrikhand, "sans-serif";
+    padding-left: 30px;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.fa-heart {
+    font-size: 60px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-top: 60px;
+    cursor: pointer;
+}
+
+.fa-heart:active {
+    transform: scaleY(1);
+    animation-name: fa-heart;
+    animation-duration: 2s;
+    background-color: #99E2D0;
+
+}
+
+@keyframes fa-heart {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0 0 0 40px;
+    padding-bottom: 20px;
+    border-bottom: 4px aquamarine solid;
+    font-family: Shrikhand, "sans-serif";
+    width: 10%;
+    padding-top: 70px;
+}
+
+h4 {
+    font-size: 37px;
+    font-family: Shrikhand, "sans-serif";
+    margin: 0;
+    padding: 20px 0 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.resto {
+    border-radius: 70px 70px 0 0;
+    background-color: hsl(210, 4%, 93%);
+    position: relative;
+    bottom: 135px;
+}
+  
+.card { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  
+.card button {
+    margin: 25px;
+    border-radius: 20px;
+    box-shadow: 2px 10px 20px rgba(186, 190, 194);
+    border: none 2px rgba(186, 190, 194);
+    background-color: white;
+}
+
+.card p {
+    font-family: Roboto, "sans-serif";
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+em {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.composition {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+/*Le bouton commander*/
+
+.order-fr {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.order-fr button {
+    padding: 22px 68px 27px 68px;
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: hsla(294, 79%, 57%, .9);
+    color: white;
+    cursor: pointer;
+    font-family: roboto, "sans-serif";
+    font-weight: bold;
+    border: hsla(294, 79%, 57%, .9) 2px none;
+    box-shadow: 8px 0 45px rgb(152, 155, 159);
+    opacity: 0.7;
+}
+
+/**
+Le Footer
+**/
+footer {
+    background-color: #313339;
+    color: white;
+    width: 100%;
+}
+  
+/*Le nom du site*/
+h1 {
+    width: 30%;
+    color: white;
+    padding: 30px 0 10px 50px;
+    font-family: Shrikhand, "sans-serif";
+    font-size: 35px;
+}
+  
+/*La liste de la nav du footer*/
+.list-footer {
+    list-style: none;
+    line-height: 50px;
+    padding: 0 0 60px 50px;
+    margin: 0;
+    font-family: Roboto, "sans-serif";
+    font-size: 30px;
+}
+
+.list-footer a {
+    text-decoration: none;
+    color: white;
+}
+  
+/*icône des couverts*/
+.fa-utensils {
+    padding-right: 15px;
+    font-size: 30px;
+}
+  
+/*icône des mains*/
+.fa-hands-helping {
+    padding-right: 9px;
+    font-size: 30px;
+}
+  
+.list-bold {
+    font-weight: bold;
+}
+  
+  

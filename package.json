@@ -1,0 +1,23 @@
+{
+  "name": "Projet3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lydia14777/Lydia_Tremor_P3_NoSass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lydia14777/Lydia_Tremor_P3_NoSass/issues"
+  },
+  "homepage": "https://github.com/Lydia14777/Lydia_Tremor_P3_NoSass#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}

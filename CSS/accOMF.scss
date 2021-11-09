@@ -1,0 +1,362 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url("roboto/Roboto-Black.ttf") format("ttf");
+  src: url("roboto/Roboto-BlackItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-Bold.ttf") format("ttf");
+  src: url("roboto/Roboto-BoldCondensed.ttf") format("ttf");
+  src: url("roboto/Roboto-BoldCondensedItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-BoldItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-Condensed.ttf") format("ttf");
+  src: url("roboto/Roboto-CondensedItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-Italic.ttf") format("ttf");
+  src: url("roboto/Roboto-Light.ttf") format("ttf");
+  src: url("roboto/Roboto-LightItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-Medium.ttf") format("ttf");
+  src: url("roboto/Roboto-MediumItalic.ttf") format("ttf");
+  src: url("roboto/Roboto-Regular.ttf") format("ttf");
+  src: url("roboto/Roboto-Thin.ttf") format("ttf");
+  src: url("roboto/Roboto-ThinItalic.ttf") format("ttf");
+  src: url("roboto/Roboto_Specimen_Book.pdf") format("ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("shrikhand/Shrikhand-Regular.otf") format("otf");
+  src: url("shrikhand/shrikhand.ttf") format("ttf");
+}
+body {
+  margin: 0;
+}
+
+/**
+Le Hearder
+**/
+/*
+Le logo
+*/
+/*La balise qui englobe l'image du logo*/
+.logo {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/*L'image du logo*/
+.image-omf {
+  width: 30%;
+  object-fit: cover;
+  padding: 7px 0 15px 0;
+}
+
+/*
+Le texte
+*/
+/*Couleur de fond du header : du formulaire au 1er bouton*/
+.color-back {
+  background-color: #e9eaeb;
+  min-height: 390px;
+  width: 100%;
+}
+
+/*
+Le formulaire
+*/
+/*Le div du formulaire*/
+.form-maps {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*icône maps*/
+.fa-map-marker-alt {
+  background-color: #d4d5d6;
+  border: none 2px #d4d5d6;
+  padding: 17px 14px 18px 14px;
+  font-size: 18px;
+}
+
+/*Le texte du formulaire*/
+.country {
+  border: none;
+  background-color: #d4d5d6;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  font-family: Roboto, "sans-serif";
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/*Formulaire*/
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+Le titre et le texte
+*/
+/*Le h2 et p du header*/
+.header-txt {
+  text-align: center;
+}
+
+/*Le h2 du header*/
+.header-txt h2 {
+  font-weight: bold;
+  font-family: shrikhand, "sans-serif";
+  font-size: 36px;
+}
+
+.header-txt p {
+  font-family: roboto, "sans-serif";
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/*
+Le bouton
+*/
+/*Le 1er bouton du header*/
+.button-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+/*Le bouton à l'intérieur de la class button-header*/
+.button-header button {
+  padding: 23px 40px 26px 40px;
+  border-radius: 50px;
+  background-color: hsla(294, 79%, 57%, .9);
+  color: white;
+  cursor: pointer;
+  font-family: roboto, "sans-serif";
+  box-shadow: 8px 0 45px rgb(152, 155, 159);
+  border: hsla(294, 79%, 57%, .9) 2px none;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.button-header span {
+  font-family: roboto, "sans-serif";
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/**
+La section Fonctionnement
+**/
+.functioning-title {
+  padding-left: 35px;
+  font-size: 35px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+/*La div des 3 boutons de la section Fonctionnement*/
+.functioning {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*icône d'un téléphone*/
+.fa-mobile-alt {
+  padding-right: 25px;
+  font-size: 25px;
+  color: gray;
+}
+
+/*icône d'une liste*/
+.fa-list-ul {
+  padding-right: 30px;
+  font-size: 25px;
+  color: gray;
+}
+
+/*icône d'une boutique*/
+.fa-store {
+  padding-right: 30px;
+  font-size: 25px;
+  color: blueviolet;
+}
+
+/*Le boutons de la section Fonctionnement x3*/
+.functioning button {
+  margin: 25px 30px 15px 38px;
+  border-radius: 20px;
+  padding: 25px 30px 20px 0;
+  box-shadow: 0 5px 10px gainsboro;
+  border: #e9eaeb none 2px;
+  cursor: pointer;
+}
+
+.functioning span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.test {
+    background-color: blueviolet;
+    color: white;
+    border: blueviolet 1px none;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 25px;
+}
+
+/**
+La section Restaurants
+**/
+.restaurant {
+  background-color: #e9eaeb;
+}
+
+.restaurant-title {
+  font-weight: bold;
+  padding-left: 35px;
+  font-size: 35px;
+  font-family: "Roboto", "sans-serif";
+}
+
+.links-restaurant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
+.bloc-restaurant {
+  margin: 20px;
+  box-shadow: 0 5px 10px #c9cbcd;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  border: white 2px none;
+  background-color: white;
+  object-fit: cover;
+}
+
+.float-new {
+  float: right;
+  margin: 0;
+  border: mediumaquamarine 2px none;
+  background-color: mediumaquamarine;
+  color: forestgreen;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 5px;
+  font-family: Roboto, "sans-serif";
+}
+
+.restaurant-text {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+a.bloc-restaurant {
+  text-decoration: none;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.txt h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Shrikhand, "sans-serif";
+  padding: 20px 0 15px 45px;
+  margin: 0;
+}
+
+.txt p {
+  color: black;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 0;
+  font-family: Roboto, "sans-serif";
+  padding: 0 0 35px 45px;
+}
+
+.fa-heart {
+  font-size: 60px;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+
+/*L'image de la div x4*/
+.bloc-restaurant img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+/**
+Le Footer
+**/
+footer {
+  background-color: #313339;
+  color: white;
+  width: 100%;
+  min-height: 235px;
+}
+
+/*Le nom du site*/
+h1 {
+  width: 30%;
+  color: white;
+  padding: 30px 0 10px 50px;
+  font-family: Shrikhand, "sans-serif";
+  font-size: 35px;
+}
+
+/*La liste de la nav du footer*/
+.list-footer {
+  list-style: none;
+  line-height: 50px;
+  margin: 0;
+  padding: 0 0 60px 50px;
+  font-size: 30px;
+  font-family: Roboto, "sans-serif";
+}
+
+.list-footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/*icône des couverts*/
+.fa-utensils {
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+/*icône des mains*/
+.fa-hands-helping {
+  padding-right: 9px;
+  font-size: 20px;
+}
+
+.list-bold {
+  font-weight: bold;
+}
+
