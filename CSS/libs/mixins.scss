@@ -1,0 +1,15 @@
+@mixin buttons-menus {
+    
+}
+
+@mixin logo-images {
+    width: 30%;
+    object-fit: cover;
+    padding: 7px 0 15px 0;
+    /*padding: 10px 0 22px 0;*/
+}
+
+@mixin logo-mixin {
+    display: flex;
+    background-color: white;
+}
