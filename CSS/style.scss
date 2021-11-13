@@ -2,6 +2,7 @@
 
 @import "libs/mixins.scss";
 @import "libs/responsive.scss";
+@import "libs/fonctions.scss";
 
 $color-primary: hsl(210, 4%, 93%); /*background-color, boutons*/
 $color-second: #d4d5d6;  /*formulaire, box-shadow*/
@@ -54,27 +55,32 @@ body {
   background-color: $color-primary;
 }
 
-.far.fa-heart {
-  /*font-size: $size-heart;
-  font-size: 60px;
+/****transition****/
+.fa-heart {
   color: black;
-  background-color: white;
-  opacity: 0;
+  font-size: $size-heart;
+  cursor: pointer;
   display: flex;
   justify-content: flex-end;
-  padding-right: 60px;
-  cursor: pointer;
-  transition: all cubic-bezier .5s;*/
 }
 
-/*.fas.fa-heart:active {
-  opacity: 1px;
-  background-color:hsla(294, 79%, 57%, .9);
-  color: black;
-  transform: translateY(-30%);
-}*/
+.far.fa-heart {
+  position: relative;
+  opacity: 0;
+  transition: all .5s;
+}
 
-.fa-h
+.fas.fa-heart {
+  position: absolute;
+  display: none;
+}
+
+.fas.fa-heart:active {
+  display: flex;
+  opacity: 1;
+  transform: $color-heart;
+}
+/****transition****/
 
 /********
 Le header
@@ -178,6 +184,10 @@ Le header
   }
 }
 
+.button-header button:hover {
+  background-color: hsla(294, 79%, 57%, .7);
+}
+
 /******************A la Française******************/
 
 .logo {
@@ -203,6 +213,10 @@ Le header
       }
     }
   }
+}
+
+img.logo-menus {
+  padding: 10px 0 22px 0;
 }
 
 /********
@@ -281,6 +295,10 @@ Le contenu : les grands blocs
       color: blueviolet;
     }
   }
+}
+
+.functioning button:hover {
+  background-color: hsla(210, 4%, 93%, .6);
 }
 
 /****La section Restaurants****/
@@ -402,6 +420,17 @@ a.bloc-restaurant {
   }
 }
 
+/****transition****/
+body {
+  transition: transform 1s;
+}
+
+.gap-menus {
+  transform: scale(1.2);
+  transform-origin: left right;
+}
+/****transition****/
+
 .resto h3 {
   font-size: 40px;
   font-weight: normal;
@@ -417,10 +446,9 @@ h4 {
   font-size: 37px;
   font-family: $police-primary;
   margin: 0;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 10px 30px;
   display: flex;
   justify-content: flex-start;
-  padding-left: 30px;
 }
 
 .card { 
@@ -428,17 +456,17 @@ h4 {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  .card button {
+  button {
     margin: 25px;
     border-radius: 20px;
     box-shadow: $color-shadow;
     border: none 2px white;
     background-color: white;
-    .composition {
-      display: flex;
-      align-items: center;
-      padding-left: 30px;
-    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
   }
 }
 
@@ -446,15 +474,54 @@ h4 {
   font-family: $police-second;
   font-size: 30px;
   padding-bottom: 20px;
+  padding-left: 30px;
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
-em {
+em { 
   font-weight: bold;
   display: flex;
-  justify-content: flex-end;
+  padding-top: 55px;
   padding-right: 30px;
+  font-size: 25px;
+  font-style: normal;
 }
+
+/****transition****/
+/****transition****/
+.fa-check-circle {
+  /*display: none;*/
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 120px;
+  color: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 20px 20px 0;
+  font-size: 60px;
+  position:absolute;
+  transition: all .5s;
+  display: flex;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.card button:hover {
+  /*transform: ;*/
+  display: flex;
+}
+/****transition****/
+/****transition****/
 
 /****Le bouton commander****/
 
@@ -462,7 +529,7 @@ em {
   display: flex;
   justify-content: center;
   padding-top: 60px;
-  .order-fr button {
+  button {
     padding: 22px 68px 27px 68px;
     font-size: 30px;
     border-radius: 50px;
@@ -475,6 +542,10 @@ em {
     box-shadow: $color-shadow;
     opacity: 0.7;
   }
+}
+
+.order-fr button:hover {
+  background-color: hsla(294, 79%, 57%, .7);
 }
 
 /********

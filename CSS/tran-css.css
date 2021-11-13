@@ -1,29 +1,17 @@
 .fa-heart {
-    color: black;
-    font-size: 50px;
-    animation: filling-color 1s;
-    animation-delay: 1s;
-    cursor: pointer;
+  font-size: 60px;
+  margin: 100px;
 }
 
-@keyframes filling-color {
-    from {
-        transform: translateY(40%);
-        background-color: white;
-    }
-    to {
-        transform: translateY(0);
-        background-color: hsla(294, 79%, 57%, .9);
-    }
+.fas.fa-heart {
+  display: none;
+  position: absolute;
 }
 
-button {
-    cursor: pointer;
-    border: cadetblue 2px none;
-    background-color: cadetblue;
-    color: white;
-    font-size: 20px;
-    border-radius: 25px;
+.far.fa-heart {
+  position: relative;
 }
 
-
+.far.fa-heart:hover {
+  display: flex;
+}
