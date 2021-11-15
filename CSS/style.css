@@ -1,13 +1,8 @@
 @charset "UTF-8";
 /*********************Généralités********************/
-/*background-color, boutons*/
-/*formulaire, box-shadow*/
-/*icône grise*/
-/*icône violette*/
-/*bouton fuschia*/
-/*gris le plus foncé*/
-/*icône coeur*/
-/*color float*/
+/*@function brightness {
+    ()
+}*/
 @font-face {
   font-family: "Roboto";
   src: url("roboto/Roboto-Black.ttf") format("ttf");
@@ -45,6 +40,8 @@ body {
   background-color: #ecedee;
 }
 
+/*******************transition: coeur*******************/
+/*******************************************************/
 .fa-heart {
   color: black;
   font-size: 60px;
@@ -78,10 +75,24 @@ body {
           transform: #FF79DA;
 }
 
+/*******************************************************/
+/*******************************************************/
 /********
 Le header
 ********/
 /*******************Accueil*******************/
+/*************transition: loading spinner***************/
+/*******************************************************/
+.loading-spinner {
+  display: none;
+}
+
+.loading {
+  display: none;
+}
+
+/*******************************************************/
+/*******************************************************/
 /****Le logo****/
 /*La balise qui englobe l'image du logo*/
 .logo-acc {
@@ -189,8 +200,8 @@ Le header
   color: white;
   cursor: pointer;
   font-family: Roboto, Roboto-Bold, Roboto-Italic, Roboto-Light, Roboto-Medium, "sans-serif";
-  -webkit-box-shadow: 0 5px 10px #d4d5d6;
-          box-shadow: 0 5px 10px #d4d5d6;
+  -webkit-box-shadow: 5px 5px 5px #A6A6A9;
+          box-shadow: 5px 5px 5px #A6A6A9;
   border: rgba(215, 59, 232, 0.9) 2px none;
   font-weight: bold;
   opacity: 0.7;
@@ -204,6 +215,8 @@ Le header
 
 .button-header button:hover {
   background-color: rgba(215, 59, 232, 0.7);
+  -webkit-box-shadow: 5px 5px 5px #B5B6B9;
+          box-shadow: 5px 5px 5px #B5B6B9;
 }
 
 /******************A la Française******************/
@@ -297,8 +310,8 @@ Le contenu : les grands blocs
   margin: 0 30px 30px 38px;
   border-radius: 20px;
   padding: 25px 30px 20px 0;
-  -webkit-box-shadow: 0 5px 10px #d4d5d6;
-          box-shadow: 0 5px 10px #d4d5d6;
+  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
+          box-shadow: 5px 5px 5px #CCCDD0;
   border: #ecedee none 2px;
   cursor: pointer;
   /*icône d'un téléphone*/
@@ -352,6 +365,8 @@ Le contenu : les grands blocs
 
 .functioning button:hover {
   background-color: rgba(236, 237, 238, 0.6);
+  -webkit-box-shadow: 5px 5px 5px #E6E7E9;
+          box-shadow: 5px 5px 5px #E6E7E9;
 }
 
 /****La section Restaurants****/
@@ -383,8 +398,8 @@ Le contenu : les grands blocs
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
   margin: 20px;
-  -webkit-box-shadow: 0 5px 10px #d4d5d6;
-          box-shadow: 0 5px 10px #d4d5d6;
+  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
+          box-shadow: 5px 5px 5px #CCCDD0;
   cursor: pointer;
   width: 100%;
   border-radius: 20px;
@@ -477,6 +492,17 @@ a.bloc-restaurant {
 }
 
 /******************A la Française******************/
+/*******transition: apparition des plats différée*******/
+/*******************************************************/
+/*body {
+  transition: transform 1s;
+}*/
+/*.gap-menus {
+  transform: scale(1.2);
+  transform-origin: left right;
+}*/
+/*******************************************************/
+/*******************************************************/
 .img-fr {
   width: 100%;
   display: -webkit-box;
@@ -560,14 +586,20 @@ h4 {
 .card button {
   margin: 25px;
   border-radius: 20px;
-  -webkit-box-shadow: 0 5px 10px #d4d5d6;
-          box-shadow: 0 5px 10px #d4d5d6;
+  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
+          box-shadow: 5px 5px 5px #CCCDD0;
   border: none 2px white;
   background-color: white;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
@@ -577,8 +609,12 @@ h4 {
   padding-bottom: 20px;
   padding-left: 30px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 em {
@@ -586,14 +622,63 @@ em {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
   padding-top: 55px;
   padding-right: 30px;
   font-size: 25px;
   font-style: normal;
 }
 
+/******************transition: coches*******************/
+/*******************************************************/
+.fa-check-circle {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+  width: 120px;
+  color: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 20px 20px 0;
+  font-size: 60px;
+  position: absolute;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  /*display: flex;*/
+}
+
+.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.card button:hover {
+  /*transform: ;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*******************************************************/
+/*******************************************************/
 /****Le bouton commander****/
 .order-fr {
   display: -webkit-box;
@@ -615,13 +700,15 @@ em {
   font-family: Roboto, Roboto-Bold, Roboto-Italic, Roboto-Light, Roboto-Medium, "sans-serif";
   font-weight: bold;
   border: rgba(215, 59, 232, 0.9) 2px none;
-  -webkit-box-shadow: 0 5px 10px #d4d5d6;
-          box-shadow: 0 5px 10px #d4d5d6;
+  -webkit-box-shadow: 5px 5px 5px #A6A6A9;
+          box-shadow: 5px 5px 5px #A6A6A9;
   opacity: 0.7;
 }
 
 .order-fr button:hover {
   background-color: rgba(215, 59, 232, 0.7);
+  -webkit-box-shadow: 5px 5px 5px #B5B6B9;
+          box-shadow: 5px 5px 5px #B5B6B9;
 }
 
 /********
@@ -674,4 +761,3 @@ footer .list-footer {
   color: white;
 }
 /*# sourceMappingURL=style.css.map */
-

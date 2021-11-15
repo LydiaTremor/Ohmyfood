@@ -4,16 +4,19 @@
 @import "libs/responsive.scss";
 @import "libs/fonctions.scss";
 
-$color-primary: hsl(210, 4%, 93%); /*background-color, boutons*/
-$color-second: #d4d5d6;  /*formulaire, box-shadow*/
-$color-icon-g: gray; /*icône grise*/
-$color-icon: blueviolet; /*icône violette*/
-$color-button: hsla(294, 79%, 57%, .9); /*bouton fuschia*/
-$color-darkgrey: #c9cbcd;  /*gris le plus foncé*/
-$color-heart: #FF79DA;  /*icône coeur*/
-$color-float: forestgreen;  /*color float*/
+$color-primary: hsl(210, 4%, 93%); 
+$color-second: #d4d5d6;  
+$color-icon-g: gray; 
+$color-icon: blueviolet; 
+$color-button: hsla(294, 79%, 57%, .9); 
+$color-darkgrey: #c9cbcd;  
+$color-heart: #FF79DA;  
+$color-float: forestgreen;  
 $color-cyan: #99E2D0;
-$color-shadow: 0 5px 10px #d4d5d6; 
+$light-shadow: 5px 5px 5px #E6E7E9;
+$dark-shadow: 5px 5px 5px #CCCDD0;
+$light-shadow-violet: 5px 5px 5px #B5B6B9;
+$dark-shadow-violet: 5px 5px 5px #A6A6A9;
 $size-heart: 60px;
 $police-primary: Shrikhand, Shrikhand-Regular, "sans-serif";
 $police-second: Roboto, Roboto-Bold, Roboto-Italic, Roboto-Light, Roboto-Medium, "sans-serif";
@@ -55,7 +58,9 @@ body {
   background-color: $color-primary;
 }
 
-/****transition****/
+
+/*******************transition: coeur*******************/
+/*******************************************************/
 .fa-heart {
   color: black;
   font-size: $size-heart;
@@ -80,13 +85,25 @@ body {
   opacity: 1;
   transform: $color-heart;
 }
-/****transition****/
+/*******************************************************/
+/*******************************************************/
 
 /********
 Le header
 ********/
 
 /*******************Accueil*******************/
+
+/*************transition: loading spinner***************/
+/*******************************************************/
+.loading-spinner {
+  display: none;
+}
+.loading {
+  display: none;
+}
+/*******************************************************/
+/*******************************************************/
 
 /****Le logo****/
 
@@ -172,7 +189,7 @@ Le header
     color: white;
     cursor: pointer;
     font-family: $police-second;
-    box-shadow: $color-shadow;
+    box-shadow: $dark-shadow-violet;
     border: $color-button 2px none;
     font-weight: bold;
     opacity: 0.7;
@@ -186,6 +203,7 @@ Le header
 
 .button-header button:hover {
   background-color: hsla(294, 79%, 57%, .7);
+  box-shadow: $light-shadow-violet;
 }
 
 /******************A la Française******************/
@@ -254,7 +272,7 @@ Le contenu : les grands blocs
     margin: 0 30px 30px 38px;
     border-radius: 20px;
     padding: 25px 30px 20px 0;
-    box-shadow: $color-shadow;
+    box-shadow: $dark-shadow;
     border: $color-primary none 2px;
     cursor: pointer;
     span {
@@ -299,6 +317,7 @@ Le contenu : les grands blocs
 
 .functioning button:hover {
   background-color: hsla(210, 4%, 93%, .6);
+  box-shadow: $light-shadow;
 }
 
 /****La section Restaurants****/
@@ -325,7 +344,7 @@ Le contenu : les grands blocs
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
   margin: 20px;
-  box-shadow: $color-shadow;
+  box-shadow: $dark-shadow;
   cursor: pointer;
   width: 100%;
   border-radius: 20px;
@@ -392,6 +411,19 @@ a.bloc-restaurant {
 
 /******************A la Française******************/
 
+/*******transition: apparition des plats différée*******/
+/*******************************************************/
+/*body {
+  transition: transform 1s;
+}*/
+
+/*.gap-menus {
+  transform: scale(1.2);
+  transform-origin: left right;
+}*/
+/*******************************************************/
+/*******************************************************/
+
 .img-fr {
   width: 100%;
   display: flex;
@@ -419,17 +451,6 @@ a.bloc-restaurant {
     }
   }
 }
-
-/****transition****/
-body {
-  transition: transform 1s;
-}
-
-.gap-menus {
-  transform: scale(1.2);
-  transform-origin: left right;
-}
-/****transition****/
 
 .resto h3 {
   font-size: 40px;
@@ -459,7 +480,7 @@ h4 {
   button {
     margin: 25px;
     border-radius: 20px;
-    box-shadow: $color-shadow;
+    box-shadow: $dark-shadow;
     border: none 2px white;
     background-color: white;
     cursor: pointer;
@@ -489,10 +510,10 @@ em {
   font-style: normal;
 }
 
-/****transition****/
-/****transition****/
+/******************transition: coches*******************/
+/*******************************************************/
 .fa-check-circle {
-  /*display: none;*/
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
@@ -505,7 +526,7 @@ em {
   font-size: 60px;
   position:absolute;
   transition: all .5s;
-  display: flex;
+  /*display: flex;*/
 }
 
 .check {
@@ -520,8 +541,8 @@ em {
   /*transform: ;*/
   display: flex;
 }
-/****transition****/
-/****transition****/
+/*******************************************************/
+/*******************************************************/
 
 /****Le bouton commander****/
 
@@ -539,13 +560,14 @@ em {
     font-family: $police-second;
     font-weight: bold;
     border: $color-button 2px none;
-    box-shadow: $color-shadow;
+    box-shadow: $dark-shadow-violet;
     opacity: 0.7;
   }
 }
 
 .order-fr button:hover {
   background-color: hsla(294, 79%, 57%, .7);
+  box-shadow: $light-shadow-violet;
 }
 
 /********
