@@ -1,14 +1,30 @@
-/*********************Bibliothèques********************/
+/*********************Généralités********************/
+
 @import "libs/mixins.scss";
 @import "libs/responsive.scss";
 @import "libs/fonctions.scss";
 
-
-/******************Polices d'écriture*******************/
 @import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
-/*Police d'écriture à conserver 
-@font-face {
+
+$color-primary: hsl(210, 4%, 93%); 
+$color-second: #d4d5d6;  
+$color-icon-g: gray; 
+$color-icon: blueviolet; 
+$color-button: hsla(294, 79%, 57%, .9); 
+$color-darkgrey: #c9cbcd;  
+$color-heart: #FF79DA;  
+$color-float: forestgreen;  
+$color-cyan: #99E2D0;
+$light-shadow: 5px 5px 5px #E6E7E9;
+$dark-shadow: 5px 5px 5px #CCCDD0;
+$light-shadow-violet: 5px 5px 5px #B5B6B9;
+$dark-shadow-violet: 5px 5px 5px #A6A6A9;
+$size-heart: 60px;
+$police-primary:'Shrikhand', cursif ; /*font-family : 'Shrikhand', cursif ;*/
+$police-second:'Roboto', sans-serif ; /*font-family : 'Roboto', sans-serif ;*/
+
+/*@font-face {
   font-family: "Roboto";
   src: url("roboto/Roboto-Black.ttf") format("ttf");
   src: url("roboto/Roboto-BlackItalic.ttf") format("ttf");
@@ -35,291 +51,93 @@
   src: url("shrikhand/shrikhand.ttf") format("ttf");
 }*/
 
+body {
+  margin: 0;
+  background-color: $color-primary;
+}
 
-/**********************Variables************************/
-$color-primary: hsl(210, 4%, 93%); 
-$color-second: #d4d5d6;  
-$color-icon-g: gray; 
-$color-icon: blueviolet; 
-$color-button: hsla(294, 79%, 57%, .9); 
-$color-darkgrey: #c9cbcd;  
-$color-heart: #FF79DA;  
-$color-float: forestgreen;  
-$color-cyan: #99E2D0;
-$light-shadow: 5px 5px 5px #E6E7E9;
-$dark-shadow: 5px 5px 5px #CCCDD0;
-$light-shadow-violet: 5px 5px 5px #B5B6B9;
-$dark-shadow-violet: 5px 5px 5px #A6A6A9;
-$size-heart: 60px;
-$police-primary:'Shrikhand', cursif ; /*font-family : 'Shrikhand', cursif ;*/
-$police-second:'Roboto', sans-serif ; /*font-family : 'Roboto', sans-serif ;*/
-
-/*Principal couleur*/
+/*Couleur de fond du header : du formulaire au 1er bouton*/
 .bckg-color { 
   background-color: $color-primary;
 }
 
-/****************************\
-      transition: body
-\****************************/
-body {
-  margin: 0;
-  animation: color-body 6s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes color-body {
-  0% {
-    background-color: #EEE1EA;
-  }
-  50% {
-    background-color: #f5f0f3;
-  }
-  100% {
-    background-color: $color-primary;
-  }
-}
-
-/****************************\
-      transition: coeur
-\****************************/
-.heart {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 70px;
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
-.fr-heart {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 60px;
-  padding-right: 60px;
-}
-
+/*******************************************************\
+                    transition: coeur
+\*******************************************************/
 .fa-heart {
+  color: black;
+  font-size: $size-heart;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; 
 }
 
 .far.fa-heart { /*coeur vide*/
   position: absolute;
-  font-size: $size-heart;
-  color: black;
+  transition: transform .5s, color .5s;
+  opacity: 1;
 }
 
-/*Voir avec mentor*/
-/*.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-  &:hover {
-    animation: heart-fill .7s linear infinite; 
-  }
-}*/
-
-/*coeur remplit*/
-.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
+.fas.fa-heart { /*coeur remplit*/
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.5);
 }
 
-.fr-heart > .fas.fa-heart {
-  position: relative;
-  color: $color-primary;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
+.fas.fa-heart:hover { /*coeur remplit*/
+  opacity: 1;
+  transform: scale(1.1);
+  color: #FF79DA;
 }
 
-.heart {
-  &:hover {
-    & > .fas.fa-heart {
-      animation: heart-fill .7s linear;
-      animation-fill-mode: forwards;
-    }
-  }
-  &:active {
-    & > .fas.fa-heart {
-      color: #FF79DA;  
-    }
-  }
+.fa-heart:active {
+  color: #FF79DA;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-.fr-heart {
-  &:hover {
-    & > .fas.fa-heart {
-      animation: heart-fill .7s linear;
-      animation-fill-mode: forwards;
-    }
-  }
-  &:active {
-    & > .fas.fa-heart {
-      color: #FF79DA;  
-    }
-  }
-}
-
-@keyframes heart-fill {
-  0% {
-      transform: scale(0);
-      color: #FF79DA;
-      opacity: .4;
-  }
-  55% {
-      transform: scale(55%);
-      color: #FF79DA;
-      opacity: .7;
-  }
-  100% {
-      transform: scale(100%);
-      color: #FF79DA;
-      opacity: 1;
-  }
-}
-
-/*********************************************/
-
-
-/**************************************************************Accueil********************************************************/
+/*******************************************************/
+/*******************************************************/
 
 /********
 Le header
 ********/
 
-/*****************************************\
-      transition: loading spinner
-\*****************************************/
+/*******************Accueil*******************/
 
-.loader {
-  margin: auto;
-  position: relative; 
-  top: 0;
-  bottom:0;
-  right: 0;
-  left: 0;
+/*************transition: loading spinner***************/
+/*******************************************************/
+
+.fa-spinner {
+  transform:rotate(1turn);
+  animation-name: load-perso;
+  animation-duration: 1200ms;
+  animation-iteration-count: 7;
 }
 
-.circle {
-  border-radius: 50%;
-  border: 15px solid #fff;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
+.fa-spinner {
+  color: #9356DC;
+  font-size: 90px;
 }
 
-.circle:after {
-  content:'';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  border: 15px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  opacity: 0.6;
-  animation: spin 1s linear 0s infinite;
-}
-
-.circle:before {
-  content:'';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff9ff3;
-  opacity: 0.6;
-  animation: spin 1s linear 0s infinite;
-}
-
-@keyframes spin {
+@keyframes load-perso {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(1turn);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(2turn);
   }
 }
 
-
-@keyframes spin-reverse {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(-360deg);
-  }
-}
-
-.loading-spinner {
-  animation: hide 4s linear;
-  animation-fill-mode: forwards;
-}
-@keyframes hide {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-  } 
-}
-
-.page {
-  color: black;
-  animation: visible 6s linear -.6s;
+.hidden-loading {
   opacity: 1;
-  animation-fill-mode: forwards;
 }
-@keyframes visible {
-  0% {
-      opacity: 0;
-      overflow: hidden;
-  }
-  50% {
-      opacity: 0;
-      overflow: hidden;
-  }
-  75% {
-      opacity: 0;
-      overflow: hidden;
-  }
-  90% {
-      opacity: .8;
-      overflow: visible;
-  }
-  100% {
-      opacity: 1;
-      overflow: visible;
-  } 
+.hidden-loading:focus-visible {
+  transform: all 3s;
+  opacity: 0;
 }
-
-/********************************************/
+/*******************************************************/
+/*******************************************************/
 
 /****Le logo****/
 
@@ -422,9 +240,42 @@ Le header
   box-shadow: $light-shadow-violet;
 }
 
+/******************A la Française******************/
+
+.logo {
+  @include logo-mixin;
+  align-items: center;
+  justify-content: space-around;
+  img .logo-menus {
+    @include logo-images;
+    margin-right: 0;
+    display: flex;
+    flex-grow: 3;
+  }
+  button {
+    border: white none 1px;
+    background-color: white;
+    cursor: pointer;
+    a {
+      color: black;
+      text-decoration: none;
+      .fa-arrow-left {
+        font-size: 45px;
+        display: flex;
+      }
+    }
+  }
+}
+
+img.logo-menus {
+  padding: 10px 0 22px 0;
+}
+
 /********
 Le contenu : les grands blocs
 ********/
+
+/*******************Accueil*******************/
 
 /****La section Fonctionnement****/
 
@@ -591,99 +442,25 @@ a.bloc-restaurant {
   text-decoration: none;
 }
 
-/******************************************************A la Française*********************************************************/
+.heart {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 70px;
+  padding-right: 70px;
+}
+/******************A la Française******************/
 
-/********
-Le header
-********/
-
-.logo {
-  @include logo-mixin;
-  align-items: center;
-  justify-content: space-around;
-  img .logo-menus {
-    @include logo-images;
-    margin-right: 0;
-    display: flex;
-    flex-grow: 3;
-  }
-  button {
-    border: white none 1px;
-    background-color: white;
-    cursor: pointer;
-    a {
-      color: black;
-      text-decoration: none;
-      .fa-arrow-left {
-        font-size: 45px;
-        display: flex;
-      }
-    }
-  }
-}
-
-img.logo-menus {
-  padding: 10px 0 22px 0;
-}
-
-/********
-Le contenu : les grands blocs
-********/
-
-/*****************************************************\
-      transition: apparition des plats différée
-\*****************************************************/
-.delay-entrees {
-  animation: bloc-primary .7s ease-out;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes bloc-primary {
-  0% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.delay-meals {
-  animation: bloc-second .7s ease-out 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes bloc-second {
-  0% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
-  /*50% {
-    transform: translateX(-50%);
-    opacity: 1;
-  }*/
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.delay-desserts {
-  animation: bloc-ters .7s ease-out 2s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes bloc-ters {
-  0% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+/*******transition: apparition des plats différée*******/
+/*******************************************************/
+/*body {
+  transition: transform 1s;
+}*/
+/*keyframes*/
+/*.gap-menus {
+  transform: scale(1.2);
+  transform-origin: left right;
+}*/
+/*******************************************************/
 /*******************************************************/
 
 .img-fr {
@@ -745,6 +522,7 @@ h4 {
     box-shadow: $dark-shadow;
     border: none 2px white;
     background-color: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -763,6 +541,7 @@ h4 {
     box-shadow: $dark-shadow;
     border: none 2px white;
     background-color: white;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -779,14 +558,60 @@ h4 {
   display: flex;
   justify-content: flex-start;
 }
+/*******transition: décalage apparition des plats******/
+/******************************************************/
+.delay-entrees {
+  animation-name: bloc-primary;
+  animation-duration: 2s;
+}
+@keyframes bloc-primary {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.delay-meals {
+  animation-name: bloc-second;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+@keyframes bloc-second {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+.delay-desserts {
+  animation-name: bloc-ters;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+@keyframes bloc-ters {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+/******************************************************/
 /******************************************************/
 
-/*******************************\
-      transition: coches
-/*******************************/
+/******************transition: coches*******************/
+/*******************************************************/
 .fa-check-circle {
   display: flex;
-  cursor: pointer;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
@@ -799,35 +624,13 @@ h4 {
   font-size: 60px;
   position:absolute;
   opacity: 0;
+  transition: transform 2s;
 }
 
-/*.check {
-  &:hover + .test {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
-}*/
-
-.check {
-  &:hover {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
-}
-
-@keyframes validation {
-  0% {
-    transform:translateX(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.fa-check-circle:hover {
+  opacity: 1;
+  transform:translateX(-120px);
+  transform-origin: 120% 50%;
 }
 
 em { 
@@ -835,18 +638,13 @@ em {
   display: flex;
   padding-top: 55px;
   padding-right: 30px;
-  padding-left: 50px;
   font-size: 25px;
   font-style: normal;
   opacity: 1;
 }
 
-.check {
-  &:hover {
-    & > em {
-      opacity: 0;
-    }
-  }
+em:hover {
+  opacity: 0;
 }
 
 .check {
@@ -855,12 +653,13 @@ em {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  cursor: pointer;
 }
 
 .card button {
   position:relative;
 }
+
+/*******************************************************/
 /*******************************************************/
 
 /****Le bouton commander****/
