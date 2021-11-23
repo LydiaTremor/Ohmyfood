@@ -36,49 +36,20 @@
 /**********************Variables************************/
 /*font-family : 'Shrikhand', cursif ;*/
 /*font-family : 'Roboto', sans-serif ;*/
+body {
+  margin: 0;
+  background-color: #ecedee;
+}
+
 /*Principal couleur*/
 .bckg-color {
   background-color: #ecedee;
 }
 
 /****************************\
-      transition: body
-\****************************/
-body {
-  margin: 0;
-  -webkit-animation: color-body 6s linear;
-          animation: color-body 6s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes color-body {
-  0% {
-    background-color: #EEE1EA;
-  }
-  50% {
-    background-color: #f5f0f3;
-  }
-  100% {
-    background-color: #ecedee;
-  }
-}
-
-@keyframes color-body {
-  0% {
-    background-color: #EEE1EA;
-  }
-  50% {
-    background-color: #f5f0f3;
-  }
-  100% {
-    background-color: #ecedee;
-  }
-}
-
-/****************************\
       transition: coeur
 \****************************/
+/*div des 2 icônes coeur de la page d'accueil*/
 .heart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +62,8 @@ body {
   padding-left: 70px;
 }
 
-.fr-heart {
+/*div des icônes coeur des pages menus*/
+.menu-heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +74,7 @@ body {
   padding-right: 60px;
 }
 
+/*Les 2 icônes coeur*/
 .fa-heart {
   cursor: pointer;
   display: -webkit-box;
@@ -112,8 +85,8 @@ body {
           justify-content: flex-end;
 }
 
+/*Icône de coeur vide*/
 .far.fa-heart {
-  /*coeur vide*/
   position: absolute;
   font-size: 60px;
   color: black;
@@ -131,7 +104,7 @@ body {
     animation: heart-fill .7s linear infinite; 
   }
 }*/
-/*coeur remplit*/
+/*Icône de coeur remplit*/
 .fas.fa-heart {
   position: relative;
   color: white;
@@ -141,7 +114,8 @@ body {
   bottom: 0;
 }
 
-.fr-heart > .fas.fa-heart {
+/*Elément enfant : Icône de coeur remplit*/
+.menu-heart > .fas.fa-heart {
   position: relative;
   color: #ecedee;
   font-size: 50px;
@@ -150,6 +124,7 @@ body {
   bottom: 0;
 }
 
+/*Transition de l'icône coeur au survol ou au clic de la souris*/
 .heart:hover > .fas.fa-heart {
   -webkit-animation: heart-fill .7s linear;
           animation: heart-fill .7s linear;
@@ -161,14 +136,14 @@ body {
   color: #FF79DA;
 }
 
-.fr-heart:hover > .fas.fa-heart {
+.menu-heart:hover > .fas.fa-heart {
   -webkit-animation: heart-fill .7s linear;
           animation: heart-fill .7s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.fr-heart:active > .fas.fa-heart {
+.menu-heart:active > .fas.fa-heart {
   color: #FF79DA;
 }
 
@@ -274,8 +249,8 @@ Le header
   border-radius: 50%;
   border-top-color: #ff9ff3;
   opacity: 0.6;
-  -webkit-animation: spin 1s linear 0s infinite;
-          animation: spin 1s linear 0s infinite;
+  -webkit-animation: spin .6s linear 0s infinite;
+          animation: spin .6s linear 0s infinite;
 }
 
 @-webkit-keyframes spin {
@@ -757,7 +732,7 @@ a.bloc-restaurant {
   text-decoration: none;
 }
 
-/******************************************************A la Française*********************************************************/
+/******************************************************** Les menus ***********************************************************/
 /********
 Le header
 ********/
@@ -769,8 +744,10 @@ Le header
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-animation: body-menus 3s linear -.8s infinite;
+          animation: body-menus 3s linear -.8s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .logo img .logo-menus {
@@ -779,12 +756,15 @@ Le header
      object-fit: cover;
   padding: 10px 0 22px 0;
   margin-right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .logo button {
@@ -803,10 +783,43 @@ Le header
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@-webkit-keyframes body-menus {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes body-menus {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
 }
 
 img.logo-menus {
   padding: 10px 0 22px 0;
+}
+
+.img-resto-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /********
@@ -926,18 +939,6 @@ Le contenu : les grands blocs
 }
 
 /*******************************************************/
-.img-fr {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .resto {
   border-radius: 70px 70px 0 0;
   background-color: #ecedee;
@@ -1231,6 +1232,7 @@ footer h1 {
   color: white;
   padding: 30px 0 10px 50px;
   font-family: "Shrikhand", cursif;
+  font-style: italic;
   font-size: 35px;
 }
 

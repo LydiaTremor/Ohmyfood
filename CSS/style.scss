@@ -54,35 +54,20 @@ $size-heart: 60px;
 $police-primary:'Shrikhand', cursif ; /*font-family : 'Shrikhand', cursif ;*/
 $police-second:'Roboto', sans-serif ; /*font-family : 'Roboto', sans-serif ;*/
 
+body {
+  margin: 0;
+  background-color: $color-primary;
+}
+
 /*Principal couleur*/
 .bckg-color { 
   background-color: $color-primary;
 }
 
 /****************************\
-      transition: body
-\****************************/
-body {
-  margin: 0;
-  animation: color-body 6s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes color-body {
-  0% {
-    background-color: #EEE1EA;
-  }
-  50% {
-    background-color: #f5f0f3;
-  }
-  100% {
-    background-color: $color-primary;
-  }
-}
-
-/****************************\
       transition: coeur
 \****************************/
+/*div des 2 icônes coeur de la page d'accueil*/
 .heart {
   display: flex;
   justify-content: flex-end;
@@ -91,20 +76,23 @@ body {
   padding-left: 70px;
 }
 
-.fr-heart {
+/*div des icônes coeur des pages menus*/
+.menu-heart {
   display: flex;
   justify-content: flex-end;
   padding-top: 60px;
   padding-right: 60px;
 }
 
+/*Les 2 icônes coeur*/
 .fa-heart {
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
 }
 
-.far.fa-heart { /*coeur vide*/
+/*Icône de coeur vide*/
+.far.fa-heart { 
   position: absolute;
   font-size: $size-heart;
   color: black;
@@ -123,7 +111,7 @@ body {
   }
 }*/
 
-/*coeur remplit*/
+/*Icône de coeur remplit*/
 .fas.fa-heart {
   position: relative;
   color: white;
@@ -133,7 +121,8 @@ body {
   bottom: 0;
 }
 
-.fr-heart > .fas.fa-heart {
+/*Elément enfant : Icône de coeur remplit*/
+.menu-heart > .fas.fa-heart {
   position: relative;
   color: $color-primary;
   font-size: 50px;
@@ -142,6 +131,7 @@ body {
   bottom: 0;
 }
 
+/*Transition de l'icône coeur au survol ou au clic de la souris*/
 .heart {
   &:hover {
     & > .fas.fa-heart {
@@ -156,7 +146,7 @@ body {
   }
 }
 
-.fr-heart {
+.menu-heart {
   &:hover {
     & > .fas.fa-heart {
       animation: heart-fill .7s linear;
@@ -252,7 +242,7 @@ Le header
   border-radius: 50%;
   border-top-color: #ff9ff3;
   opacity: 0.6;
-  animation: spin 1s linear 0s infinite;
+  animation: spin .6s linear 0s infinite;
 }
 
 @keyframes spin {
@@ -591,7 +581,7 @@ a.bloc-restaurant {
   text-decoration: none;
 }
 
-/******************************************************A la Française*********************************************************/
+/******************************************************** Les menus ***********************************************************/
 
 /********
 Le header
@@ -600,12 +590,15 @@ Le header
 .logo {
   @include logo-mixin;
   align-items: center;
-  justify-content: space-around;
+  animation: body-menus 3s linear -.8s infinite;
+  animation-fill-mode: forwards;
   img .logo-menus {
     @include logo-images;
     margin-right: 0;
-    display: flex;
     flex-grow: 3;
+    display: flex;
+    justify-content: center;
+
   }
   button {
     border: white none 1px;
@@ -617,13 +610,30 @@ Le header
       .fa-arrow-left {
         font-size: 45px;
         display: flex;
+        justify-content: flex-start;
       }
     }
   }
 }
 
+@keyframes body-menus {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
 img.logo-menus {
   padding: 10px 0 22px 0;
+}
+
+.img-resto-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
 }
 
 /********
@@ -685,13 +695,6 @@ Le contenu : les grands blocs
   }
 }
 /*******************************************************/
-
-.img-fr {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  object-fit: cover;
-}
 
 .resto {
   border-radius: 70px 70px 0 0;
@@ -904,6 +907,7 @@ footer {
     color: white;
     padding: 30px 0 10px 50px;
     font-family: $police-primary;
+    font-style: italic;
     font-size: 35px;
   }
   /*La liste de la nav du footer*/
