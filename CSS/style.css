@@ -1,11 +1,227 @@
 @charset "UTF-8";
 /*********************Bibliothèques********************/
+/******************* Page d'accueil ********************/
+@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap");
+@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
+@media screen and (max-width: 1500px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 34%;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 36%;
+  }
+  .header-txt p {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 38%;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 41%;
+  }
+  .header-txt p {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .bloc-restaurant > img {
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .button-header span {
+    font-size: 29px;
+  }
+  .functioning {
+    min-height: 560px;
+  }
+  .functioning button {
+    padding: 45px 25px 35px 0;
+    margin: 0 36px 35px 42px;
+    border-radius: 35px;
+  }
+  .functioning button span {
+    font-size: 29px;
+  }
+  .functioning button .fa-mobile-alt {
+    font-size: 35px;
+  }
+  .functioning button .fa-list-ul {
+    font-size: 35px;
+  }
+  .functioning button .fa-store {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 43%;
+  }
+  .functioning button strong {
+    padding: 14px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 45%;
+  }
+  .header-txt h2 {
+    padding-left: 160px;
+    padding-right: 160px;
+    font-size: 40px;
+  }
+  .header-txt p {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .functioning {
+    min-height: 550px;
+  }
+  .bloc-restaurant > img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 47%;
+  }
+  .header-txt h2 {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
+@media screen and (max-width: 693px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 50%;
+  }
+  .button-header button {
+    padding: 30px 40px 30px 40px;
+  }
+  .button-header span {
+    font-size: 26px;
+  }
+  .functioning {
+    min-height: 470px;
+  }
+  .functioning button {
+    padding: 35px 20px 25px 0;
+    margin: 0 34px 35px 40px;
+    border-radius: 30px;
+  }
+  .functioning button span {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .header-txt p {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 30px;
+  }
+  .header-txt h2 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .button-header span {
+    font-size: 24px;
+  }
+  .functioning button span {
+    font-size: 24px;
+  }
+  .functioning button strong {
+    padding: 12px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 557px) {
+  .header-txt h2 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  /*La balise qui englobe l'image du logo*/
+  .logo-acc .image-omf {
+    width: 55%;
+  }
+  .button-header span {
+    font-size: 22px;
+  }
+  .functioning button span {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  body {
+    width: 510px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .functioning {
+    min-height: 450px;
+  }
+  .color-functioning .functioning-title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
+
+/******************* Page menu : francaise ********************/
+/******************* Page menu : delice ********************/
+/******************* Page menu : palette ********************/
+/******************* Page menu : note ********************/
+/*********************** Le footer ***********************/
+@media screen and (max-width: 693px) {
+  .list-footer {
+    padding-right: 60px;
+  }
+}
+
 /*@function brightness {
     ()
 }*/
 /******************Polices d'écriture*******************/
-@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap");
-@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
 /*Police d'écriture à conserver 
 @font-face {
   font-family: "Roboto";
@@ -60,6 +276,36 @@ body {
   padding-bottom: 70px;
   padding-right: 70px;
   padding-left: 70px;
+  cursor: pointer;
+  /*Icône de coeur remplit*/
+  /*Icône de coeur vide*/
+}
+
+.heart .fas.fa-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  color: white;
+  font-size: 50px;
+  top: 4px;
+  right: 5px;
+  bottom: 0;
+}
+
+.heart .far.fa-heart {
+  position: absolute;
+  font-size: 60px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /*div des icônes coeur des pages menus*/
@@ -72,11 +318,15 @@ body {
           justify-content: flex-end;
   padding-top: 60px;
   padding-right: 60px;
+  cursor: pointer;
+  /*Icône de coeur vide*/
+  /*Icône de coeur remplit*/
 }
 
-/*Les 2 icônes coeur*/
-.fa-heart {
-  cursor: pointer;
+.menu-heart .far.fa-heart {
+  position: absolute;
+  font-size: 60px;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,37 +335,7 @@ body {
           justify-content: flex-end;
 }
 
-/*Icône de coeur vide*/
-.far.fa-heart {
-  position: absolute;
-  font-size: 60px;
-  color: black;
-}
-
-/*Voir avec mentor*/
-/*.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-  &:hover {
-    animation: heart-fill .7s linear infinite; 
-  }
-}*/
-/*Icône de coeur remplit*/
-.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-}
-
-/*Elément enfant : Icône de coeur remplit*/
-.menu-heart > .fas.fa-heart {
+.menu-heart .fas.fa-heart {
   position: relative;
   color: #ecedee;
   font-size: 50px;
@@ -124,6 +344,15 @@ body {
   bottom: 0;
 }
 
+/*Elément enfant : Icône de coeur remplit si je supprime les ligne 109 à 115*/
+/*.menu-heart > .fas.fa-heart {
+  position: relative;
+  color: $color-primary;
+  font-size: 50px;
+  top: 4px;
+  right: 5px;
+  bottom: 0;
+}*/
 /*Transition de l'icône coeur au survol ou au clic de la souris*/
 .heart:hover > .fas.fa-heart {
   -webkit-animation: heart-fill .7s linear;
@@ -189,6 +418,18 @@ body {
   }
 }
 
+/*Voir avec mentor*/
+/*.fas.fa-heart {
+  position: relative;
+  color: white;
+  font-size: 50px;
+  top: 4px;
+  right: 5px;
+  bottom: 0;
+  &:hover {
+    animation: heart-fill .7s linear infinite; 
+  }
+}*/
 /*********************************************/
 /**************************************************************Accueil********************************************************/
 /********
@@ -197,192 +438,116 @@ Le header
 /*****************************************\
       transition: loading spinner
 \*****************************************/
-.loader {
-  margin: auto;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.circle {
-  border-radius: 50%;
-  border: 15px solid #fff;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-.circle:after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  border: 15px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  opacity: 0.6;
-  -webkit-animation: spin 1s linear 0s infinite;
-          animation: spin 1s linear 0s infinite;
-}
-
-.circle:before {
-  content: '';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff9ff3;
-  opacity: 0.6;
-  -webkit-animation: spin .6s linear 0s infinite;
-          animation: spin .6s linear 0s infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+/*.loading-spinner {
+  animation: hide 4s linear;
+  animation-fill-mode: forwards;
+  .loader {
+    margin: auto;
+    position: relative; 
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  .circle {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .circle:after {
+    content:'';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 15px solid transparent;
+    border-radius: 50%;
+    border-top-color: #9356DC;
+    opacity: 0.6;
+    animation: spin 1s linear 0s infinite;
+  }
+  .circle:before {
+    content:'';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    border-top-color: #ff9ff3;
+    opacity: 0.6;
+    animation: spin .6s linear 0s infinite;
   }
 }
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-.loading-spinner {
-  -webkit-animation: hide 4s linear;
-          animation: hide 4s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes hide {
   0% {
-    opacity: 1;
+      opacity: 1;
   }
   50% {
-    opacity: 1;
+      opacity: 1;
   }
   100% {
-    opacity: 0;
+      opacity: 0;
+  } 
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
   }
 }
 
 .page {
   color: black;
-  -webkit-animation: visible 6s linear -.6s;
-          animation: visible 6s linear -.6s;
+  animation: visible 6s linear -.6s;
   opacity: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes visible {
-  0% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  50% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  75% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  90% {
-    opacity: .8;
-    overflow: visible;
-  }
-  100% {
-    opacity: 1;
-    overflow: visible;
-  }
-}
-
 @keyframes visible {
   0% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   50% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   75% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   90% {
-    opacity: .8;
-    overflow: visible;
+      opacity: .8;
+      overflow: visible;
   }
   100% {
-    opacity: 1;
-    overflow: visible;
-  }
-}
-
+      opacity: 1;
+      overflow: visible;
+  } 
+}*/
 /********************************************/
 /****Le logo****/
 /*La balise qui englobe l'image du logo*/
@@ -402,7 +567,7 @@ Le header
   width: 30%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 10px 0 22px 0;
+  padding: 20px 0 22px 0;
 }
 
 /****Le formulaire****/
@@ -436,17 +601,18 @@ Le header
 .form-maps form .fa-map-marker-alt {
   background-color: #d4d5d6;
   border: none 2px #d4d5d6;
-  padding: 17px 14px 18px 14px;
-  font-size: 18px;
+  padding: 32px 14px 32px 14px;
+  font-size: 25px;
 }
 
 .form-maps form .country {
   border: none;
   background-color: #d4d5d6;
   width: 100%;
-  padding: 15px 0 15px 0;
+  /*padding: 15px 0 15px 0;*/
+  padding: 30px 14px 30px 14px;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: black;
 }
@@ -461,12 +627,14 @@ Le header
 .header-txt h2 {
   font-weight: bold;
   font-family: "Shrikhand", cursif;
-  font-size: 36px;
+  font-size: 43px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .header-txt p {
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: normal;
 }
 
@@ -484,8 +652,14 @@ Le header
   /*Le bouton à l'intérieur de la class button-header*/
 }
 
+.button-header span {
+  font-family: "Roboto", sans-serif;
+  font-size: 33px;
+  font-weight: bold;
+}
+
 .button-header button {
-  padding: 23px 40px 26px 40px;
+  padding: 35px 45px 35px 45px;
   border-radius: 50px;
   background-color: rgba(215, 59, 232, 0.9);
   color: white;
@@ -496,12 +670,6 @@ Le header
   border: rgba(215, 59, 232, 0.9) 2px none;
   font-weight: bold;
   opacity: 0.7;
-}
-
-.button-header span {
-  font-family: "Roboto", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
 }
 
 .button-header button:hover {
@@ -517,13 +685,14 @@ Le contenu : les grands blocs
 /*Couleur de fond de la section Fonctionnement*/
 .color-functioning {
   background-color: white;
+  /*Titre de la section Fonctionnement*/
 }
 
-/*Titre de la section Fonctionnement*/
-.functioning-title {
+.color-functioning .functioning-title {
   padding-left: 35px;
-  padding-top: 60px;
-  font-size: 35px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-size: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin: 0;
@@ -534,25 +703,23 @@ Le contenu : les grands blocs
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  /*justify-content: center;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 400px;
+  min-height: 600px;
   /*Le boutons de la section Fonctionnement x3*/
 }
 
 .functioning button {
-  margin: 0 30px 30px 38px;
-  border-radius: 20px;
-  padding: 25px 30px 20px 0;
-  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
-          box-shadow: 5px 5px 5px #CCCDD0;
+  margin: 0 36px 40px 42px;
+  border-radius: 45px;
+  padding: 50px 30px 40px 0;
+  -webkit-box-shadow: 5px 5px 15px #cdcdcf;
+          box-shadow: 5px 5px 15px #cdcdcf;
   border: #ecedee none 2px;
   cursor: pointer;
   /*icône d'un téléphone*/
@@ -562,7 +729,7 @@ Le contenu : les grands blocs
 
 .functioning button span {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 33px;
 }
 
 .functioning button strong {
@@ -570,8 +737,8 @@ Le contenu : les grands blocs
   color: white;
   border: blueviolet 1px none;
   border-radius: 50%;
-  padding: 10px;
-  font-size: 20px;
+  padding: 17px;
+  font-size: 27px;
   width: 15px;
   height: 15px;
   margin: 0;
@@ -584,23 +751,24 @@ Le contenu : les grands blocs
   position: absolute;
   -webkit-transform: translate(-45%, -18%);
           transform: translate(-45%, -18%);
+  font-weight: normal;
 }
 
 .functioning button .fa-mobile-alt {
-  padding-right: 25px;
-  font-size: 25px;
+  padding-right: 40px;
+  font-size: 40px;
   color: gray;
 }
 
 .functioning button .fa-list-ul {
-  padding-right: 30px;
-  font-size: 25px;
+  padding-right: 40px;
+  font-size: 40px;
   color: gray;
 }
 
 .functioning button .fa-store {
-  padding-right: 30px;
-  font-size: 25px;
+  padding-right: 40px;
+  font-size: 40px;
   color: blueviolet;
 }
 
@@ -610,21 +778,33 @@ Le contenu : les grands blocs
           box-shadow: 5px 5px 5px #E6E7E9;
 }
 
+.align-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /****La section Restaurants****/
 .restaurant {
   background-color: #ecedee;
+  /*Le titre de la section Restaurant*/
 }
 
-/*Le titre de la section Restaurant*/
-.restaurant-title {
+.restaurant .restaurant-title {
   font-weight: bold;
   padding: 60px 0 10px 35px;
-  font-size: 35px;
+  font-size: 40px;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
-.links-restaurant {
+.restaurant .links-restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,14 +816,19 @@ Le contenu : les grands blocs
       flex-wrap: wrap;
 }
 
+.restaurant .links-restaurant a.bloc-restaurant {
+  position: relative;
+  text-decoration: none;
+}
+
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
-  margin: 20px;
-  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
-          box-shadow: 5px 5px 5px #CCCDD0;
+  margin: 25px 35px 35px 35px;
+  -webkit-box-shadow: 15px 15px 20px #CCCDD0;
+          box-shadow: 15px 15px 20px #CCCDD0;
   cursor: pointer;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 25px;
   border: white 2px none;
   background-color: white;
   -o-object-fit: cover;
@@ -658,7 +843,7 @@ Le contenu : les grands blocs
   border: #99E2D0 2px none;
   background-color: #99E2D0;
   color: forestgreen;
-  padding: 10px 30px 10px 30px;
+  padding: 17px 30px 17px 30px;
   font-weight: bold;
   font-size: 40px;
   border-radius: 5px;
@@ -674,7 +859,7 @@ Le contenu : les grands blocs
       -ms-flex-pack: center;
           justify-content: center;
   height: 400px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 25px 25px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -727,11 +912,6 @@ Le contenu : les grands blocs
   padding: 0 0 35px 45px;
 }
 
-a.bloc-restaurant {
-  position: relative;
-  text-decoration: none;
-}
-
 /******************************************************** Les menus ***********************************************************/
 /********
 Le header
@@ -754,7 +934,7 @@ Le header
   width: 30%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 10px 0 22px 0;
+  padding: 20px 0 22px 0;
   margin-right: 0;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
@@ -788,6 +968,10 @@ Le header
           justify-content: flex-start;
 }
 
+img.logo-menus {
+  padding: 10px 0 22px 0;
+}
+
 @-webkit-keyframes body-menus {
   0% {
     background-color: white;
@@ -804,22 +988,6 @@ Le header
   100% {
     background-color: white;
   }
-}
-
-img.logo-menus {
-  padding: 10px 0 22px 0;
-}
-
-.img-resto-menu {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 /********
@@ -876,10 +1044,6 @@ Le contenu : les grands blocs
             transform: translateX(-100%);
     opacity: 1;
   }
-  /*50% {
-    transform: translateX(-50%);
-    opacity: 1;
-  }*/
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -893,10 +1057,6 @@ Le contenu : les grands blocs
             transform: translateX(-100%);
     opacity: 1;
   }
-  /*50% {
-    transform: translateX(-50%);
-    opacity: 1;
-  }*/
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -939,6 +1099,18 @@ Le contenu : les grands blocs
 }
 
 /*******************************************************/
+.img-resto-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .resto {
   border-radius: 70px 70px 0 0;
   background-color: #ecedee;
@@ -1007,26 +1179,7 @@ h4 {
       flex-wrap: wrap;
 }
 
-.card button {
-  margin: 25px;
-  border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
-          box-shadow: 5px 5px 5px #CCCDD0;
-  border: none 2px white;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-.delay-entrees, .delay-meals, .delay-desserts {
+.card .delay-entrees, .card .delay-meals, .card .delay-desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,11 +1194,11 @@ h4 {
       flex-wrap: wrap;
 }
 
-.delay-entrees button, .delay-meals button, .delay-desserts button {
+.card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
   margin: 25px;
-  border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 5px #CCCDD0;
-          box-shadow: 5px 5px 5px #CCCDD0;
+  border-radius: 25px;
+  -webkit-box-shadow: 15px 15px 20px #CCCDD0;
+          box-shadow: 15px 15px 20px #CCCDD0;
   border: none 2px white;
   background-color: white;
   display: -webkit-box;
@@ -1060,7 +1213,7 @@ h4 {
   position: relative;
 }
 
-.card p {
+.card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   padding-bottom: 20px;
@@ -1078,6 +1231,45 @@ h4 {
 /*******************************\
       transition: coches
 /*******************************/
+.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.check em {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 55px;
+  padding-right: 30px;
+  padding-left: 50px;
+  font-size: 25px;
+  font-style: normal;
+  opacity: 1;
+}
+
+.check:hover > .fa-check-circle {
+  -webkit-animation: validation .7s ease;
+          animation: validation .7s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .fa-check-circle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1095,25 +1287,10 @@ h4 {
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 25px 25px 0;
   font-size: 60px;
   position: absolute;
   opacity: 0;
-}
-
-/*.check {
-  &:hover + .test {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
-}*/
-.check:hover > .fa-check-circle {
-  -webkit-animation: validation .7s ease;
-          animation: validation .7s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes validation {
@@ -1142,44 +1319,8 @@ h4 {
   }
 }
 
-em {
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 55px;
-  padding-right: 30px;
-  padding-left: 50px;
-  font-size: 25px;
-  font-style: normal;
-  opacity: 1;
-}
-
 .check:hover > em {
   opacity: 0;
-}
-
-.check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  cursor: pointer;
-}
-
-.card button {
-  position: relative;
 }
 
 /*******************************************************/
@@ -1215,9 +1356,24 @@ em {
           box-shadow: 5px 5px 5px #B5B6B9;
 }
 
-/********
-Le footer
-********/
+/**************************************** Page menu : note *****************************************/
+.img-note {
+  max-height: 600px;
+}
+
+.img-resto-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/********************************** Le footer sur toutes les pages ********************************/
 footer {
   background-color: #313339;
   color: white;
@@ -1233,7 +1389,8 @@ footer h1 {
   padding: 30px 0 10px 50px;
   font-family: "Shrikhand", cursif;
   font-style: italic;
-  font-size: 35px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 footer .list-footer {
@@ -1245,18 +1402,18 @@ footer .list-footer {
   font-family: "Roboto", sans-serif;
 }
 
-.list-bold {
-  font-weight: bold;
+footer .list-footer .list-bold {
+  font-weight: normal;
   /*icône des couverts*/
   /*icône des mains*/
 }
 
-.list-bold .fa-utensils {
+footer .list-footer .list-bold .fa-utensils {
   padding-right: 15px;
   font-size: 20px;
 }
 
-.list-bold .fa-hands-helping {
+footer .list-footer .list-bold .fa-hands-helping {
   padding-right: 9px;
   font-size: 20px;
 }

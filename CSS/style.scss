@@ -47,7 +47,7 @@ $color-heart: #FF79DA;
 $color-float: forestgreen;  
 $color-cyan: #99E2D0;
 $light-shadow: 5px 5px 5px #E6E7E9;
-$dark-shadow: 5px 5px 5px #CCCDD0;
+$dark-shadow: 15px 15px 20px #CCCDD0;
 $light-shadow-violet: 5px 5px 5px #B5B6B9;
 $dark-shadow-violet: 5px 5px 5px #A6A6A9;
 $size-heart: 60px;
@@ -74,6 +74,26 @@ body {
   padding-bottom: 70px;
   padding-right: 70px;
   padding-left: 70px;
+  cursor: pointer;
+  /*Icône de coeur remplit*/
+  .fas.fa-heart {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    color: white;
+    font-size: 50px;
+    top: 4px;
+    right: 5px;
+    bottom: 0;
+  }
+  /*Icône de coeur vide*/
+  .far.fa-heart {
+    position: absolute;
+    font-size: $size-heart;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 /*div des icônes coeur des pages menus*/
@@ -82,54 +102,35 @@ body {
   justify-content: flex-end;
   padding-top: 60px;
   padding-right: 60px;
-}
-
-/*Les 2 icônes coeur*/
-.fa-heart {
   cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/*Icône de coeur vide*/
-.far.fa-heart { 
+  /*Icône de coeur vide*/
+  .far.fa-heart {
   position: absolute;
   font-size: $size-heart;
   color: black;
-}
-
-/*Voir avec mentor*/
-/*.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-  &:hover {
-    animation: heart-fill .7s linear infinite; 
+  display: flex;
+  justify-content: flex-end;
   }
-}*/
-
-/*Icône de coeur remplit*/
-.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
+  /*Icône de coeur remplit*/
+  .fas.fa-heart {
+    position: relative;
+    color: $color-primary;
+    font-size: 50px;
+    top: 4px;
+    right: 5px;
+    bottom: 0;
+  }
 }
 
-/*Elément enfant : Icône de coeur remplit*/
-.menu-heart > .fas.fa-heart {
+/*Elément enfant : Icône de coeur remplit si je supprime les ligne 109 à 115*/
+/*.menu-heart > .fas.fa-heart {
   position: relative;
   color: $color-primary;
   font-size: 50px;
   top: 4px;
   right: 5px;
   bottom: 0;
-}
+}*/
 
 /*Transition de l'icône coeur au survol ou au clic de la souris*/
 .heart {
@@ -178,6 +179,19 @@ body {
   }
 }
 
+/*Voir avec mentor*/
+/*.fas.fa-heart {
+  position: relative;
+  color: white;
+  font-size: 50px;
+  top: 4px;
+  right: 5px;
+  bottom: 0;
+  &:hover {
+    animation: heart-fill .7s linear infinite; 
+  }
+}*/
+
 /*********************************************/
 
 
@@ -191,82 +205,59 @@ Le header
       transition: loading spinner
 \*****************************************/
 
-.loader {
-  margin: auto;
-  position: relative; 
-  top: 0;
-  bottom:0;
-  right: 0;
-  left: 0;
-}
-
-.circle {
-  border-radius: 50%;
-  border: 15px solid #fff;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-.circle:after {
-  content:'';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  border: 15px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  opacity: 0.6;
-  animation: spin 1s linear 0s infinite;
-}
-
-.circle:before {
-  content:'';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff9ff3;
-  opacity: 0.6;
-  animation: spin .6s linear 0s infinite;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-
-
-@keyframes spin-reverse {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(-360deg);
-  }
-}
-
-.loading-spinner {
+/*.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
+  .loader {
+    margin: auto;
+    position: relative; 
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+  }
+  .circle {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .circle:after {
+    content:'';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 15px solid transparent;
+    border-radius: 50%;
+    border-top-color: #9356DC;
+    opacity: 0.6;
+    animation: spin 1s linear 0s infinite;
+  }
+  .circle:before {
+    content:'';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    border-top-color: #ff9ff3;
+    opacity: 0.6;
+    animation: spin .6s linear 0s infinite;
+  }
 }
 @keyframes hide {
   0% {
@@ -278,6 +269,22 @@ Le header
   100% {
       opacity: 0;
   } 
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
 }
 
 .page {
@@ -307,7 +314,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}
+}*/
 
 /********************************************/
 
@@ -344,17 +351,18 @@ Le header
     .fa-map-marker-alt {
       background-color: $color-second;
       border: none 2px $color-second;
-      padding: 17px 14px 18px 14px;
-      font-size: 18px;
+      padding: 32px 14px 32px 14px;
+      font-size: 25px;
     }
     /*Le texte du formulaire*/
     .country {
       border: none;
       background-color: $color-second;
       width: 100%;
-      padding: 15px 0 15px 0;
+      /*padding: 15px 0 15px 0;*/
+      padding: 30px 14px 30px 14px;
       font-family: $police-second;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       color: black;
     }
@@ -370,11 +378,13 @@ Le header
   h2 {
     font-weight: bold;
     font-family: $police-primary;
-    font-size: 36px;
+    font-size: 43px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   p {
     font-family: $police-second;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: normal;
   }
 }
@@ -387,9 +397,14 @@ Le header
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 80px;
+  span {
+    font-family: $police-second;
+    font-size: 33px;
+    font-weight: bold;
+  }
   /*Le bouton à l'intérieur de la class button-header*/
   button {
-    padding: 23px 40px 26px 40px;
+    padding: 35px 45px 35px 45px;
     border-radius: 50px;
     background-color: $color-button;
     color: white;
@@ -399,17 +414,11 @@ Le header
     border: $color-button 2px none;
     font-weight: bold;
     opacity: 0.7;
+    &:hover {
+      background-color: hsla(294, 79%, 57%, .7);
+      box-shadow: $light-shadow-violet;
+    }
   }
-  span {
-    font-family: $police-second;
-    font-size: 25px;
-    font-weight: bold;
-  }
-}
-
-.button-header button:hover {
-  background-color: hsla(294, 79%, 57%, .7);
-  box-shadow: $light-shadow-violet;
 }
 
 /********
@@ -421,44 +430,44 @@ Le contenu : les grands blocs
 /*Couleur de fond de la section Fonctionnement*/
 .color-functioning {
   background-color: white;
-}
-
-/*Titre de la section Fonctionnement*/
-.functioning-title {
-  padding-left: 35px;
-  padding-top: 60px;
-  font-size: 35px;
-  font-family: $police-second;
-  font-weight: bold;
-  margin: 0;
+  /*Titre de la section Fonctionnement*/
+  .functioning-title {
+    padding-left: 35px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-size: 40px;
+    font-family: $police-second;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
 /*La div des 3 boutons de la section Fonctionnement*/
 .functioning {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   flex-direction: column;
   flex-wrap: wrap;
-  height: 400px;
+  min-height: 600px;
   /*Le boutons de la section Fonctionnement x3*/
   button {
-    margin: 0 30px 30px 38px;
-    border-radius: 20px;
-    padding: 25px 30px 20px 0;
-    box-shadow: $dark-shadow;
+    margin: 0 36px 40px 42px;
+    border-radius: 45px;
+    padding: 50px 30px 40px 0;
+    box-shadow: 5px 5px 15px #cdcdcf;
     border: $color-primary none 2px;
     cursor: pointer;
     span {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 33px;
     }
     strong {
       background-color: blueviolet;
       color: white;
       border: blueviolet 1px none;
       border-radius: 50%;
-      padding: 10px;
-      font-size: 20px;
+      padding: 17px;
+      font-size: 27px;
       width: 15px;
       height: 15px;
       margin: 0;
@@ -466,61 +475,69 @@ Le contenu : les grands blocs
       align-items: center;
       position: absolute;
       transform: translate(-45%, -18%);
+      font-weight: normal;
     }
     /*icône d'un téléphone*/
     .fa-mobile-alt {
-      padding-right: 25px;
-      font-size: 25px;
+      padding-right: 40px;
+      font-size: 40px;
       color: gray;
     }
     /*icône d'une liste*/
     .fa-list-ul {
-      padding-right: 30px;
-      font-size: 25px;
+      padding-right: 40px;
+      font-size: 40px;
       color: gray;
     }
     /*icône d'une boutique*/
     .fa-store {
-      padding-right: 30px;
-      font-size: 25px;
+      padding-right: 40px;
+      font-size: 40px;
       color: blueviolet;
+    }
+    &:hover {
+      background-color: hsla(210, 4%, 93%, .6);
+      box-shadow: $light-shadow;
     }
   }
 }
 
-.functioning button:hover {
-  background-color: hsla(210, 4%, 93%, .6);
-  box-shadow: $light-shadow;
+.align-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /****La section Restaurants****/
 
 .restaurant {
   background-color: $color-primary;
-}
-
-/*Le titre de la section Restaurant*/
-.restaurant-title {
-  font-weight: bold;
-  padding: 60px 0 10px 35px;
-  font-size: 35px;
-  font-family: $police-second;
-  margin: 0;
-}
-
-.links-restaurant { 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /*Le titre de la section Restaurant*/
+  .restaurant-title {
+    font-weight: bold;
+    padding: 60px 0 10px 35px;
+    font-size: 40px;
+    font-family: $police-second;
+    margin: 0;
+  }
+  .links-restaurant { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    a.bloc-restaurant {
+      position: relative;
+      text-decoration: none;
+    }
+  }
 }
 
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
-  margin: 20px;
+  margin: 25px 35px 35px 35px;
   box-shadow: $dark-shadow;
   cursor: pointer;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 25px;
   border: white 2px none;
   background-color: white;
   object-fit: cover;
@@ -531,7 +548,7 @@ Le contenu : les grands blocs
     border: #99E2D0 2px none;
     background-color: #99E2D0;
     color: forestgreen;
-    padding: 10px 30px 10px 30px;
+    padding: 17px 30px 17px 30px;
     font-weight: bold;
     font-size: 40px;
     border-radius: 5px;
@@ -543,7 +560,7 @@ Le contenu : les grands blocs
     display: flex;
     justify-content: center;
     height: 400px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 25px 25px 0 0;
     object-fit: cover;
   }
   .restaurant-text {
@@ -574,11 +591,6 @@ Le contenu : les grands blocs
       }
     }
   }
-}
-
-a.bloc-restaurant {
-  position: relative;
-  text-decoration: none;
 }
 
 /******************************************************** Les menus ***********************************************************/
@@ -616,6 +628,10 @@ Le header
   }
 }
 
+img.logo-menus {
+  padding: 10px 0 22px 0;
+}
+
 @keyframes body-menus {
   0% {
     background-color: white;
@@ -623,17 +639,6 @@ Le header
   100% {
     background-color: white;
   }
-}
-
-img.logo-menus {
-  padding: 10px 0 22px 0;
-}
-
-.img-resto-menu {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  object-fit: cover;
 }
 
 /********
@@ -669,10 +674,6 @@ Le contenu : les grands blocs
     transform: translateX(-100%);
     opacity: 1;
   }
-  /*50% {
-    transform: translateX(-50%);
-    opacity: 1;
-  }*/
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -695,6 +696,12 @@ Le contenu : les grands blocs
   }
 }
 /*******************************************************/
+.img-resto-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
 
 .resto {
   border-radius: 70px 70px 0 0;
@@ -742,51 +749,65 @@ h4 {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  button {
-    margin: 25px;
-    border-radius: 20px;
-    box-shadow: $dark-shadow;
-    border: none 2px white;
-    background-color: white;
+  .delay-entrees,.delay-meals,.delay-desserts {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    button {
+      margin: 25px;
+      border-radius: 25px;
+      box-shadow: $dark-shadow;
+      border: none 2px white;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      p {
+        font-family: $police-second;
+        font-size: 30px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
   }
 }
 
-.delay-entrees,.delay-meals,.delay-desserts {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  button {
-    margin: 25px;
-    border-radius: 20px;
-    box-shadow: $dark-shadow;
-    border: none 2px white;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-  }
-}
-
-.card p {
-  font-family: $police-second;
-  font-size: 30px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-}
 /******************************************************/
 
 /*******************************\
       transition: coches
 /*******************************/
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  em { 
+    font-weight: bold;
+    display: flex;
+    padding-top: 55px;
+    padding-right: 30px;
+    padding-left: 50px;
+    font-size: 25px;
+    font-style: normal;
+    opacity: 1;
+  }
+  &:hover {
+    & > .fa-check-circle  {
+      animation: validation .7s ease;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
 .fa-check-circle {
   display: flex;
   cursor: pointer;
@@ -798,28 +819,10 @@ h4 {
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 25px 25px 0;
   font-size: 60px;
   position:absolute;
   opacity: 0;
-}
-
-/*.check {
-  &:hover + .test {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
-}*/
-
-.check {
-  &:hover {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
 }
 
 @keyframes validation {
@@ -833,17 +836,6 @@ h4 {
   }
 }
 
-em { 
-  font-weight: bold;
-  display: flex;
-  padding-top: 55px;
-  padding-right: 30px;
-  padding-left: 50px;
-  font-size: 25px;
-  font-style: normal;
-  opacity: 1;
-}
-
 .check {
   &:hover {
     & > em {
@@ -852,18 +844,6 @@ em {
   }
 }
 
-.check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  cursor: pointer;
-}
-
-.card button {
-  position:relative;
-}
 /*******************************************************/
 
 /****Le bouton commander****/
@@ -884,17 +864,27 @@ em {
     border: $color-button 2px none;
     box-shadow: $dark-shadow-violet;
     opacity: 0.7;
+    &:hover {
+      background-color: hsla(294, 79%, 57%, .7);
+      box-shadow: $light-shadow-violet;
+    }
   }
 }
 
-.order-fr button:hover {
-  background-color: hsla(294, 79%, 57%, .7);
-  box-shadow: $light-shadow-violet;
+/**************************************** Page menu : note *****************************************/
+
+.img-note {
+  max-height: 600px;
 }
 
-/********
-Le footer
-********/
+.img-resto-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+
+/********************************** Le footer sur toutes les pages ********************************/
 
 footer {
   background-color: #313339;
@@ -908,7 +898,8 @@ footer {
     padding: 30px 0 10px 50px;
     font-family: $police-primary;
     font-style: italic;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: bold;
   }
   /*La liste de la nav du footer*/
   .list-footer {
@@ -918,20 +909,19 @@ footer {
     padding: 0 0 60px 50px;
     font-size: 30px;
     font-family: $police-second;
-  }
-}
-
-.list-bold {
-  font-weight: bold;
-  /*icône des couverts*/
-  .fa-utensils {
-    padding-right: 15px;
-    font-size: 20px;
-  }
-  /*icône des mains*/
-  .fa-hands-helping {
-    padding-right: 9px;
-    font-size: 20px;
+    .list-bold {
+      font-weight: normal;
+      /*icône des couverts*/
+      .fa-utensils {
+        padding-right: 15px;
+        font-size: 20px;
+      }
+      /*icône des mains*/
+      .fa-hands-helping {
+        padding-right: 9px;
+        font-size: 20px;
+      }
+    }
   }
 }
 
