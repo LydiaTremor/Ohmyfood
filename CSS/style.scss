@@ -205,7 +205,7 @@ Le header
       transition: loading spinner
 \*****************************************/
 
-/*.loading-spinner {
+.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -314,7 +314,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}*/
+}
 
 /********************************************/
 

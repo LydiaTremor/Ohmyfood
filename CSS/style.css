@@ -213,8 +213,15 @@
 /******************* Page menu : note ********************/
 /*********************** Le footer ***********************/
 @media screen and (max-width: 693px) {
-  .list-footer {
-    padding-right: 60px;
+  footer .list-footer {
+    font-size: 25px;
+  }
+  .list-bold .fa-utensils {
+    font-size: 15px;
+  }
+  .list-bold .fa-hands-helping {
+    padding-right: 9px;
+    font-size: 15px;
   }
 }
 
@@ -438,116 +445,192 @@ Le header
 /*****************************************\
       transition: loading spinner
 \*****************************************/
-/*.loading-spinner {
-  animation: hide 4s linear;
-  animation-fill-mode: forwards;
-  .loader {
-    margin: auto;
-    position: relative; 
-    top: 0;
-    bottom:0;
-    right: 0;
-    left: 0;
-  }
-  .circle {
-    border-radius: 50%;
-    border: 15px solid #fff;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-  }
-  .circle:after {
-    content:'';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 15px solid transparent;
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    opacity: 0.6;
-    animation: spin 1s linear 0s infinite;
-  }
-  .circle:before {
-    content:'';
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 8px solid transparent;
-    border-radius: 50%;
-    border-top-color: #ff9ff3;
-    opacity: 0.6;
-    animation: spin .6s linear 0s infinite;
-  }
+.loading-spinner {
+  -webkit-animation: hide 4s linear;
+          animation: hide 4s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-@keyframes hide {
+
+.loading-spinner .loader {
+  margin: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.loading-spinner .circle {
+  border-radius: 50%;
+  border: 15px solid #fff;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.loading-spinner .circle:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 15px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  opacity: 0.6;
+  -webkit-animation: spin 1s linear 0s infinite;
+          animation: spin 1s linear 0s infinite;
+}
+
+.loading-spinner .circle:before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  border-top-color: #ff9ff3;
+  opacity: 0.6;
+  -webkit-animation: spin .6s linear 0s infinite;
+          animation: spin .6s linear 0s infinite;
+}
+
+@-webkit-keyframes hide {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-  } 
+    opacity: 0;
+  }
 }
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-@keyframes spin-reverse {
+
+@-webkit-keyframes spin-reverse {
   0% {
-      transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-      transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
 .page {
   color: black;
-  animation: visible 6s linear -.6s;
+  -webkit-animation: visible 6s linear -.6s;
+          animation: visible 6s linear -.6s;
   opacity: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-@keyframes visible {
+
+@-webkit-keyframes visible {
   0% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   50% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   75% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   90% {
-      opacity: .8;
-      overflow: visible;
+    opacity: .8;
+    overflow: visible;
   }
   100% {
-      opacity: 1;
-      overflow: visible;
-  } 
-}*/
+    opacity: 1;
+    overflow: visible;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  50% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  75% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  90% {
+    opacity: .8;
+    overflow: visible;
+  }
+  100% {
+    opacity: 1;
+    overflow: visible;
+  }
+}
+
 /********************************************/
 /****Le logo****/
 /*La balise qui englobe l'image du logo*/
