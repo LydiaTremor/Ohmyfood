@@ -1,264 +1,12 @@
 @charset "UTF-8";
 /*********************Bibliothèques********************/
-/******************* Page d'accueil ********************/
-@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap");
-@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
-@media screen and (max-width: 1500px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 32%;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 34%;
-  }
-}
-
-@media screen and (max-width: 1175px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 36%;
-  }
-  .header-txt p {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
-
-@media screen and (max-width: 1020px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 38%;
-  }
-}
-
-@media screen and (max-width: 993px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 41%;
-  }
-  .header-txt p {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .bloc-restaurant > img {
-    height: 360px;
-  }
-}
-
-@media screen and (max-width: 940px) {
-  .button-header span {
-    font-size: 29px;
-  }
-  .functioning {
-    min-height: 560px;
-  }
-  .functioning button {
-    padding: 45px 25px 35px 0;
-    margin: 0 36px 35px 42px;
-    border-radius: 35px;
-  }
-  .functioning button span {
-    font-size: 29px;
-  }
-  .functioning button .fa-mobile-alt {
-    font-size: 35px;
-  }
-  .functioning button .fa-list-ul {
-    font-size: 35px;
-  }
-  .functioning button .fa-store {
-    font-size: 35px;
-  }
-}
-
-@media screen and (max-width: 860px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 43%;
-  }
-  .functioning button strong {
-    padding: 14px;
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 45%;
-  }
-  .header-txt h2 {
-    padding-left: 160px;
-    padding-right: 160px;
-    font-size: 40px;
-  }
-  .header-txt p {
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .functioning {
-    min-height: 550px;
-  }
-  .bloc-restaurant > img {
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 710px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 47%;
-  }
-  .header-txt h2 {
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-}
-
-@media screen and (max-width: 693px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 50%;
-  }
-  .button-header button {
-    padding: 30px 40px 30px 40px;
-  }
-  .button-header span {
-    font-size: 26px;
-  }
-  .functioning {
-    min-height: 470px;
-  }
-  .functioning button {
-    padding: 35px 20px 25px 0;
-    margin: 0 34px 35px 40px;
-    border-radius: 30px;
-  }
-  .functioning button span {
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width: 641px) {
-  .header-txt p {
-    padding-left: 35px;
-    padding-right: 35px;
-    font-size: 30px;
-  }
-  .header-txt h2 {
-    font-size: 38px;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .button-header span {
-    font-size: 24px;
-  }
-  .functioning button span {
-    font-size: 24px;
-  }
-  .functioning button strong {
-    padding: 12px;
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 557px) {
-  .header-txt h2 {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  /*La balise qui englobe l'image du logo*/
-  .logo-acc .image-omf {
-    width: 55%;
-  }
-  .button-header span {
-    font-size: 22px;
-  }
-  .functioning button span {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 507px) {
-  body {
-    width: 510px;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  .functioning {
-    min-height: 450px;
-  }
-  .color-functioning .functioning-title {
-    padding-top: 50px;
-    padding-bottom: 40px;
-  }
-}
-
-/******************* Page menu : francaise ********************/
-/******************* Page menu : delice ********************/
-/******************* Page menu : palette ********************/
-/******************* Page menu : note ********************/
-/*********************** Le footer ***********************/
-@media screen and (max-width: 693px) {
-  footer .list-footer {
-    font-size: 25px;
-  }
-  .list-bold .fa-utensils {
-    font-size: 15px;
-  }
-  .list-bold .fa-hands-helping {
-    padding-right: 9px;
-    font-size: 15px;
-  }
-}
-
 /*@function brightness {
     ()
 }*/
 /******************Polices d'écriture*******************/
-/*Police d'écriture à conserver 
-@font-face {
-  font-family: "Roboto";
-  src: url("roboto/Roboto-Black.ttf") format("ttf");
-  src: url("roboto/Roboto-BlackItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-Bold.ttf") format("ttf");
-  src: url("roboto/Roboto-BoldCondensed.ttf") format("ttf");
-  src: url("roboto/Roboto-BoldCondensedItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-BoldItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-Condensed.ttf") format("ttf");
-  src: url("roboto/Roboto-CondensedItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-Italic.ttf") format("ttf");
-  src: url("roboto/Roboto-Light.ttf") format("ttf");
-  src: url("roboto/Roboto-LightItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-Medium.ttf") format("ttf");
-  src: url("roboto/Roboto-MediumItalic.ttf") format("ttf");
-  src: url("roboto/Roboto-Regular.ttf") format("ttf");
-  src: url("roboto/Roboto-Thin.ttf") format("ttf");
-  src: url("roboto/Roboto-ThinItalic.ttf") format("ttf");
-  src: url("roboto/Roboto_Specimen_Book.pdf") format("ttf");
-}
-
-@font-face {
-  font-family: "Shrikhand";
-  src: url("shrikhand/Shrikhand-Regular.otf") format("otf");
-  src: url("shrikhand/shrikhand.ttf") format("ttf");
-}*/
+@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap");
+@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
 /**********************Variables************************/
-/*font-family : 'Shrikhand', cursif ;*/
-/*font-family : 'Roboto', sans-serif ;*/
 body {
   margin: 0;
   background-color: #ecedee;
@@ -274,12 +22,8 @@ body {
 \****************************/
 /*div des 2 icônes coeur de la page d'accueil*/
 .heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding-bottom: 70px;
   padding-right: 70px;
   padding-left: 70px;
@@ -287,14 +31,9 @@ body {
   /*Icône de coeur remplit*/
   /*Icône de coeur vide*/
 }
-
 .heart .fas.fa-heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   position: relative;
   color: white;
   font-size: 50px;
@@ -302,46 +41,32 @@ body {
   right: 5px;
   bottom: 0;
 }
-
 .heart .far.fa-heart {
   position: absolute;
   font-size: 60px;
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /*div des icônes coeur des pages menus*/
 .menu-heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding-top: 60px;
   padding-right: 60px;
+  padding-left: 60px;
   cursor: pointer;
   /*Icône de coeur vide*/
   /*Icône de coeur remplit*/
 }
-
 .menu-heart .far.fa-heart {
   position: absolute;
   font-size: 60px;
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .menu-heart .fas.fa-heart {
   position: relative;
   color: #ecedee;
@@ -351,54 +76,40 @@ body {
   bottom: 0;
 }
 
-/*Elément enfant : Icône de coeur remplit si je supprime les ligne 109 à 115*/
-/*.menu-heart > .fas.fa-heart {
-  position: relative;
-  color: $color-primary;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-}*/
 /*Transition de l'icône coeur au survol ou au clic de la souris*/
 .heart:hover > .fas.fa-heart {
-  -webkit-animation: heart-fill .7s linear;
-          animation: heart-fill .7s linear;
+  -webkit-animation: heart-fill 0.7s linear;
+          animation: heart-fill 0.7s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .heart:active > .fas.fa-heart {
   color: #FF79DA;
 }
 
 .menu-heart:hover > .fas.fa-heart {
-  -webkit-animation: heart-fill .7s linear;
-          animation: heart-fill .7s linear;
+  -webkit-animation: heart-fill 0.7s linear;
+          animation: heart-fill 0.7s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .menu-heart:active > .fas.fa-heart {
   color: #FF79DA;
 }
 
 @-webkit-keyframes heart-fill {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     color: #FF79DA;
-    opacity: .4;
+    opacity: 0.4;
   }
   55% {
-    -webkit-transform: scale(55%);
-            transform: scale(55%);
+    transform: scale(55%);
     color: #FF79DA;
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
-    -webkit-transform: scale(100%);
-            transform: scale(100%);
+    transform: scale(100%);
     color: #FF79DA;
     opacity: 1;
   }
@@ -406,37 +117,21 @@ body {
 
 @keyframes heart-fill {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     color: #FF79DA;
-    opacity: .4;
+    opacity: 0.4;
   }
   55% {
-    -webkit-transform: scale(55%);
-            transform: scale(55%);
+    transform: scale(55%);
     color: #FF79DA;
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
-    -webkit-transform: scale(100%);
-            transform: scale(100%);
+    transform: scale(100%);
     color: #FF79DA;
     opacity: 1;
   }
 }
-
-/*Voir avec mentor*/
-/*.fas.fa-heart {
-  position: relative;
-  color: white;
-  font-size: 50px;
-  top: 4px;
-  right: 5px;
-  bottom: 0;
-  &:hover {
-    animation: heart-fill .7s linear infinite; 
-  }
-}*/
 /*********************************************/
 /**************************************************************Accueil********************************************************/
 /********
@@ -445,207 +140,126 @@ Le header
 /*****************************************\
       transition: loading spinner
 \*****************************************/
-.loading-spinner {
-  -webkit-animation: hide 4s linear;
-          animation: hide 4s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.loading-spinner .loader {
-  margin: auto;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.loading-spinner .circle {
-  border-radius: 50%;
-  border: 15px solid #fff;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-.loading-spinner .circle:after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  border: 15px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  opacity: 0.6;
-  -webkit-animation: spin 1s linear 0s infinite;
-          animation: spin 1s linear 0s infinite;
-}
-
-.loading-spinner .circle:before {
-  content: '';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff9ff3;
-  opacity: 0.6;
-  -webkit-animation: spin .6s linear 0s infinite;
-          animation: spin .6s linear 0s infinite;
-}
-
-@-webkit-keyframes hide {
-  0% {
-    opacity: 1;
+/*.loading-spinner {
+  animation: hide 4s linear;
+  animation-fill-mode: forwards;
+  .loader {
+    margin: auto;
+    position: relative; 
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
   }
-  50% {
-    opacity: 1;
+  .circle {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
   }
-  100% {
-    opacity: 0;
+  .circle:after {
+    content:'';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 15px solid transparent;
+    border-radius: 50%;
+    border-top-color: #9356DC;
+    opacity: 0.6;
+    animation: spin 1s linear 0s infinite;
+  }
+  .circle:before {
+    content:'';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    border-top-color: #ff9ff3;
+    opacity: 0.6;
+    animation: spin .6s linear 0s infinite;
   }
 }
-
 @keyframes hide {
   0% {
-    opacity: 1;
+      opacity: 1;
   }
   50% {
-    opacity: 1;
+      opacity: 1;
   }
   100% {
-    opacity: 0;
-  }
+      opacity: 0;
+  } 
 }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }
-
-@-webkit-keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
 @keyframes spin-reverse {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+      transform: rotate(-360deg);
   }
 }
 
 .page {
   color: black;
-  -webkit-animation: visible 6s linear -.6s;
-          animation: visible 6s linear -.6s;
+  animation: visible 6s linear -.6s;
   opacity: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes visible {
-  0% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  50% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  75% {
-    opacity: 0;
-    overflow: hidden;
-  }
-  90% {
-    opacity: .8;
-    overflow: visible;
-  }
-  100% {
-    opacity: 1;
-    overflow: visible;
-  }
-}
-
 @keyframes visible {
   0% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   50% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   75% {
-    opacity: 0;
-    overflow: hidden;
+      opacity: 0;
+      overflow: hidden;
   }
   90% {
-    opacity: .8;
-    overflow: visible;
+      opacity: .8;
+      overflow: visible;
   }
   100% {
-    opacity: 1;
-    overflow: visible;
-  }
-}
-
+      opacity: 1;
+      overflow: visible;
+  } 
+}*/
 /********************************************/
 /****Le logo****/
 /*La balise qui englobe l'image du logo*/
 .logo-acc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: white;
   margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   /*L'image du logo*/
 }
-
 .logo-acc .image-omf {
   width: 30%;
   -o-object-fit: cover;
@@ -660,39 +274,28 @@ Le header
   cursor: pointer;
   /*Formulaire*/
 }
-
 .form-maps .bar-grey {
   background-color: #c9cbcd;
   height: 5px;
   width: 100%;
 }
-
 .form-maps form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   /*icône maps*/
   /*Le texte du formulaire*/
 }
-
 .form-maps form .fa-map-marker-alt {
   background-color: #d4d5d6;
   border: none 2px #d4d5d6;
   padding: 32px 14px 32px 14px;
   font-size: 25px;
 }
-
 .form-maps form .country {
   border: none;
   background-color: #d4d5d6;
   width: 100%;
-  /*padding: 15px 0 15px 0;*/
   padding: 30px 14px 30px 14px;
   font-family: "Roboto", sans-serif;
   font-size: 25px;
@@ -706,15 +309,13 @@ Le header
   text-align: center;
   /*Le h2 du header*/
 }
-
 .header-txt h2 {
   font-weight: bold;
-  font-family: "Shrikhand", cursif;
+  font-family: "Roboto", sans-serif;
   font-size: 43px;
   padding-left: 100px;
   padding-right: 100px;
 }
-
 .header-txt p {
   font-family: "Roboto", sans-serif;
   font-size: 35px;
@@ -724,23 +325,17 @@ Le header
 /****Le bouton****/
 /*Le 1er bouton du header*/
 .button-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 80px;
   /*Le bouton à l'intérieur de la class button-header*/
 }
-
 .button-header span {
   font-family: "Roboto", sans-serif;
   font-size: 33px;
   font-weight: bold;
 }
-
 .button-header button {
   padding: 35px 45px 35px 45px;
   border-radius: 50px;
@@ -748,17 +343,14 @@ Le header
   color: white;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  -webkit-box-shadow: 5px 5px 5px #A6A6A9;
-          box-shadow: 5px 5px 5px #A6A6A9;
+  box-shadow: 5px 5px 5px #A6A6A9;
   border: rgba(215, 59, 232, 0.9) 2px none;
   font-weight: bold;
   opacity: 0.7;
 }
-
 .button-header button:hover {
   background-color: rgba(215, 59, 232, 0.7);
-  -webkit-box-shadow: 5px 5px 5px #B5B6B9;
-          box-shadow: 5px 5px 5px #B5B6B9;
+  box-shadow: 5px 5px 5px #B5B6B9;
 }
 
 /********
@@ -770,9 +362,9 @@ Le contenu : les grands blocs
   background-color: white;
   /*Titre de la section Fonctionnement*/
 }
-
 .color-functioning .functioning-title {
   padding-left: 35px;
+  padding-right: 35px;
   padding-top: 80px;
   padding-bottom: 60px;
   font-size: 40px;
@@ -783,38 +375,28 @@ Le contenu : les grands blocs
 
 /*La div des 3 boutons de la section Fonctionnement*/
 .functioning {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /*justify-content: center;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-height: 600px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 630px;
   /*Le boutons de la section Fonctionnement x3*/
 }
-
 .functioning button {
-  margin: 0 36px 40px 42px;
+  margin: 0 35px 40px 35px;
   border-radius: 45px;
-  padding: 50px 30px 40px 0;
-  -webkit-box-shadow: 5px 5px 15px #cdcdcf;
-          box-shadow: 5px 5px 15px #cdcdcf;
+  padding: 50px 30px 50px 30px;
+  box-shadow: 5px 5px 15px #cdcdcf;
   border: #ecedee none 2px;
   cursor: pointer;
   /*icône d'un téléphone*/
   /*icône d'une liste*/
   /*icône d'une boutique*/
 }
-
 .functioning button span {
   font-weight: bold;
   font-size: 33px;
 }
-
 .functioning button strong {
   background-color: blueviolet;
   color: white;
@@ -823,54 +405,42 @@ Le contenu : les grands blocs
   padding: 17px;
   font-size: 27px;
   width: 15px;
+  /*peut-être à supprimer*/
   height: 15px;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: absolute;
-  -webkit-transform: translate(-45%, -18%);
-          transform: translate(-45%, -18%);
+  transform: translate(-150%, -18%);
   font-weight: normal;
 }
-
 .functioning button .fa-mobile-alt {
   padding-right: 40px;
+  padding-left: 40px;
   font-size: 40px;
   color: gray;
 }
-
 .functioning button .fa-list-ul {
   padding-right: 40px;
+  padding-left: 40px;
   font-size: 40px;
   color: gray;
 }
-
 .functioning button .fa-store {
   padding-right: 40px;
+  padding-left: 40px;
   font-size: 40px;
   color: blueviolet;
 }
-
 .functioning button:hover {
   background-color: rgba(236, 237, 238, 0.6);
-  -webkit-box-shadow: 5px 5px 5px #E6E7E9;
-          box-shadow: 5px 5px 5px #E6E7E9;
+  box-shadow: 5px 5px 5px #E6E7E9;
 }
 
 .align-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /****La section Restaurants****/
@@ -878,27 +448,22 @@ Le contenu : les grands blocs
   background-color: #ecedee;
   /*Le titre de la section Restaurant*/
 }
-
 .restaurant .restaurant-title {
   font-weight: bold;
-  padding: 60px 0 10px 35px;
+  padding: 60px 35px 10px 35px;
   font-size: 40px;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
-
 .restaurant .links-restaurant {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  /*à reprendre sur le responsive*/
+  padding-right: 30px;
+  /*à reprendre sur le responsive*/
 }
-
 .restaurant .links-restaurant a.bloc-restaurant {
   position: relative;
   text-decoration: none;
@@ -906,9 +471,8 @@ Le contenu : les grands blocs
 
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
-  margin: 25px 35px 35px 35px;
-  -webkit-box-shadow: 15px 15px 20px #CCCDD0;
-          box-shadow: 15px 15px 20px #CCCDD0;
+  margin: 25px 0 35px 0;
+  box-shadow: 15px 15px 20px #CCCDD0;
   cursor: pointer;
   width: 100%;
   border-radius: 25px;
@@ -918,7 +482,6 @@ Le contenu : les grands blocs
      object-fit: cover;
   /*L'image de la div x4*/
 }
-
 .bloc-restaurant .float-new {
   position: absolute;
   top: 25px;
@@ -932,67 +495,42 @@ Le contenu : les grands blocs
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
 }
-
 .bloc-restaurant img {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: 400px;
   border-radius: 25px 25px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .bloc-restaurant .restaurant-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-
 .bloc-restaurant .restaurant-text .txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-
 .bloc-restaurant .restaurant-text .txt h3 {
   color: black;
   font-weight: bold;
   font-size: 40px;
-  font-family: "Shrikhand", cursif;
-  padding: 20px 0 15px 45px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px 45px 15px 45px;
   margin: 0;
 }
-
 .bloc-restaurant .restaurant-text .txt p {
   color: black;
   font-weight: normal;
   font-size: 40px;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  padding: 0 0 35px 45px;
+  padding: 0 45px 35px 45px;
 }
 
 /******************************************************** Les menus ***********************************************************/
@@ -1000,55 +538,37 @@ Le contenu : les grands blocs
 Le header
 ********/
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: body-menus 3s linear -.8s infinite;
-          animation: body-menus 3s linear -.8s infinite;
+  align-items: center;
+  -webkit-animation: body-menus 3s linear -0.8s infinite;
+          animation: body-menus 3s linear -0.8s infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 .logo img .logo-menus {
   width: 30%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 20px 0 22px 0;
   margin-right: 0;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-grow: 3;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .logo button {
   border: white none 1px;
   background-color: white;
   cursor: pointer;
 }
-
 .logo button a {
   color: black;
   text-decoration: none;
 }
-
 .logo button a .fa-arrow-left {
   font-size: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 img.logo-menus {
@@ -1072,7 +592,6 @@ img.logo-menus {
     background-color: white;
   }
 }
-
 /********
 Le contenu : les grands blocs
 ********/
@@ -1080,8 +599,8 @@ Le contenu : les grands blocs
       transition: apparition des plats différée
 \*****************************************************/
 .delay-entrees {
-  -webkit-animation: bloc-primary .7s ease-out;
-          animation: bloc-primary .7s ease-out;
+  -webkit-animation: bloc-primary 0.7s ease-out;
+          animation: bloc-primary 0.7s ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -1089,33 +608,28 @@ Le contenu : les grands blocs
 
 @-webkit-keyframes bloc-primary {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes bloc-primary {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 .delay-meals {
-  -webkit-animation: bloc-second .7s ease-out 1s;
-          animation: bloc-second .7s ease-out 1s;
+  -webkit-animation: bloc-second 0.7s ease-out 1s;
+          animation: bloc-second 0.7s ease-out 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -1123,33 +637,28 @@ Le contenu : les grands blocs
 
 @-webkit-keyframes bloc-second {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes bloc-second {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 .delay-desserts {
-  -webkit-animation: bloc-ters .7s ease-out 2s;
-          animation: bloc-ters .7s ease-out 2s;
+  -webkit-animation: bloc-ters 0.7s ease-out 2s;
+          animation: bloc-ters 0.7s ease-out 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -1157,39 +666,30 @@ Le contenu : les grands blocs
 
 @-webkit-keyframes bloc-ters {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes bloc-ters {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 /*******************************************************/
 .img-resto-menu {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1200,25 +700,18 @@ Le contenu : les grands blocs
   position: relative;
   bottom: 135px;
 }
-
 .resto .menus {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
-
 .resto .menus h2 {
   font-size: 75px;
   font-weight: bold;
   font-family: "Shrikhand", cursif;
   padding-left: 30px;
+  padding-right: 30px;
   margin: 0;
   padding-top: 60px;
 }
@@ -1226,88 +719,55 @@ Le contenu : les grands blocs
 .resto h3 {
   font-size: 40px;
   font-weight: normal;
-  margin: 0 0 0 40px;
+  margin: 0 40px 0 40px;
   padding-bottom: 20px;
   border-bottom: 4px #99E2D0 solid;
-  font-family: "Shrikhand", cursif;
+  font-family: "Roboto", sans-serif;
   width: 10%;
   padding-top: 70px;
 }
 
 h4 {
   font-size: 37px;
-  font-family: "Shrikhand", cursif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 20px 0 10px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 20px 30px 10px 30px;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-
 .card .delay-entrees, .card .delay-meals, .card .delay-desserts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-
 .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
   margin: 25px;
   border-radius: 25px;
-  -webkit-box-shadow: 15px 15px 20px #CCCDD0;
-          box-shadow: 15px 15px 20px #CCCDD0;
+  box-shadow: 15px 15px 20px #CCCDD0;
   border: none 2px white;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
-
 .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   padding-bottom: 20px;
   padding-left: 30px;
+  padding-right: 30px;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 /******************************************************/
@@ -1315,28 +775,15 @@ h4 {
       transition: coches
 /*******************************/
 .check {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   cursor: pointer;
 }
-
 .check em {
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 55px;
   padding-right: 30px;
@@ -1345,25 +792,18 @@ h4 {
   font-style: normal;
   opacity: 1;
 }
-
 .check:hover > .fa-check-circle {
-  -webkit-animation: validation .7s ease;
-          animation: validation .7s ease;
+  -webkit-animation: validation 0.7s ease;
+          animation: validation 0.7s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .fa-check-circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #99E2D0;
   width: 120px;
   color: white;
@@ -1378,30 +818,25 @@ h4 {
 
 @-webkit-keyframes validation {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes validation {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 .check:hover > em {
   opacity: 0;
 }
@@ -1409,15 +844,10 @@ h4 {
 /*******************************************************/
 /****Le bouton commander****/
 .order-fr {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 60px;
 }
-
 .order-fr button {
   padding: 22px 68px 27px 68px;
   font-size: 30px;
@@ -1428,15 +858,12 @@ h4 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   border: rgba(215, 59, 232, 0.9) 2px none;
-  -webkit-box-shadow: 5px 5px 5px #A6A6A9;
-          box-shadow: 5px 5px 5px #A6A6A9;
+  box-shadow: 5px 5px 5px #A6A6A9;
   opacity: 0.7;
 }
-
 .order-fr button:hover {
   background-color: rgba(215, 59, 232, 0.7);
-  -webkit-box-shadow: 5px 5px 5px #B5B6B9;
-          box-shadow: 5px 5px 5px #B5B6B9;
+  box-shadow: 5px 5px 5px #B5B6B9;
 }
 
 /**************************************** Page menu : note *****************************************/
@@ -1446,12 +873,8 @@ h4 {
 
 .img-resto-menu {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1465,39 +888,36 @@ footer {
   /*Le nom du site*/
   /*La liste de la nav du footer*/
 }
-
 footer h1 {
   width: 30%;
   color: white;
-  padding: 30px 0 10px 50px;
+  padding: 30px 50px 10px 50px;
   font-family: "Shrikhand", cursif;
   font-style: italic;
   font-size: 40px;
   font-weight: bold;
 }
-
 footer .list-footer {
   list-style: none;
   line-height: 50px;
   margin: 0;
-  padding: 0 0 60px 50px;
+  padding: 0 50px 60px 50px;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
 }
-
 footer .list-footer .list-bold {
   font-weight: normal;
   /*icône des couverts*/
   /*icône des mains*/
 }
-
 footer .list-footer .list-bold .fa-utensils {
   padding-right: 15px;
+  padding-left: 15px;
   font-size: 20px;
 }
-
 footer .list-footer .list-bold .fa-hands-helping {
   padding-right: 9px;
+  padding-left: 9px;
   font-size: 20px;
 }
 
@@ -1505,4 +925,482 @@ footer .list-footer .list-bold .fa-hands-helping {
   text-decoration: none;
   color: white;
 }
-/*# sourceMappingURL=style.css.map */
+
+/**************************************************************************************************
+***********************************************************************************************************
+**********************************************************************************************************/
+@media screen and (min-width: 280px) {
+  body {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 300px) {
+  /************************** Le logo ************************/
+  .logo-acc .image-omf {
+    width: 55%;
+  }
+
+  /************************* Formulaire ***************************/
+  .form-maps form .fa-map-marker-alt {
+    padding: 21px 14px 21px 14px;
+    font-size: 22px;
+  }
+  .form-maps form .country {
+    padding: 20px 14px 18px 14px;
+    font-size: 22px;
+  }
+
+  /*********************** Texte de présentation ***************************/
+  .header-txt h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    line-height: 27px;
+    font-size: 35px;
+  }
+  .header-txt p {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 27px;
+  }
+
+  /*********************** Boutons de recherche ******************************/
+  .button-header {
+    padding-top: 15px;
+    padding-bottom: 70px;
+  }
+  .button-header span {
+    font-size: 22px;
+  }
+  .button-header button {
+    padding: 20px 20px 20px 20px;
+  }
+
+  /******************** Fonctionnement ************************/
+  .color-functioning .functioning-title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 33px;
+  }
+
+  .functioning {
+    min-height: 415px;
+  }
+  .functioning button {
+    padding: 20px;
+    border-radius: 30px;
+    margin: 0 35px 30px 35px;
+  }
+  .functioning button span {
+    font-size: 22px;
+  }
+  .functioning button strong {
+    padding: 12px;
+    font-size: 22px;
+    transform: translate(-90%, 10%);
+  }
+  .functioning button .fa-mobile-alt {
+    padding-right: 10px;
+    font-size: 30px;
+  }
+  .functioning button .fa-list-ul {
+    padding-right: 10px;
+    font-size: 30px;
+  }
+  .functioning button .fa-store {
+    padding-right: 10px;
+    font-size: 30px;
+  }
+
+  /************************** Restaurant **************************/
+  .restaurant .restaurant-title {
+    font-size: 33px;
+  }
+  .restaurant .links-restaurant {
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .bloc-restaurant {
+    margin: 25px 0 35px 0;
+    width: 90%;
+  }
+  .bloc-restaurant img {
+    height: 300px;
+  }
+  .bloc-restaurant .float-new {
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+  }
+  .bloc-restaurant .restaurant-text .txt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bloc-restaurant .restaurant-text .txt h3 {
+    font-size: 33px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bloc-restaurant .restaurant-text .txt p {
+    font-size: 33px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /********************* Transition du coeur ***********************/
+  .heart {
+    padding: 0 20px 20px 20px;
+  }
+  .heart .fas.fa-heart {
+    font-size: 30px;
+  }
+  .heart .far.fa-heart {
+    font-size: 40px;
+  }
+
+  /*************************** Le footer **************************/
+  footer .list-footer {
+    font-size: 25px;
+    padding: 0 30px 60px 30px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 15px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    width: 600px;
+  }
+
+  /************************* Formulaire ***************************/
+  .form-maps form .fa-map-marker-alt {
+    font-size: 25px;
+  }
+  .form-maps form .country {
+    font-size: 25px;
+  }
+
+  /*********************** Texte de présentation ***************************/
+  .header-txt h2 {
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: normal;
+    font-size: 43px;
+  }
+  .header-txt p {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 35px;
+    line-height: normal;
+  }
+
+  /*********************** Boutons de recherche ******************************/
+  .button-header {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+  .button-header span {
+    font-size: 27px;
+  }
+  .button-header button {
+    padding: 25px;
+  }
+
+  /******************** Fonctionnement ************************/
+  .color-functioning .functioning-title {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-size: 40px;
+  }
+
+  .functioning {
+    min-height: 540px;
+  }
+  .functioning button {
+    padding: 40px 30px 40px 30px;
+    border-radius: 35px;
+    margin: 0 35px 40px 35px;
+  }
+  .functioning button span {
+    font-size: 30px;
+  }
+  .functioning button strong {
+    padding: 17px;
+    font-size: 27px;
+    transform: translate(-90%, 10%);
+  }
+  .functioning button .fa-mobile-alt {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 40px;
+  }
+  .functioning button .fa-list-ul {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 35px;
+  }
+  .functioning button .fa-store {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 35px;
+  }
+
+  /************************** Restaurant **************************/
+  .restaurant .restaurant-title {
+    font-size: 40px;
+  }
+  .restaurant .links-restaurant {
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .bloc-restaurant {
+    margin: 25px 0 35px 0;
+    width: 95%;
+  }
+  .bloc-restaurant img {
+    height: 300px;
+  }
+  .bloc-restaurant .float-new {
+    padding: 10px 20px 10px 20px;
+    font-size: 30px;
+  }
+  .bloc-restaurant .restaurant-text .txt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bloc-restaurant .restaurant-text .txt h3 {
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bloc-restaurant .restaurant-text .txt p {
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /********************* Transition du coeur ***********************/
+  .heart {
+    padding: 0 30px 20px 30px;
+  }
+  .heart .fas.fa-heart {
+    font-size: 40px;
+  }
+  .heart .far.fa-heart {
+    font-size: 50px;
+  }
+
+  /*************************** Le footer **************************/
+  footer .list-footer {
+    font-size: 30px;
+    padding: 0 40px 60px 40px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 20px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  /************************* Formulaire ***************************/
+  .form-maps form .fa-map-marker-alt {
+    padding: 26px 14px 26px 14px;
+    font-size: 25px;
+  }
+  .form-maps form .country {
+    padding: 24px 14px 24px 14px;
+    font-size: 25px;
+  }
+
+  /*********************** Texte de présentation ***************************/
+  .header-txt h2 {
+    font-size: 43px;
+  }
+  .header-txt p {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 35px;
+  }
+
+  /*********************** Boutons de recherche ******************************/
+  .button-header span {
+    font-size: 30px;
+  }
+  .button-header button {
+    padding: 30px 40px 30px 40px;
+  }
+
+  /******************** Fonctionnement ************************/
+  .functioning button strong {
+    transform: translate(-100%, 0%);
+  }
+  .functioning button span {
+    font-size: 30px;
+  }
+  .functioning button .fa-mobile-alt {
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 40px;
+  }
+  .functioning button .fa-list-ul {
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 40px;
+  }
+  .functioning button .fa-store {
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 40px;
+  }
+
+  /************************** Restaurant **************************/
+  .restaurant .links-restaurant {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .bloc-restaurant {
+    width: 100%;
+  }
+  .bloc-restaurant img {
+    height: 330px;
+  }
+
+  /********************* Transition du coeur ***********************/
+  .heart {
+    padding: 0 50px 20px 50px;
+  }
+  .heart .fas.fa-heart {
+    font-size: 50px;
+  }
+  .heart .far.fa-heart {
+    font-size: 60px;
+  }
+
+  /*************************** Le footer **************************/
+  footer .list-footer {
+    padding: 0 50px 60px 50px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 20px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .logo-acc .image-omf {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 800px) {
+  /************************** Le logo ************************/
+  .logo-acc .image-omf {
+    width: 40%;
+  }
+
+  /************************* Formulaire ***************************/
+  .form-maps form .fa-map-marker-alt {
+    padding: 32px 14px 32px 14px;
+  }
+  .form-maps form .country {
+    padding: 30px 14px 30px 14px;
+  }
+
+  /******************** Fonctionnement ************************/
+  .functioning button span {
+    font-size: 33px;
+  }
+
+  /************************** Restaurant **************************/
+  .restaurant .links-restaurant {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .bloc-restaurant {
+    width: 100%;
+  }
+  .bloc-restaurant img {
+    height: 400px;
+  }
+  .bloc-restaurant .float-new {
+    padding: 14px 25px 14px 25px;
+    font-size: 35px;
+  }
+
+  /********************* Transition du coeur ***********************/
+  .heart {
+    padding: 0 70px 20px 70px;
+  }
+}
+@media screen and (min-width: 900px) {
+  /************************** Le logo ************************/
+  .logo-acc .image-omf {
+    width: 35%;
+  }
+
+  /******************** Fonctionnement ************************/
+  .functioning {
+    min-height: 630px;
+  }
+  .functioning button {
+    border-radius: 40px;
+    padding: 50px 30px 50px 30px;
+  }
+  .functioning button strong {
+    transform: translate(-100%, 0%);
+  }
+
+  /************************** Restaurant **************************/
+  bloc-restaurant .float-new {
+    padding: 17px 30px 17px 30px;
+    font-size: 40px;
+  }
+
+  /********************* Transition du coeur ***********************/
+  .heart {
+    padding: 0 70px 30px 70px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1800px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /************************** Le logo ************************/
+  .logo-acc .image-omf {
+    width: 30%;
+  }
+}
+/*.button-header {
+    span { 
+      font-size: 33px;
+    }
+    button { 
+      padding: 35px 45px 35px 45px;
+    }
+  }*//*# sourceMappingURL=style.css.map */
