@@ -1,8 +1,15 @@
 /*********************Bibliothèques********************/
 @import "libs/mixins.scss";
-@import "libs/responsive.scss";
 @import "libs/fonctions.scss";
-
+@mixin logo-images {
+  width: 35%;
+  object-fit: cover;
+  padding: 20px 0 22px 0;
+}
+@mixin logo-mixin {
+  display: flex;
+  background-color: white;
+}
 
 /******************Polices d'écriture*******************/
 @import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap');
@@ -156,7 +163,7 @@ Le header
       transition: loading spinner
 \*****************************************/
 
-/*.loading-spinner {
+.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -265,7 +272,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}*/
+}
 
 /********************************************/
 
@@ -586,6 +593,7 @@ Le header
 
 img.logo-menus {
   padding: 10px 0 22px 0;
+  width: 30%;
 }
 
 @keyframes body-menus {
@@ -604,7 +612,7 @@ Le contenu : les grands blocs
 /*****************************************************\
       transition: apparition des plats différée
 \*****************************************************/
-.delay-entrees {
+/*.delay-entrees {
   animation: bloc-primary .7s ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -650,7 +658,7 @@ Le contenu : les grands blocs
     transform: translateX(0);
     opacity: 1;
   }
-}
+}*/
 /*******************************************************/
 .img-resto-menu {
   width: 100%;
@@ -893,604 +901,85 @@ footer {
 /**************************************************************************************************
 ***********************************************************************************************************
 **********************************************************************************************************/
-@media screen and (min-width: 280px) { 
+
+@media screen and (min-width: 280px) and (max-width: 400px) { 
 
   body {
-    width: 400px;
-  }
-}
-
-@media screen and (min-width: 300px) { 
-
-  /************************** Le logo ************************/
-  .logo-acc .image-omf {
-      width: 55%;
+    width: 550px;
   }
 
-  /************************* Formulaire ***************************/
-  .form-maps {
-    form {
-      .fa-map-marker-alt {
-        padding: 21px 14px 21px 14px;
-        font-size: 22px;
-      }
-      .country {
-        padding: 20px 14px 18px 14px;
-        font-size: 22px;
-      }
-    }
-  }
-
-  /*********************** Texte de présentation ***************************/
-
-  .header-txt  {
-    h2 { 
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-bottom: 30px;
-      margin-top: 50px;
-      line-height: 27px;
-      font-size: 35px;
-    }
-    p {
-      padding-left: 30px;
-      padding-right: 30px;
-      font-size: 28px;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      line-height: 27px;
-    }
-  }
-
-  /*********************** Boutons de recherche ******************************/
-
-  .button-header {
-    padding-top: 15px;
-    padding-bottom: 70px;
-    span { 
-      font-size: 22px;
-    }
-    button { 
-      padding: 20px 20px 20px 20px;
-    }
-  }
-    
-  /******************** Fonctionnement ************************/
+  /***************************** Le logo *****************************/
   
-  .color-functioning .functioning-title {
-    padding-top: 50px;
-    padding-bottom: 40px;
-    font-size: 33px;
+  img.logo-menus {
+    padding: 10px 0 22px 0;
+    width: 30%;
   }
 
-  .functioning {
-    min-height: 415px;
-    button {
-      padding: 20px;
-      border-radius: 30px;
-      margin: 0 35px 30px 35px;
-      span {
-        font-size: 22px;
-      }
-      strong {
-        padding: 12px;
-        font-size: 22px;
-        transform: translate(-90%, 10%);
-      }
-      .fa-mobile-alt {
-        padding-right: 10px;
-        font-size: 30px;
-      }
-      .fa-list-ul {
-        padding-right: 10px;
-        font-size: 30px;
-      }
-      .fa-store {
-        padding-right: 10px;
-        font-size: 30px;
+  /*********************** Menu ***********************/
+
+  .resto {
+    bottom: 90px;
+    .menus {
+      h2 {
+        font-size: 50px;
       }
     }
   }
 
-  /************************** Restaurant **************************/
-
-  .restaurant {
-    .restaurant-title { 
-      font-size: 33px;
+  .menu-heart {
+    .far.fa-heart {
+      font-size: 40px;
     }
-    .links-restaurant { 
+    .fas.fa-heart {
+      font-size: 30px;
+    }
+  }
+
+  /************* ENTREES - PLATS - DESSERTS **************/
+
+  .resto h3 {
+    font-size: 30px;
+  }
+  
+  h4 {
+    font-size: 27px;
+    padding: 20px 30px 10px 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .card { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .delay-entrees,.delay-meals,.delay-desserts {
+      display: flex;
       justify-content: center;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  .bloc-restaurant {
-    margin: 25px 0 35px 0;
-    width: 90%;
-    img {
-      height: 300px;
-    }
-    .float-new {
-      padding: 10px 20px 10px 20px;
-      font-size: 20px;
-    }
-    .restaurant-text {
-      .txt {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        h3 {
-          font-size: 33px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+      flex-direction: column;
+      flex-wrap: wrap;
+      button {
+        margin: 25px;
+        border-radius: 25px;
+        box-shadow: $dark-shadow;
+        border: none 2px white;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
         p {
-          font-size: 33px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-  }
-
-  /********************* Transition du coeur ***********************/
-
-  .heart {
-    padding: 0 20px 20px 20px;
-    .fas.fa-heart {
-      font-size: 30px;
-    }
-    .far.fa-heart {
-      font-size: 40px;
-    }
-  }
-
-  /*************************** Le footer **************************/
-
-  footer { 
-    .list-footer {
-      font-size: 25px;
-      padding: 0 30px 60px 30px;
-      .list-bold { 
-        .fa-utensils {
-          font-size: 15px;
-        }
-        .fa-hands-helping {
-          font-size: 15px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 400px) { 
-
-  body {
-    width: 600px;
-  }
-
-  /************************* Formulaire ***************************/
-  .form-maps {
-    form {
-      .fa-map-marker-alt {
-        font-size: 25px;
-      }
-      .country {
-        font-size: 25px;
-      }
-    }
-  }
-
-  /*********************** Texte de présentation ***************************/
-
-  .header-txt  {
-    h2 { 
-      padding-left: 100px;
-      padding-right: 100px;
-      line-height: normal;
-      font-size: 43px;
-    }
-    p {
-      padding-left: 35px;
-      padding-right: 35px;
-      font-size: 35px;
-      line-height: normal;
-    }
-  }
-
-  /*********************** Boutons de recherche ******************************/
-
-  .button-header {
-    padding-top: 20px;
-    padding-bottom: 80px;
-    span { 
-      font-size: 27px;
-    }
-    button { 
-      padding: 25px;
-    }
-  }
-    
-  /******************** Fonctionnement ************************/
-
-  .color-functioning .functioning-title {
-    padding-top: 80px;
-    padding-bottom: 60px;
-    font-size: 40px;
-  }
-
-  .functioning {
-    min-height: 540px;
-    button {
-      padding: 40px 30px 40px 30px;
-      border-radius: 35px;
-      margin: 0 35px 40px 35px;
-      span {
-        font-size: 30px;
-      }
-      strong {
-        padding: 17px;
-        font-size: 27px;
-        transform: translate(-90%, 10%);
-      }
-      .fa-mobile-alt {
-        padding-right: 30px;
-        padding-left: 30px;
-        font-size: 40px;
-      }
-      .fa-list-ul {
-        padding-right: 30px;
-        padding-left: 30px;
-        font-size: 35px;
-      }
-      .fa-store {
-        padding-right: 30px;
-        padding-left: 30px;
-        font-size: 35px;
-      }
-    }
-  }
-
-  /************************** Restaurant **************************/
-
-  .restaurant {
-    .restaurant-title { 
-      font-size: 40px;
-    }
-    .links-restaurant { 
-      justify-content: center;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  .bloc-restaurant {
-    margin: 25px 0 35px 0;
-    width: 95%;
-    img {
-      height: 300px;
-    }
-    .float-new {
-      padding: 10px 20px 10px 20px;
-      font-size: 30px;
-    }
-    .restaurant-text {
-      .txt {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        h3 {
-          font-size: 40px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        p {
-          font-size: 40px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-  }
-
-  /********************* Transition du coeur ***********************/
-
-  .heart {
-    padding: 0 30px 20px 30px;
-    .fas.fa-heart {
-      font-size: 40px;
-    }
-    .far.fa-heart {
-      font-size: 50px;
-    }
-  }
-
-  /*************************** Le footer **************************/
-
-  footer { 
-    .list-footer {
-      font-size: 30px;
-      padding: 0 40px 60px 40px;
-      .list-bold { 
-        .fa-utensils {
+          font-family: $police-second;
           font-size: 20px;
+          padding-bottom: 20px;
+          padding-left: 30px;
+          padding-right: 30px;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
         }
-        .fa-hands-helping {
-          font-size: 20px;
-        }
       }
-    }
-  }
-
-}
-
-@media screen and (min-width: 400px) and (max-width: 600px) {
-
-  /************************* Formulaire ***************************/
-  .form-maps {
-    form {
-      .fa-map-marker-alt {
-        padding: 26px 14px 26px 14px;
-        font-size: 25px;
-      }
-      .country {
-        padding: 24px 14px 24px 14px;
-        font-size: 25px;
-      }
-    }
-  }
-
-  /*********************** Texte de présentation ***************************/
-
-  .header-txt  {
-    h2 { 
-      font-size: 43px;
-    }
-    p {
-      padding-left: 30px;
-      padding-right: 30px;
-      font-size: 35px;
-    }
-  }
-
-  /*********************** Boutons de recherche ******************************/
-
-  .button-header {
-    span { 
-      font-size: 30px;
-    }
-    button { 
-      padding: 30px 40px 30px 40px;
-    }
-  }
-    
-  /******************** Fonctionnement ************************/
-
-  .functioning {
-    button {
-      strong {
-        transform: translate(-100%, 0%);
-      }
-      span {
-        font-size: 30px;
-      }
-      .fa-mobile-alt {
-        padding-right: 40px;
-        padding-left: 40px;
-        font-size: 40px;
-      }
-      .fa-list-ul {
-        padding-right: 40px;
-        padding-left: 40px;
-        font-size: 40px;
-      }
-      .fa-store {
-        padding-right: 40px;
-        padding-left: 40px;
-        font-size: 40px;
-      }
-    }
-  }
-
-  /************************** Restaurant **************************/
-
-  .restaurant {
-    .links-restaurant { 
-      padding-right: 30px;
-      padding-left: 30px;
     }
   }
   
-  .bloc-restaurant {
-    width: 100%;
-    img {
-      height: 330px;
-    }
-  }
-
-  /********************* Transition du coeur ***********************/
-
-  .heart {
-    padding: 0 50px 20px 50px;
-    .fas.fa-heart {
-      font-size: 50px;
-    }
-    .far.fa-heart {
-      font-size: $size-heart;
-    }
-  }
-
-  /*************************** Le footer **************************/
-
-  footer { 
-    .list-footer {
-      padding: 0 50px 60px 50px;
-      .list-bold { 
-        .fa-utensils {
-          font-size: 20px;
-        }
-        .fa-hands-helping {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px) { 
-
-  body {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 700px) {
-
-  .logo-acc .image-omf {
-    width: 45%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-
-  /************************** Le logo ************************/
-
-  .logo-acc .image-omf {
-    width: 40%;
-  }
-
-  /************************* Formulaire ***************************/
-
-  .form-maps {
-    form {
-      .fa-map-marker-alt {
-        padding: 32px 14px 32px 14px;
-      }
-      .country {
-        padding: 30px 14px 30px 14px;
-      }
-    }
-  }
-
-  /******************** Fonctionnement ************************/
-
-  .functioning {
-    button {
-      span {
-        font-size: 33px;
-      }
-    }
-  }
-
-  /************************** Restaurant **************************/
-
-  .restaurant {
-    .links-restaurant { 
-      padding-right: 30px;
-      padding-left: 30px;
-    }
-  }
-  
-  .bloc-restaurant {
-    width: 100%;
-    img {
-      height: 400px;
-    }
-    .float-new {
-      padding: 14px 25px 14px 25px;
-      font-size: 35px;
-    }
-  }
-
-  /********************* Transition du coeur ***********************/
-
-  .heart {
-    padding: 0 70px 20px 70px;
-  }
-
-}
-
-@media screen and (min-width: 900px) {
-
-  /************************** Le logo ************************/
-
-  .logo-acc .image-omf {
-    width: 35%;
-  }
-
-  /******************** Fonctionnement ************************/
-
-  .functioning {
-    min-height: 630px;
-    button {
-      border-radius: 40px;
-      padding: 50px 30px 50px 30px;
-      strong {
-        transform: translate(-100%, 0%);
-      }
-    }
-  }
-
-  /************************** Restaurant **************************/
-
-  bloc-restaurant {
-    .float-new {
-      padding: 17px 30px 17px 30px;
-      font-size: 40px;
-    }
-  }
-
-  /********************* Transition du coeur ***********************/
-
-  .heart {
-    padding: 0 70px 30px 70px;
-  }
-  
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1800px) { 
-
-  body {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-
-  /*********************** Texte de présentation ***************************/
-
-  /*N'a pas fonctionné*/
-  .header-txt  {
-    p {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
-   /*********************** Boutons de recherche ******************************/
-
-   /***N'a pas fonctionné***/
-   .button-header {
-      span { 
-        font-size: 33px;
-      }
-      button { 
-        padding: 35px 45px 35px 45px;
-      }
-    }
-}
-
-@media screen and (min-width: 1300px) {
-
-  /***N'a pas fonctionné***/
-  .functioning {
-    button {
-      border-radius: 45px;
-    }
-  }
 }
