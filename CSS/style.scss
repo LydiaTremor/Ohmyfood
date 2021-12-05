@@ -30,7 +30,7 @@ $light-shadow: 5px 5px 5px #E6E7E9;
 $dark-shadow: 15px 15px 20px #CCCDD0;
 $light-shadow-violet: 5px 5px 5px #B5B6B9;
 $dark-shadow-violet: 5px 5px 5px #A6A6A9;
-$size-heart: 60px;
+$size-heart: 40px;
 $police-primary:'Shrikhand', cursif; 
 $police-second:'Roboto', sans-serif; 
 
@@ -51,9 +51,9 @@ body {
 .heart {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 30px;
-  padding-right: 70px;
-  padding-left: 70px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   cursor: pointer;
   /*Icône de coeur remplit*/
   .fas.fa-heart {
@@ -61,15 +61,15 @@ body {
     justify-content: flex-end;
     position: relative;
     color: white;
-    font-size: 50px;
+    font-size: 12px;
     top: 4px;
-    right: 5px;
+    right: 3px;
     bottom: 0;
   }
   /*Icône de coeur vide*/
   .far.fa-heart {
     position: absolute;
-    font-size: $size-heart;
+    font-size: 21px;
     color: black;
     display: flex;
     justify-content: flex-end;
@@ -113,7 +113,7 @@ body {
   }
   &:active {
     & > .fas.fa-heart {
-      color: #FF79DA;  
+      color: $color-button;  
     }
   }
 }
@@ -127,7 +127,7 @@ body {
   }
   &:active {
     & > .fas.fa-heart {
-      color: #FF79DA;  
+      color: $color-button;  
     }
   }
 }
@@ -135,17 +135,17 @@ body {
 @keyframes heart-fill {
   0% {
       transform: scale(0);
-      color: #FF79DA;
+      color: $color-button;
       opacity: .4;
   }
   55% {
       transform: scale(55%);
-      color: #FF79DA;
+      color: $color-button;
       opacity: .7;
   }
   100% {
       transform: scale(100%);
-      color: #FF79DA;
+      color: $color-button;
       opacity: 1;
   }
 }
@@ -163,7 +163,7 @@ Le header
       transition: loading spinner
 \*****************************************/
 
-.loading-spinner {
+/*.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -272,10 +272,10 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}
+}*/
 
 /********************************************/
-
+/*** 598px*****/
 /****Le logo****/
 
 /*La balise qui englobe l'image du logo*/
@@ -285,7 +285,10 @@ Le header
   justify-content: center;
   /*L'image du logo*/
   .image-omf {
-    @include logo-images;
+    /*@include logo-images;*/
+    width: 41%;
+    object-fit: cover;
+    padding: 8px 0 9px 0;
   }
 }
 
@@ -297,7 +300,7 @@ Le header
   cursor: pointer;
   .bar-grey {
     background-color: #c9cbcd;
-    height: 5px;
+    height: 3px;
     width: 100%;
   }
   /*Formulaire*/
@@ -309,17 +312,17 @@ Le header
     .fa-map-marker-alt {
       background-color: $color-second;
       border: none 2px $color-second;
-      padding: 32px 14px 32px 14px;
-      font-size: 25px;
+      padding: 12px;
+      font-size: 13px;
     }
     /*Le texte du formulaire*/
     .country {
       border: none;
       background-color: $color-second;
       width: 100%;
-      padding: 30px 14px 30px 14px;
+      padding: 11px;
       font-family: $police-second;
-      font-size: 25px;
+      font-size: 13px;
       font-weight: bold;
       color: black;
     }
@@ -335,14 +338,21 @@ Le header
   h2 {
     font-weight: bold;
     font-family: $police-second;
-    font-size: 43px;
-    padding-left: 100px;
-    padding-right: 100px;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin: 0;
   }
   p {
     font-family: $police-second;
-    font-size: 35px;
+    font-size: 15px;
     font-weight: normal;
+    margin: 0;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -352,16 +362,16 @@ Le header
 .button-header {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 47px;
   span {
     font-family: $police-second;
-    font-size: 33px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: normal;
+    /*letter-spacing: .1rem;*/
   }
   /*Le bouton à l'intérieur de la class button-header*/
   button {
-    padding: 35px 45px 35px 45px;
+    padding: 12px 22px 12px 22px;
     border-radius: 50px;
     background-color: $color-button;
     color: white;
@@ -391,9 +401,9 @@ Le contenu : les grands blocs
   .functioning-title {
     padding-left: 35px;
     padding-right: 35px;
-    padding-top: 80px;
-    padding-bottom: 60px;
-    font-size: 40px;
+    padding-top: 40px;
+    padding-bottom: 23px;
+    font-size: 19px;
     font-family: $police-second;
     font-weight: bold;
     margin: 0;
@@ -403,57 +413,59 @@ Le contenu : les grands blocs
 /*La div des 3 boutons de la section Fonctionnement*/
 .functioning {
   display: flex;
-  /*justify-content: center;*/
   flex-direction: column;
   flex-wrap: wrap;
-  min-height: 630px;
+  min-height: 270px;
   /*Le boutons de la section Fonctionnement x3*/
   button {
-    margin: 0 35px 40px 35px;
-    border-radius: 45px;
-    padding: 50px 30px 50px 30px;
+    margin: 0 20px 20px 20px;
+    border-radius: 18px;
+    padding: 21px 0 21px 0;
     box-shadow: 5px 5px 15px #cdcdcf;
     border: $color-primary none 2px;
     cursor: pointer;
+    justify-content: flex-start;
     span {
       font-weight: bold;
-      font-size: 33px;
+      font-size: 13px;
     }
     strong {
       background-color: blueviolet;
       color: white;
       border: blueviolet 1px none;
       border-radius: 50%;
-      padding: 17px;
-      font-size: 27px;
+      padding: 2px;
+      font-size: 10px;
       width: 15px; /*peut-être à supprimer*/
       height: 15px;
       margin: 0;
       display: flex;
       align-items: center;
       position: absolute;
-      transform: translate(-150%, -18%);
+      transform: translate(-49%, -13%);
       font-weight: normal;
+      display: flex;
+      justify-content: center;
     }
     /*icône d'un téléphone*/
     .fa-mobile-alt {
-      padding-right: 40px;
-      padding-left: 40px;
-      font-size: 40px;
+      padding-right: 20px;
+      padding-left: 30px;
+      font-size: 15px;
       color: gray;
     }
     /*icône d'une liste*/
     .fa-list-ul {
-      padding-right: 40px;
-      padding-left: 40px;
-      font-size: 40px;
+      padding-right: 20px;
+      padding-left: 30px;
+      font-size: 15px;
       color: gray;
     }
     /*icône d'une boutique*/
     .fa-store {
-      padding-right: 40px;
-      padding-left: 40px;
-      font-size: 40px;
+      padding-right: 20px;
+      padding-left: 30px;
+      font-size: 12px;
       color: blueviolet;
     }
     &:hover {
@@ -466,7 +478,6 @@ Le contenu : les grands blocs
 .align-button {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 /****La section Restaurants****/
@@ -476,8 +487,8 @@ Le contenu : les grands blocs
   /*Le titre de la section Restaurant*/
   .restaurant-title {
     font-weight: bold;
-    padding: 60px 35px 10px 35px;
-    font-size: 40px;
+    padding: 45px 20px 15px 20px;
+    font-size: 19px;
     font-family: $police-second;
     margin: 0;
   }
@@ -485,8 +496,8 @@ Le contenu : les grands blocs
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 30px; /*à reprendre sur le responsive*/
-    padding-right: 30px;  /*à reprendre sur le responsive*/
+    padding-left: 15px; 
+    padding-right: 15px;  
     a.bloc-restaurant {
       position: relative;
       text-decoration: none;
@@ -496,25 +507,25 @@ Le contenu : les grands blocs
 
 /*Une div : l'image, le h3, le texte, le flottant et les logo x4*/
 .bloc-restaurant {
-  margin: 25px 0 35px 0;
+  margin: 0 0 14px 0;
   box-shadow: $dark-shadow;
   cursor: pointer;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
   border: white 2px none;
   background-color: white;
   object-fit: cover;
   .float-new {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 10px;
+    right: 10px;
     border: #99E2D0 2px none;
     background-color: #99E2D0;
     color: forestgreen;
-    padding: 17px 30px 17px 30px;
+    padding: 6px 11px 6px 11px;
     font-weight: bold;
-    font-size: 40px;
-    border-radius: 5px;
+    font-size: 10px;
+    border-radius: 3px;
     font-family: $police-second;
   }
   /*L'image de la div x4*/
@@ -522,8 +533,8 @@ Le contenu : les grands blocs
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 400px;
-    border-radius: 25px 25px 0 0;
+    height: 140px;
+    border-radius: 15px 15px 0 0;
     object-fit: cover;
   }
   .restaurant-text {
@@ -539,18 +550,18 @@ Le contenu : les grands blocs
       h3 {
         color: black;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 15px;
         font-family: $police-second;
-        padding: 20px 45px 15px 45px;
+        padding: 13px 10px 3px 10px;
         margin: 0;
       }
       p {
         color: black;
         font-weight: normal;
-        font-size: 40px;
+        font-size: 14px;
         margin: 0;
         font-family: $police-second;
-        padding: 0 45px 35px 45px;
+        padding: 0 10px 12px 10px;
       }
     }
   }
@@ -856,38 +867,38 @@ footer {
   background-color: #313339;
   color: white;
   width: 100%;
-  min-height: 235px;
+  margin-top: 40px;
   /*Le nom du site*/
   h1 {
-    width: 30%;
     color: white;
-    padding: 30px 50px 10px 50px;
+    padding: 15px 20px 12px 20px;
     font-family: $police-primary;
     font-style: italic;
-    font-size: 40px;
+    font-size: 17px;
+    letter-spacing: 1px;
     font-weight: bold;
+    margin: 0;
   }
   /*La liste de la nav du footer*/
   .list-footer {
     list-style: none;
-    line-height: 50px;
+    line-height: 22px;
     margin: 0;
-    padding: 0 50px 60px 50px;
-    font-size: 30px;
+    padding: 0 20px 25px 20px;
+    font-size: 13px;
     font-family: $police-second;
+    letter-spacing: 1px;
     .list-bold {
       font-weight: normal;
       /*icône des couverts*/
       .fa-utensils {
-        padding-right: 15px;
-        padding-left: 15px;
-        font-size: 20px;
+        padding-right: 10px;
+        font-size: 9px;
       }
       /*icône des mains*/
       .fa-hands-helping {
-        padding-right: 9px;
-        padding-left: 9px;
-        font-size: 20px;
+        padding-right: 10px;
+        font-size: 8px;
       }
     }
   }
@@ -902,84 +913,3 @@ footer {
 ***********************************************************************************************************
 **********************************************************************************************************/
 
-@media screen and (min-width: 280px) and (max-width: 400px) { 
-
-  body {
-    width: 550px;
-  }
-
-  /***************************** Le logo *****************************/
-  
-  img.logo-menus {
-    padding: 10px 0 22px 0;
-    width: 30%;
-  }
-
-  /*********************** Menu ***********************/
-
-  .resto {
-    bottom: 90px;
-    .menus {
-      h2 {
-        font-size: 50px;
-      }
-    }
-  }
-
-  .menu-heart {
-    .far.fa-heart {
-      font-size: 40px;
-    }
-    .fas.fa-heart {
-      font-size: 30px;
-    }
-  }
-
-  /************* ENTREES - PLATS - DESSERTS **************/
-
-  .resto h3 {
-    font-size: 30px;
-  }
-  
-  h4 {
-    font-size: 27px;
-    padding: 20px 30px 10px 30px;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .card { 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    .delay-entrees,.delay-meals,.delay-desserts {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      button {
-        margin: 25px;
-        border-radius: 25px;
-        box-shadow: $dark-shadow;
-        border: none 2px white;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        p {
-          font-family: $police-second;
-          font-size: 20px;
-          padding-bottom: 20px;
-          padding-left: 30px;
-          padding-right: 30px;
-          margin: 0;
-          display: flex;
-          justify-content: flex-start;
-        }
-      }
-    }
-  }
-  
-}
