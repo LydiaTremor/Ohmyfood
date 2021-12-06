@@ -80,14 +80,14 @@ body {
 .menu-heart {
   display: flex;
   justify-content: flex-end;
-  padding-top: 60px;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
   cursor: pointer;
   /*Icône de coeur vide*/
   .far.fa-heart {
   position: absolute;
-  font-size: $size-heart;
+  font-size: 21px;
   color: black;
   display: flex;
   justify-content: flex-end;
@@ -96,7 +96,7 @@ body {
   .fas.fa-heart {
     position: relative;
     color: $color-primary;
-    font-size: 50px;
+    font-size: 12px;
     top: 4px;
     right: 5px;
     bottom: 0;
@@ -163,7 +163,7 @@ Le header
       transition: loading spinner
 \*****************************************/
 
-/*.loading-spinner {
+.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -272,7 +272,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}*/
+}
 
 /********************************************/
 /*** 598px*****/
@@ -283,6 +283,8 @@ Le header
   @include logo-mixin;
   margin: 0;
   justify-content: center;
+  display: flex;
+  background-color: white;
   /*L'image du logo*/
   .image-omf {
     /*@include logo-images;*/
@@ -574,17 +576,21 @@ Le header
 ********/
 
 .logo {
-  @include logo-mixin;
+  /*@include logo-mixin;*/
+  display: flex;
+  background-color: white;
   align-items: center;
   animation: body-menus 3s linear -.8s infinite;
   animation-fill-mode: forwards;
-  img .logo-menus {
-    @include logo-images;
+  width: 100%;
+  padding: 8px 0 12px 0;
+  .logo-menus {
+    /*@include logo-images;*/
+    object-fit: cover;
     margin-right: 0;
-    flex-grow: 3;
     display: flex;
     justify-content: center;
-
+    width: 40%;
   }
   button {
     border: white none 1px;
@@ -594,17 +600,12 @@ Le header
       color: black;
       text-decoration: none;
       .fa-arrow-left {
-        font-size: 45px;
+        font-size: 15px;
         display: flex;
         justify-content: flex-start;
       }
     }
   }
-}
-
-img.logo-menus {
-  padding: 10px 0 22px 0;
-  width: 30%;
 }
 
 @keyframes body-menus {
@@ -679,45 +680,46 @@ Le contenu : les grands blocs
 }
 
 .resto {
-  border-radius: 70px 70px 0 0;
+  border-radius: 33px 33px 0 0;
   background-color: $color-primary;
   position: relative;
-  bottom: 135px;
+  bottom: 23px;
   .menus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     h2 {
-      font-size: 75px;
+      font-size: 22px;
       font-weight: bold;
       font-family: $police-primary;
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
       margin: 0;
-      padding-top: 60px;
+      padding-top: 25px;
     }
   }
 }
 
 .resto h3 {
-  font-size: 40px;
+  font-size: 12px;
   font-weight: normal;
-  margin: 0 40px 0 40px;
-  padding-bottom: 20px;
-  border-bottom: 4px #99E2D0 solid;
+  margin: 25px 20px 11px 20px;
+  border-bottom: 3px #99E2D0 solid;
   font-family: $police-second;
-  width: 10%;
-  padding-top: 70px;
+  width: 32px;
+  padding-bottom: 4px;
 }
 
 h4 {
-  font-size: 37px;
+  font-size: 14px;
   font-family: $police-second;
   margin: 0;
-  padding: 20px 30px 10px 30px;
+  padding: 9px 2px 6px 2px;
   display: flex;
   justify-content: flex-start;
+  /*overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;*/
 }
 
 .card { 
@@ -731,8 +733,8 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
     button {
-      margin: 25px;
-      border-radius: 25px;
+      margin: 0 10px 11px 10px;
+      border-radius: 11px;
       box-shadow: $dark-shadow;
       border: none 2px white;
       background-color: white;
@@ -740,18 +742,28 @@ h4 {
       align-items: center;
       justify-content: space-between;
       position: relative;
+      /*overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;*/
       p {
         font-family: $police-second;
-        font-size: 30px;
-        padding-bottom: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
+        font-size: 12px;
+        padding-bottom: 8px;
+        padding-left: 3px;
+        padding-right: 3px;
         margin: 0;
         display: flex;
         justify-content: flex-start;
+        /*overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;*/
       }
     }
   }
+}
+
+.txt-bold {
+  font-weight: bold;
 }
 
 /******************************************************/
@@ -770,10 +782,10 @@ h4 {
   em { 
     font-weight: bold;
     display: flex;
-    padding-top: 55px;
-    padding-right: 30px;
-    padding-left: 50px;
-    font-size: 25px;
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
     font-style: normal;
     opacity: 1;
   }
@@ -791,13 +803,13 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 120px;
+  width: 60px;
   color: white;
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 0 25px 25px 0;
-  font-size: 60px;
+  border-radius: 0 11px 11px 0;
+  font-size: 30px;
   position:absolute;
   opacity: 0;
 }
@@ -828,22 +840,25 @@ h4 {
 .order-fr {
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: 30px;
   button {
-    padding: 22px 68px 27px 68px;
-    font-size: 30px;
     border-radius: 50px;
+    padding: 13px 37px 13px 37px;
     background-color: $color-button;
-    color: white;
     cursor: pointer;
-    font-family: $police-second;
-    font-weight: bold;
     border: $color-button 2px none;
     box-shadow: $dark-shadow-violet;
     opacity: 0.7;
     &:hover {
       background-color: hsla(294, 79%, 57%, .7);
       box-shadow: $light-shadow-violet;
+    }
+    span {
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-family: $police-second;
+      font-weight: normal;
+      color: white;
     }
   }
 }

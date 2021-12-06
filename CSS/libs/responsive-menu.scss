@@ -1,0 +1,356 @@
+@media screen and (min-width: 600px) {
+      
+    .resto {
+        bottom: 45px;
+        border-radius: 35px 35px 0 0;
+        .menus {
+            h2 {
+                font-size: 25px;
+                padding-top: 30px;
+            }
+        }
+    }
+      
+    .resto h3 {
+        font-size: 15px;
+        width: 40px;
+    }
+      
+    h4 {
+        font-size: 17px;
+        padding: 12px 5px 9px 5px;
+    }
+      
+    .card { 
+        .delay-entrees,.delay-meals,.delay-desserts {
+          button {
+            margin: 0 15px 15px 15px;
+            border-radius: 15px;
+            p {
+              font-size: 15px;
+              padding-bottom: 11px;
+              padding-left: 6px;
+              padding-right: 6px;
+            }
+          }
+        }
+    }
+
+    /****************** coches : 600px *********************/
+    .check {
+        em { 
+          padding-top: 20px;
+          padding-right: 20px;
+          padding-left: 20px;
+          font-size: 15px;
+        }
+    }
+      
+    .fa-check-circle {
+        width: 70px;
+        border-radius: 0 15px 15px 0;
+        font-size: 33px;
+    }
+
+    /**************** Le bouton commander : 600px ******************/
+
+    .order-fr {
+        padding-top: 40px;
+        button {
+            padding: 16px 40px 16px 40px;
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    /*************** icônes de coeur : 600px ******************/
+
+    .menu-heart {
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 20px;
+        .far.fa-heart {
+            font-size: 24px;
+        }
+        .fas.fa-heart {
+          font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+      
+    .resto {
+        bottom: 80px;
+        border-radius: 40px 40px 0 0;
+        .menus {
+            h2 {
+                font-size: 30px;
+                padding-top: 40px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+      
+    .resto h3 {
+        font-size: 20px;
+        margin: 25px 30px 11px 30px;
+        width: 53px;
+    }
+      
+    h4 {
+        font-size: 22px;
+        padding: 15px 8px 12px 8px;
+    }
+      
+    .card { 
+        .delay-entrees,.delay-meals,.delay-desserts {
+          button {
+            margin: 0 18px 18px 18px;
+            border-radius: 20px;
+            p {
+              font-size: 20px;
+              padding-bottom: 14px;
+              padding-left: 9px;
+              padding-right: 9px;
+            }
+          }
+        }
+    }
+
+    /****************** coches : 800px *********************/
+    .check {
+        em { 
+          font-size: 20px;
+        }
+    }
+      
+    .fa-check-circle {
+        width: 80px;
+        border-radius: 0 20px 20px 0;
+        font-size: 38px;
+    }
+
+    /**************** Le bouton commander : 800px ******************/
+
+    .order-fr {
+        padding-top: 50px;
+        button {
+            padding: 19px 43px 19px 43px;
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /*************** icônes de coeur : 800px ******************/
+
+    .menu-heart {
+        padding-right: 35px;
+        padding-left: 35px;
+        .far.fa-heart {
+            font-size: 29px;
+        }
+        .fas.fa-heart {
+          font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+      
+    .resto {
+        bottom: 90px;
+        border-radius: 50px 50px 0 0;
+        .menus {
+            h2 {
+                font-size: 45px;
+            }
+        }
+    }
+      
+    .resto h3 {
+        font-size: 30px;
+        margin: 40px 30px 20px 30px;
+        width: 77px;
+    }
+      
+    h4 {
+        font-size: 30px;
+        padding: 17px 15px 10px 15px;
+    }
+      
+    .card { 
+        .delay-entrees,.delay-meals,.delay-desserts {
+          button {
+            margin: 0 25px 25px 25px;
+            border-radius: 25px;
+            p {
+              font-size: 28px;
+              padding-bottom: 16px;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
+        }
+    }
+
+    /****************** coches : 1000px *********************/
+    .check {
+        em { 
+          font-size: 28px;
+        }
+    }
+      
+    .fa-check-circle {
+        width: 90px;
+        border-radius: 0 25px 25px 0;
+        font-size: 40px;
+    }
+
+    /**************** Le bouton commander : 1000px ******************/
+
+    .order-fr {
+        button {
+            padding: 22px 45px 22px 45px;
+            span {
+                font-size: 33px;
+            }
+        }
+    }
+
+    /*************** icônes de coeur : 1000px ******************/
+
+    .menu-heart {
+        padding-right: 50px;
+        padding-left: 50px;
+        .far.fa-heart {
+            font-size: 45px;
+        }
+        .fas.fa-heart {
+          font-size: 36px;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+      
+    .resto {
+        bottom: 150px;
+        border-radius: 70px 70px 0 0;
+        max-height: 880px;
+    }
+      
+    h4 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 150px;
+    }
+      
+    .card { 
+        .delay-entrees,.delay-meals,.delay-desserts {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            button {
+                width: 30%;
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 150px;
+                }
+            }
+        }
+    }
+
+    /****************** coches : 1400px *********************/
+    .check {
+        em { 
+            font-size: 28px;
+        }
+    }
+      
+    .fa-check-circle {
+        width: 90px;
+        border-radius: 0 25px 25px 0;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+      
+    .resto {
+        bottom: 170px;
+        border-radius: 80px 80px 0 0;
+        max-height: 970px;
+        .menus {
+            h2 {
+                padding-top: 70px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    }
+
+    .resto h3 {
+        margin: 50px 50px 30px 50px;
+        width: 90px;
+    }
+      
+    h4 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 150px;
+        padding: 20px 18px 13px 18px;
+    }
+      
+    .card { 
+        padding-left: 10px;
+        padding-right: 10px;
+        .delay-entrees,.delay-meals,.delay-desserts {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            button {
+                width: 30%;
+                margin: 0 20px 25px 10px;
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 150px;
+                    padding-bottom: 20px;
+                    padding-left: 18px;
+                    padding-right: 18px;
+                }
+            }
+        }
+    }
+
+    /****************** coches : 1600px *********************/
+    .check {
+        em { 
+            font-size: 28px;
+        }
+    }
+      
+    .fa-check-circle {
+        width: 90px;
+        border-radius: 0 25px 25px 0;
+        font-size: 40px;
+    }
+
+    
+    /*************** icônes de coeur : 1600px ******************/
+
+    .menu-heart {
+        padding-right: 80px;
+        padding-left: 80px;
+        padding-top: 40px;
+    }
+}
