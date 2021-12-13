@@ -1,5 +1,72 @@
 @charset "UTF-8";
+@media screen and (min-width: 400px) {
+  /********************** Le logo : 400px *********************/
+  .logo button a .fa-arrow-left {
+    font-size: 15px;
+    left: 20px;
+    top: 15px;
+  }
+
+  /***************** Tarif : 400px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-60px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-60px);
+    }
+  }
+  /******************** Le footer : 400px *********************/
+  footer h1 {
+    padding: 20px 23px 15px 23px;
+    font-size: 17px;
+  }
+  footer .list-footer {
+    line-height: 25px;
+    padding: 0 20px 30px 20px;
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 10px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 500px) {
+  /********************** Le logo : 500px *********************/
+  .logo button a .fa-arrow-left {
+    font-size: 18px;
+    left: 20px;
+    top: 15px;
+  }
+
+  /******************** Le footer : 500px *********************/
+  footer h1 {
+    font-size: 19px;
+  }
+  footer .list-footer {
+    padding: 0 25px 35px 25px;
+    font-size: 16px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 12px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 11px;
+  }
+}
 @media screen and (min-width: 600px) {
+  /********************* La carte : 600px *********************/
   .resto {
     bottom: 45px;
     border-radius: 35px 35px 0 0;
@@ -16,32 +83,49 @@
 
   h4 {
     font-size: 17px;
-    padding: 12px 5px 9px 5px;
+    padding: 10px 10px 3px 10px;
   }
 
-  .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
     margin: 0 15px 15px 15px;
     border-radius: 15px;
   }
-  .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
     font-size: 15px;
-    padding-bottom: 11px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 0 11px 10px 11px;
+  }
+
+  /***************** Tarif : 600px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-80px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-80px);
+    }
+  }
+  .price span {
+    font-size: 15px;
+    padding: 15px 20px 0 20px;
   }
 
   /****************** coches : 600px *********************/
-  .check em {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    font-size: 15px;
+  .check {
+    width: 60px;
+    border-radius: 0 15px 15px 0;
   }
 
   .fa-check-circle {
-    width: 70px;
-    border-radius: 0 15px 15px 0;
-    font-size: 33px;
+    font-size: 25px;
+    left: 15px;
   }
 
   /**************** Le bouton commander : 600px ******************/
@@ -65,10 +149,85 @@
     font-size: 24px;
   }
   .menu-heart .fas.fa-heart {
+    font-size: 20px;
+    top: 2px;
+  }
+}
+@media screen and (min-width: 650px) {
+  /********************** Le logo : 650px *********************/
+  .logo {
+    padding: 13px 0 18px 0;
+  }
+  .logo button a .fa-arrow-left {
+    font-size: 23px;
+    left: 30px;
+    top: 18px;
+  }
+
+  /********************** Le footer : 650px ********************/
+  footer {
+    margin-top: 60px;
+  }
+  footer h1 {
+    padding: 30px 30px 20px 30px;
+    font-size: 24px;
+  }
+  footer .list-footer {
+    padding: 0 30px 50px 30px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    padding-right: 15px;
+    font-size: 16px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    padding-right: 15px;
     font-size: 15px;
   }
 }
+@media screen and (min-width: 750px) {
+  /********************** Le logo : 750px *********************/
+  .logo .logo-menus {
+    width: 270px;
+  }
+  .logo button a .fa-arrow-left {
+    font-size: 30px;
+    left: 35px;
+    top: 25px;
+  }
+
+  /***************** Le footer : 750px ********************/
+  footer {
+    margin-top: 70px;
+  }
+  footer h1 {
+    padding: 40px 40px 30px 40px;
+    font-size: 29px;
+  }
+  footer .list-footer {
+    padding: 0 40px 70px 40px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    padding-right: 20px;
+    font-size: 21px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    padding-right: 20px;
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 800px) {
+  /**************** images des menus : 800px ******************/
+  .img-resto-menu {
+    width: 100%;
+    max-height: 550px;
+    min-height: 450px;
+  }
+
+  /********************* La carte : 800px *********************/
   .resto {
     bottom: 80px;
     border-radius: 40px 40px 0 0;
@@ -88,29 +247,49 @@
 
   h4 {
     font-size: 22px;
-    padding: 15px 8px 12px 8px;
+    padding: 15px 12px 6px 12px;
   }
 
-  .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
     margin: 0 18px 18px 18px;
     border-radius: 20px;
   }
-  .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
     font-size: 20px;
-    padding-bottom: 14px;
-    padding-left: 9px;
-    padding-right: 9px;
+    padding: 0 12px 10px 12px;
+  }
+
+  /***************** Tarif : 800px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
+  }
+  .price span {
+    font-size: 20px;
+    padding: 25px 25px 0 25px;
   }
 
   /****************** coches : 800px *********************/
-  .check em {
-    font-size: 20px;
+  .check {
+    width: 80px;
+    border-radius: 0 20px 20px 0;
   }
 
   .fa-check-circle {
-    width: 80px;
-    border-radius: 0 20px 20px 0;
-    font-size: 38px;
+    font-size: 34px;
+    left: 22px;
   }
 
   /**************** Le bouton commander : 800px ******************/
@@ -130,13 +309,27 @@
     padding-left: 35px;
   }
   .menu-heart .far.fa-heart {
-    font-size: 29px;
+    font-size: 30px;
   }
   .menu-heart .fas.fa-heart {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 1000px) {
+  /**************** image des menus : 1000px ********************/
+  .img-resto-menu {
+    width: 100%;
+    max-height: 650px;
+    min-height: 550px;
+  }
+
+  /********************** Le logo : 1000px *********************/
+  .logo button a .fa-arrow-left {
+    font-size: 35px;
+    left: 40px;
+  }
+
+  /********************* La carte : 1000px *********************/
   .resto {
     bottom: 90px;
     border-radius: 50px 50px 0 0;
@@ -153,29 +346,49 @@
 
   h4 {
     font-size: 30px;
-    padding: 17px 15px 10px 15px;
+    padding: 17px 20px 8px 20px;
   }
 
-  .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
     margin: 0 25px 25px 25px;
     border-radius: 25px;
   }
-  .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
     font-size: 28px;
-    padding-bottom: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 20px 14px 20px;
+  }
+
+  /***************** Tarif : 1000px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-130px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-130px);
+    }
+  }
+  .price span {
+    font-size: 28px;
+    padding: 30px 35px 0 35px;
   }
 
   /****************** coches : 1000px *********************/
-  .check em {
-    font-size: 28px;
+  .check {
+    width: 100px;
+    border-radius: 0 25px 25px 0;
   }
 
   .fa-check-circle {
-    width: 90px;
-    border-radius: 0 25px 25px 0;
-    font-size: 40px;
+    font-size: 42px;
+    left: 28px;
   }
 
   /**************** Le bouton commander : 1000px ******************/
@@ -192,13 +405,78 @@
     padding-left: 50px;
   }
   .menu-heart .far.fa-heart {
-    font-size: 45px;
+    font-size: 41px;
   }
   .menu-heart .fas.fa-heart {
     font-size: 36px;
   }
+
+  /***************** Le footer : 1000px ********************/
+  footer {
+    margin-top: 75px;
+  }
+  footer h1 {
+    padding: 45px 45px 35px 45px;
+    font-size: 35px;
+  }
+  footer .list-footer {
+    padding: 0 45px 80px 45px;
+    font-size: 28px;
+    line-height: 45px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    padding-right: 20px;
+    font-size: 25px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    padding-right: 20px;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /**************** image des menus : 1200px *******************/
+  .img-resto-menu {
+    width: 100%;
+    max-height: 700px;
+    min-height: 650px;
+  }
+
+  /***************** Tarif : 1200px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-160px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-160px);
+    }
+  }
+  /********************* Le footer : 1200px ***********************/
+  footer h1 {
+    padding: 45px 50px 35px 50px;
+    font-size: 38px;
+  }
+  footer .list-footer {
+    padding: 0 50px 90px 50px;
+    font-size: 31px;
+    line-height: 50px;
+  }
+  footer .list-footer .list-bold .fa-utensils {
+    font-size: 28px;
+  }
+  footer .list-footer .list-bold .fa-hands-helping {
+    font-size: 27px;
+  }
 }
 @media screen and (min-width: 1400px) {
+  /********************* La carte : 1400px *********************/
   .resto {
     bottom: 150px;
     border-radius: 70px 70px 0 0;
@@ -206,10 +484,12 @@
   }
 
   h4 {
+    max-width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 150px;
+    padding: 5px;
+    min-width: 0;
   }
 
   .card .delay-entrees, .card .delay-meals, .card .delay-desserts {
@@ -217,28 +497,47 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
     width: 30%;
   }
-  .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
+    max-width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 150px;
+    padding: 5px;
+    min-width: 0;
   }
 
   /****************** coches : 1400px *********************/
-  .check em {
-    font-size: 28px;
+  .check {
+    width: 90px;
   }
 
   .fa-check-circle {
-    width: 90px;
-    border-radius: 0 25px 25px 0;
-    font-size: 40px;
+    left: 23px;
+  }
+
+  /***************** Tarif : 1400px *****************/
+  @-webkit-keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-90px);
+    }
+  }
+  @keyframes price-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-90px);
+    }
   }
 }
 @media screen and (min-width: 1600px) {
+  /********************* La carte : 1600px *********************/
   .resto {
     bottom: 170px;
     border-radius: 80px 80px 0 0;
@@ -256,11 +555,8 @@
   }
 
   h4 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     width: 150px;
-    padding: 20px 18px 13px 18px;
+    padding: 20px 23px 10px 23px;
   }
 
   .card {
@@ -272,29 +568,13 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .card .delay-entrees button, .card .delay-meals button, .card .delay-desserts button {
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
     width: 30%;
     margin: 0 20px 25px 10px;
   }
-  .card .delay-entrees button p, .card .delay-meals button p, .card .delay-desserts button p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
     width: 150px;
-    padding-bottom: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  /****************** coches : 1600px *********************/
-  .check em {
-    font-size: 28px;
-  }
-
-  .fa-check-circle {
-    width: 90px;
-    border-radius: 0 25px 25px 0;
-    font-size: 40px;
+    padding: 0 23px 14px 23px;
   }
 
   /*************** icônes de coeur : 1600px ******************/
@@ -302,5 +582,23 @@
     padding-right: 80px;
     padding-left: 80px;
     padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  /***************** La carte : 1800px *******************/
+  h4 {
+    width: 200px;
+  }
+
+  .card .delay-entrees, .card .delay-meals, .card .delay-desserts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
+    width: 30%;
+  }
+  .card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
+    width: 200px;
   }
 }/*# sourceMappingURL=responsive-menu.css.map */

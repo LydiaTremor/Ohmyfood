@@ -1,15 +1,18 @@
+@charset "UTF-8";
 @media screen and (min-width: 400px) {
   /********************** Le logo : 400px *********************/
   .logo-acc .image-omf {
-    width: 43%;
     padding: 8px 0 12px 0;
   }
 
-  /******************** Le formulaire : 400px **********************/
-  .form-maps form .fa-map-marker-alt {
+  /******************** Localisation : 400px **********************/
+  .localization .localization-elements {
+    height: 45px;
+  }
+  .localization .localization-elements .fa-map-marker-alt {
     font-size: 14px;
   }
-  .form-maps form .country {
+  .localization .localization-elements p {
     font-size: 14px;
   }
 
@@ -104,15 +107,13 @@
     padding: 0 12px 15px 12px;
   }
 
+  /***************** Les icônes coeur : 400px ******************/
   .heart {
     padding-right: 25px;
     padding-left: 25px;
   }
   .heart .fas.fa-heart {
-    font-size: 16px;
-  }
-  .heart .far.fa-heart {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   /***************** Le footer : 400px ********************/
@@ -134,11 +135,14 @@
   }
 }
 @media screen and (min-width: 500px) {
-  /******************** Le formulaire : 500px **********************/
-  .form-maps form .fa-map-marker-alt {
+  /******************** Localisation : 500px **********************/
+  .localization .localization-elements {
+    height: 45px;
+  }
+  .localization .localization-elements .fa-map-marker-alt {
     font-size: 15px;
   }
-  .form-maps form .country {
+  .localization .localization-elements p {
     font-size: 15px;
   }
 
@@ -214,15 +218,10 @@
     padding: 0 15px 17px 15px;
   }
 
+  /*************** Les icônes coeur : 500px *****************/
   .heart {
     padding-right: 30px;
     padding-left: 30px;
-  }
-  .heart .fas.fa-heart {
-    font-size: 18px;
-  }
-  .heart .far.fa-heart {
-    font-size: 27px;
   }
 
   /***************** Le footer : 500px ********************/
@@ -241,14 +240,9 @@
   }
 }
 @media screen and (min-width: 650px) {
-  /******************** Le formulaire : 650px **********************/
-  .form-maps form .fa-map-marker-alt {
-    font-size: 17px;
-    padding: 16px 17px 17px 17px;
-  }
-  .form-maps form .country {
-    font-size: 17px;
-    padding: 15px;
+  /********************** Le logo : 650px *********************/
+  .logo-acc .image-omf {
+    padding: 13px 0 18px 0;
   }
 
   /********************** Le texte du header : 650px *********************/
@@ -341,11 +335,13 @@
     padding: 0 18px 20px 18px;
   }
 
+  /***************** Les icônes coeur : 650px *******************/
   .heart .fas.fa-heart {
-    font-size: 21px;
+    font-size: 22px;
+    top: 2px;
   }
   .heart .far.fa-heart {
-    font-size: 29px;
+    font-size: 26px;
   }
 
   /***************** Le footer : 650px ********************/
@@ -373,21 +369,21 @@
 @media screen and (min-width: 750px) {
   /********************** Le logo : 750px *********************/
   .logo-acc .image-omf {
-    width: 48%;
-    padding: 13px 0 18px 0;
+    max-width: 270px;
   }
 
-  /******************** Le formulaire : 750px **********************/
-  .form-maps .bar-grey {
+  /******************** Localisation : 750px **********************/
+  .localization .bar-grey {
     height: 5px;
   }
-  .form-maps form .fa-map-marker-alt {
-    font-size: 19px;
-    padding: 24px 22px 23px 22px;
+  .localization .localization-elements {
+    height: 55px;
   }
-  .form-maps form .country {
+  .localization .localization-elements .fa-map-marker-alt {
     font-size: 19px;
-    padding: 22px;
+  }
+  .localization .localization-elements p {
+    font-size: 19px;
   }
 
   /********************** Le texte du header : 750px *********************/
@@ -480,15 +476,17 @@
     padding: 0 25px 30px 25px;
   }
 
+  /***************** Les icônes coeur : 750px *******************/
   .heart {
     padding-right: 40px;
     padding-left: 40px;
   }
   .heart .fas.fa-heart {
-    font-size: 26px;
+    font-size: 27px;
+    top: 1px;
   }
   .heart .far.fa-heart {
-    font-size: 35px;
+    font-size: 31px;
   }
 
   /***************** Le footer : 750px ********************/
@@ -514,17 +512,18 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  /******************** Le formulaire : 1000px **********************/
-  .form-maps .bar-grey {
+  /******************** Localisation : 1000px **********************/
+  .localization .bar-grey {
     height: 7px;
   }
-  .form-maps form .fa-map-marker-alt {
-    font-size: 23px;
-    padding: 30px 20px 30px 20px;
+  .localization .localization-elements {
+    height: 65px;
   }
-  .form-maps form .country {
+  .localization .localization-elements .fa-map-marker-alt {
     font-size: 23px;
-    padding: 28px;
+  }
+  .localization .localization-elements p {
+    font-size: 23px;
   }
 
   /********************** Le texte du header : 1000px *********************/
@@ -608,15 +607,12 @@
     font-size: 32px;
   }
 
-  .heart {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+  /************** Les icônes coeur : 1000px ******************/
   .heart .fas.fa-heart {
     font-size: 32px;
   }
   .heart .far.fa-heart {
-    font-size: 42px;
+    font-size: 37px;
   }
 
   /***************** Le footer : 1000px ********************/
@@ -641,12 +637,22 @@
     font-size: 24px;
   }
 }
+@media screen and (min-width: 1171px) {
+  /****************** Les icônes coeur : 1171px ********************/
+  .heart .fas.fa-heart {
+    font-size: 32px;
+    top: 2px;
+  }
+  .heart .far.fa-heart {
+    font-size: 37px;
+  }
+}
 @media screen and (min-width: 1200px) {
-  /******************** Le formulaire : 1200px **********************/
-  .form-maps form .fa-map-marker-alt {
+  /******************** Localisation : 1200px **********************/
+  .localization .localization-elements .fa-map-marker-alt {
     font-size: 25px;
   }
-  .form-maps form .country {
+  .localization .localization-elements p {
     font-size: 25px;
   }
 

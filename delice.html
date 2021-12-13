@@ -20,10 +20,10 @@
         <script src="https://kit.fontawesome.com/23e60cc156.js" crossorigin="anonymous"></script> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2? family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2? family= Shrikhand & display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2? family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/libs/responsive-menu.css">
         <title>Ohmyfood</title> 
@@ -31,15 +31,15 @@
 
     <body>
         <header>
-            <div class="logo">
+            <div class="logo">   <!--le bouton (icône d'une flèche) et le logo-->
                 <button><a href="accueilOMF.html"><i class="fas fa-arrow-left"></i></a></button>
                 <img src="images/logo/ohmyfood.png" class="logo-menus" alt="logo du site"/>
             </div>
         </header>
 
-        <div class="bckg-color"> 
-            <img src="images/restaurants/delice.jpg" class="img-resto-menu" alt="La Française"/>
-            <div class="resto">
+        <div class="bckg-color">  <!--"Le délice des sens" jusqu'à "Commander"-->
+            <img src="images/restaurants/delice.jpg" class="img-resto-menu img-delice" alt="La Française"/>
+            <div class="resto resto-delice">
                 <div class="menus">
                     <h2>Le délice des sens</h2>
                     <div class="menu-heart">
@@ -48,121 +48,139 @@
                     </div>
                 </div>
                 <div> <!--ENTRÉE - PLATS - DESSERTS-->
-                    <div class="gap-menus"> <!--titre + les 3 boutons ENTRÉE-->
+                    <div class="gap-menus">  <!--titre + les 3 boutons ENTRÉE-->
                         <h3>ENTRÉES</h3>
-                        <div class="card"> <!--les 3 boutons ENTRÉE-->
+                        <div class="card">  <!--les 3 boutons ENTRÉE-->
                             <div class="delay-entrees">
-                                <button>
+                                <a class="advent-one">
                                     <div>
                                         <h4>Tartare de thon</h4>
                                         <p>Assaisonné au yuzu</p>
                                     </div>
+                                    <div class="price">
+                                        <span>25€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>25€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-two">
                                     <div>
                                         <h4>Bouchée de homard croustillant</h4>
                                         <p>Et sa farandole de petits légumes</p>
                                     </div>
+                                    <div class="price">
+                                        <span>35€</span>
+                                    </div>   
                                     <div class="check">
-                                        <em>35€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-three">
                                     <div>
                                         <h4>Velouté de cèpes</h4>
                                         <p>Aux truffes</p>
                                     </div>
-                                    <div class="check">
-                                        <em>20€</em>
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                </button>
+                                    <div class="price">
+                                        <span> 20€</span>
+                                     </div>                       
+                                     <div class="check">
+                                         <i class="fas fa-check-circle"></i>
+                                     </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="gap-menus">  <!--titre + les 3 boutons PLATS-->
                         <h3>PLATS</h3>
-                        <div class="card"> <!--les 3 boutons PLATS-->
+                        <div class="card">  <!--les 3 boutons PLATS-->
                             <div class="delay-meals">
-                                <button>
+                                <a class="advent-four">
                                     <div>
                                         <h4>Poulet rôti aux herbes de provence</h4>
                                         <p>Et sa crème de truffe</p>
                                     </div>
+                                    <div class="price">
+                                        <span>40€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>40€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-five">
                                     <div>
                                         <h4>Langouste rôtie</h4>
                                         <p>Et ses légumes de saison</p>
                                     </div>
+                                    <div class="price">
+                                        <span>35€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>35€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-six">
                                     <div>
                                         <h4>Côte de boeuf angus</h4>
                                         <p>Et sa purée de panais</p>
                                     </div>
+                                    <div class="price">
+                                        <span>44€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>44€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="gap-menus">  <!--titre + les 3 boutons DESSERTS-->
+                    <div class="gap-menus"> <!--titre + les 3 boutons DESSERTS-->
                         <h3>DESSERTS</h3>
                         <div class="card">  <!--les 3 boutons DESSERTS--> 
                             <div class="delay-desserts"> 
-                                <button>
+                                <a class="advent-seven">
                                     <div>
                                         <h4>Farandole de desserts</h4>
                                         <p>Du chef</p>
                                     </div>
+                                    <div class="price">
+                                        <span>18€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>18€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-eight">
                                     <div>
                                         <h4>Crème brûlée</h4>
                                         <p>Revisitée</p>
                                     </div>
+                                    <div class="price">
+                                        <span>22€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>22€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
-                                <button>
+                                </a>
+                                <a class="advent-nine">
                                     <div>
                                         <h4>Tiramisu</h4>
                                         <p>À la noisette</p>
                                     </div>
+                                    <div class="price">
+                                        <span>23€</span>
+                                    </div>
                                     <div class="check">
-                                        <em>23€</em>
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="order-fr"> 
+                <div class="order-fr"> <!--boutons "Commander"-->
                     <button>
-                        Commander
+                        <span>Commander</span>  
                     </button>
                 </div>
             </div>

@@ -1,15 +1,6 @@
 /*********************Bibliothèques********************/
 @import "libs/mixins.scss";
 @import "libs/fonctions.scss";
-@mixin logo-images {
-  width: 35%;
-  object-fit: cover;
-  padding: 20px 0 22px 0;
-}
-@mixin logo-mixin {
-  display: flex;
-  background-color: white;
-}
 
 /******************Polices d'écriture*******************/
 @import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap');
@@ -17,12 +8,11 @@
 
 
 /**********************Variables************************/
-/*$color-primary: hsl(210, 4%, 93%); */
 $color-primary: #e9e9e9;
 $color-second: #d4d5d6;  
 $color-icon-g: gray; 
 $color-icon: blueviolet; 
-$color-button: hsla(294, 79%, 57%, .9); 
+$color-button: linear-gradient(to bottom, #ff79da, #9356dc);
 $color-darkgrey: #c9cbcd;  
 $color-heart: #FF79DA;  
 $color-float: forestgreen;  
@@ -62,9 +52,9 @@ body {
     justify-content: flex-end;
     position: relative;
     color: white;
-    font-size: 12px;
-    top: 4px;
-    right: 3px;
+    font-size: 17px;
+    top: 1px;
+    right: 2px;
     bottom: 0;
   }
   /*Icône de coeur vide*/
@@ -97,9 +87,9 @@ body {
   .fas.fa-heart {
     position: relative;
     color: $color-primary;
-    font-size: 12px;
-    top: 4px;
-    right: 5px;
+    font-size: 17px;
+    top: 1px;
+    right: 2px;
     bottom: 0;
   }
 }
@@ -119,6 +109,7 @@ body {
   }
 }
 
+/*Transition des icônes coeur des pages menu*/
 .menu-heart {
   &:hover {
     & > .fas.fa-heart {
@@ -132,7 +123,7 @@ body {
     }
   }
 }
-
+/*Keyframes des icônes coeur*/
 @keyframes heart-fill {
   0% {
       transform: scale(0);
@@ -164,6 +155,7 @@ Le header
       transition: loading spinner
 \*****************************************/
 
+/*Loader du la page d'accueil*/
 .loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
@@ -281,53 +273,48 @@ Le header
 
 /*La balise qui englobe l'image du logo*/
 .logo-acc {
-  @include logo-mixin;
   margin: 0;
   justify-content: center;
   display: flex;
   background-color: white;
   /*L'image du logo*/
   .image-omf {
-    /*@include logo-images;*/
-    width: 41%;
+    max-width: 30%;
     object-fit: cover;
     padding: 8px 0 9px 0;
   }
 }
 
-/****Le formulaire****/
+/****localisation****/
 
-/*Le div du formulaire*/
-.form-maps {
+/*localisation des restaurants*/
+.localization {
   width: 100%;
   cursor: pointer;
+  /*div grise plus foncé au-dessus de la div "localization-elements*/
   .bar-grey {
     background-color: #c9cbcd;
     height: 3px;
     width: 100%;
   }
-  /*Formulaire*/
-  form {
+  /*L'icône et le texte*/
+  .localization-elements {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*icône maps*/
+    height: 35px;
+    background-color: $color-second;
+    /*Icône maps*/
     .fa-map-marker-alt {
-      background-color: $color-second;
-      border: none 2px $color-second;
-      padding: 12px;
-      font-size: 13px;
+      font-size: 12px;
     }
-    /*Le texte du formulaire*/
-    .country {
-      border: none;
-      background-color: $color-second;
-      width: 100%;
-      padding: 11px;
+    /*Ville*/
+    p {
       font-family: $police-second;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       color: black;
+      padding-left: 15px;
     }
   }
 }
@@ -348,6 +335,7 @@ Le header
     padding-bottom: 10px;
     margin: 0;
   }
+  /*Le p du header*/
   p {
     font-family: $police-second;
     font-size: 15px;
@@ -370,22 +358,21 @@ Le header
     font-family: $police-second;
     font-size: 13px;
     font-weight: normal;
-    /*letter-spacing: .1rem;*/
   }
   /*Le bouton à l'intérieur de la class button-header*/
   button {
     padding: 12px 22px 12px 22px;
     border-radius: 50px;
-    background-color: $color-button;
+    background: $color-button;
     color: white;
     cursor: pointer;
     font-family: $police-second;
     box-shadow: $dark-shadow-violet;
-    border: $color-button 2px none;
+    border: white 2px none;
     font-weight: bold;
     opacity: 0.7;
     &:hover {
-      background-color: hsla(294, 79%, 57%, .7);
+      background: linear-gradient(to bottom, #eeb6de, #b089e0);
       box-shadow: $light-shadow-violet;
     }
   }
@@ -428,10 +415,15 @@ Le contenu : les grands blocs
     border: $color-primary none 2px;
     cursor: pointer;
     justify-content: flex-start;
+    /*Le texte du bouton*/ 
     span {
       font-weight: bold;
       font-size: 13px;
     }
+    &:hover {
+      color: $color-button;
+    }
+    /*Le chiffre*/
     strong {
       background-color: blueviolet;
       color: white;
@@ -478,6 +470,7 @@ Le contenu : les grands blocs
   }
 }
 
+/*Englobe l'icône et le texte des boutons dans functioning*/
 .align-button {
   display: flex;
   align-items: center;
@@ -485,6 +478,7 @@ Le contenu : les grands blocs
 
 /****La section Restaurants****/
 
+/*la partie Restaurants*/
 .restaurant {
   background-color: $color-primary;
   /*Le titre de la section Restaurant*/
@@ -495,12 +489,14 @@ Le contenu : les grands blocs
     font-family: $police-second;
     margin: 0;
   }
+  /*Englobe tous les liens "bloc-restaurant*/
   .links-restaurant { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 15px; 
-    padding-right: 15px;  
+    padding-right: 15px; 
+    /*les liens "bloc-restaurant" qui présentent chaque menu*/ 
     a.bloc-restaurant {
       position: relative;
       text-decoration: none;
@@ -518,6 +514,7 @@ Le contenu : les grands blocs
   border: white 2px none;
   background-color: white;
   object-fit: cover;
+  /*Texte "Nouveau*/
   .float-new {
     position: absolute;
     top: 10px;
@@ -540,12 +537,14 @@ Le contenu : les grands blocs
     border-radius: 15px 15px 0 0;
     object-fit: cover;
   }
+  /*Le titre h3, texte et les icônes des coeurs*/
   .restaurant-text {
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    /*Le titre h3 et le p*/
     .txt {
       display: flex;
       flex-direction: column;
@@ -576,23 +575,30 @@ Le contenu : les grands blocs
 Le header
 ********/
 
+/*Le header des page menu*/
+header {
+  position: relative;
+}
+
+/*Le logo et l'icône des pages menu*/
 .logo {
-  /*@include logo-mixin;*/
   display: flex;
   background-color: white;
   align-items: center;
-  animation: body-menus 3s linear -.8s infinite;
-  animation-fill-mode: forwards;
+  justify-content: center;
   width: 100%;
   padding: 8px 0 12px 0;
+  animation: body-menus 3s linear -.8s infinite;
+  animation-fill-mode: forwards;
+  /*L'image du logo*/
   .logo-menus {
-    /*@include logo-images;*/
     object-fit: cover;
     margin-right: 0;
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 30%;
   }
+  /*Le bouton qui englobe le lien et l'icône d'une flèche*/
   button {
     border: white none 1px;
     background-color: white;
@@ -600,10 +606,17 @@ Le header
     a {
       color: black;
       text-decoration: none;
+      /*Icône d'une flèche*/
       .fa-arrow-left {
-        font-size: 15px;
+        font-size: 13px;
         display: flex;
         justify-content: flex-start;
+        position: absolute;
+        left: 10px;
+        top: 9px;
+        &:hover {
+          color: $color-icon;
+        }
       }
     }
   }
@@ -626,65 +639,109 @@ Le contenu : les grands blocs
       transition: apparition des plats différée
 \*****************************************************/
 /*.delay-entrees {
-  animation: bloc-primary .7s ease-out;
+  animation: bloc .5s ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-@keyframes bloc-primary {
-  0% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .delay-meals {
-  animation: bloc-second .7s ease-out 1s;
+  animation: bloc .7s ease-out 1200ms;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-@keyframes bloc-second {
+.delay-desserts {
+  animation: bloc .7s ease-out 2100ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes bloc {
   0% {
-    transform: translateX(-100%);
-    opacity: 1;
+    transform: translateY(-30%);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-.delay-desserts {
-  animation: bloc-ters .7s ease-out 2s;
+a.advent-one {
+  animation: advent .6s linear;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+a.advent-two {
+  animation: advent .6s linear .6s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-@keyframes bloc-ters {
+a.advent-three {
+  animation: advent .6s linear 900ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-four {
+  animation: advent .6s linear 1100ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-five {
+  animation: advent .6s linear 1500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-six {
+  animation: advent .6s linear 1800ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-seven {
+  animation: advent .6s linear 2100ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-eight {
+  animation: advent .6s linear 2500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-nine {
+  animation: advent .6s linear 3000ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+a.advent-ten {
+  animation: advent .6s linear 3400ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes advent {
   0% {
-    transform: translateX(-100%);
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
   }
 }*/
+
 /*******************************************************/
+
+/*Image spécifique au menu proposé*/
 .img-resto-menu {
   width: 100%;
+  max-height: 450px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   object-fit: cover;
 }
 
+/*Du titre au bouton "commander"*/
 .resto {
   border-radius: 33px 33px 0 0;
   background-color: $color-primary;
   position: relative;
   bottom: 23px;
+  /*Titre du menu et icônes de coeur*/
   .menus {
     display: flex;
     align-items: center;
@@ -715,14 +772,12 @@ h4 {
   font-size: 14px;
   font-family: $police-second;
   margin: 0;
-  padding: 9px 2px 6px 2px;
+  padding: 6px 9px 3px 9px;
   display: flex;
   justify-content: flex-start;
-  /*overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;*/
 }
 
+/*Englobe la transition et les liens des plats proposés*/
 .card { 
   display: flex;
   justify-content: center;
@@ -733,7 +788,7 @@ h4 {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    button {
+    a {
       margin: 0 10px 11px 10px;
       border-radius: 11px;
       box-shadow: $dark-shadow;
@@ -743,26 +798,39 @@ h4 {
       align-items: center;
       justify-content: space-between;
       position: relative;
-      /*overflow: hidden;
+      overflow: hidden;
       white-space: nowrap;
-      text-overflow: ellipsis;*/
+      text-overflow: ellipsis;
+      min-width: 0;
+      padding: 5px;
+      cursor: pointer;
+      &:hover { 
+        & > .check { 
+          animation: check .7s ease;
+          animation-fill-mode: forwards;
+          & > .fa-check-circle {
+            animation: validation .5s ease;
+            animation-fill-mode: forwards;
+          }
+        }
+        & > .price {
+          animation: price-slide .7s ease;
+          animation-fill-mode: forwards;
+        }
+      }
       p {
         font-family: $police-second;
         font-size: 12px;
-        padding-bottom: 8px;
-        padding-left: 3px;
-        padding-right: 3px;
+        padding: 0 10px 7px 10px;
         margin: 0;
         display: flex;
         justify-content: flex-start;
-        /*overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;*/
       }
     }
   }
 }
 
+/*p en gras sur la page "A la française"*/
 .txt-bold {
   font-weight: bold;
 }
@@ -773,49 +841,56 @@ h4 {
       transition: coches
 /*******************************/
 
+/*Tarif*/
+.price { 
+  display: flex;
+  justify-content: flex-end;
+  &:hover {
+    animation: price-slide .7s ease;
+    animation-fill-mode: forwards;
+  }
+  span {
+    position: relative;
+    font-weight: bold;
+    padding: 15px 15px 0 15px;
+    font-family: $police-second;
+    font-style: normal;
+    opacity: 1;
+    color: black;
+    font-size: 12px;
+  }
+}
+@keyframes price-slide {
+  0% {
+    transform:translateX(0);
+  }
+  100% {
+    /*transform: translateX(-200px);*/
+    transform: translateX(-40px);
+  }
+}
+/*forme cyan*/
 .check {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   cursor: pointer;
-  em { 
-    font-weight: bold;
-    display: flex;
-    padding-top: 12px;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 12px;
-    font-style: normal;
-    opacity: 1;
-  }
-  &:hover {
-    & > .fa-check-circle  {
-      animation: validation .7s ease;
-      animation-fill-mode: forwards;
-    }
-  }
-}
-
-.fa-check-circle {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
   background-color: #99E2D0;
-  width: 60px;
-  color: white;
+  width: 40px;
   right: 0;
   top: 0;
   bottom: 0;
   border-radius: 0 11px 11px 0;
-  font-size: 30px;
-  position:absolute;
+  position: absolute;
   opacity: 0;
+  &:hover {
+    animation: check .7s ease;
+    animation-fill-mode: forwards;
+  }
 }
-
-@keyframes validation {
+@keyframes check {
   0% {
     transform:translateX(100%);
     opacity: 1;
@@ -826,18 +901,38 @@ h4 {
   }
 }
 
-.check {
-  &:hover {
-    & > em {
-      opacity: 0;
-    }
+/*icône check*/
+.fa-check-circle {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  font-size: 20px;
+  left: 10px;
+  position: absolute;
+  &:hover  {
+    animation: validation .5s ease;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes validation {
+  0% {
+    transform: translateX(100%) rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    opacity: 1;
   }
 }
 
 /*******************************************************/
 
-/****Le bouton commander****/
+/****Le bouton Commander****/
 
+/*Englobe le bouton et la span Commander*/
 .order-fr {
   display: flex;
   justify-content: center;
@@ -845,15 +940,16 @@ h4 {
   button {
     border-radius: 50px;
     padding: 13px 37px 13px 37px;
-    background-color: $color-button;
+    background: $color-button;
     cursor: pointer;
-    border: $color-button 2px none;
+    border: white 2px none;
     box-shadow: $dark-shadow-violet;
     opacity: 0.7;
     &:hover {
-      background-color: hsla(294, 79%, 57%, .7);
+      background: linear-gradient(to bottom, #eeb6de, #b089e0);
       box-shadow: $light-shadow-violet;
     }
+    /*Texte*/
     span {
       font-size: 12px;
       letter-spacing: 1px;
@@ -866,15 +962,9 @@ h4 {
 
 /**************************************** Page menu : note *****************************************/
 
+/*Hauteur de l'image de la page menu note*/
 .img-note {
   max-height: 600px;
-}
-
-.img-resto-menu {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  object-fit: cover;
 }
 
 /********************************** Le footer sur toutes les pages ********************************/
@@ -882,7 +972,6 @@ h4 {
 footer {
   background-color: #313339;
   color: white;
-  width: 100%;
   margin-top: 40px;
   /*Le nom du site*/
   h1 {
@@ -904,6 +993,7 @@ footer {
     font-size: 13px;
     font-family: $police-second;
     letter-spacing: 1px;
+    /*Les li*/
     .list-bold {
       font-weight: normal;
       /*icône des couverts*/
@@ -920,12 +1010,11 @@ footer {
   }
 }
 
+/*Les liens du footer*/
 .list-footer a {
   text-decoration: none;
   color: white;
+  &:hover {
+    color: $color-icon;
+  }
 }
-
-/**************************************************************************************************
-***********************************************************************************************************
-**********************************************************************************************************/
-

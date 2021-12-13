@@ -20,43 +20,43 @@
         <script src="https://kit.fontawesome.com/23e60cc156.js" crossorigin="anonymous"></script> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2? family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2? family= Shrikhand & display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2? family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="CSS/style.css"/>
         <link rel="stylesheet" href="CSS/libs/responsive-index.css"/>
         <title>Ohmyfood</title> 
     </head>
 
     <body> 
-        <div class="loading-spinner">
+        <div class="loading-spinner">  <!--loader-->
             <span class="loader circle"></span>
         </div>
-        <div class="page">
+        <div class="page"> <!--les éléments du body visibles après le loader-->
             <header> 
-                <div class="logo-acc">
+                <div class="logo-acc"> <!--logo ohmyfood-->
                     <img src="images/logo/ohmyfood.png" class="image-omf" alt="logo du site"/>
                 </div> 
                 <div class="bckg-color">
-                    <div class="form-maps">
+                    <section class="localization">  <!--localisation des restaurants-->
                         <div class="bar-grey"></div>
-                        <form method="get" action="#">
-                            <label for="maps"><i class="fas fa-map-marker-alt"></i></label>
-                            <input type="text" name="localization" id="localization" class="country" placeholder="Paris, Belleville"/>
-                        </form>
-                    </div>
-                    <div class="header-txt">
+                        <div class="localization-elements">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Paris, Belleville</p>
+                        </div>
+                    </section>
+                    <div class="header-txt">  <!--texte de présentation-->
                         <h2>Réservez le menu qui vous convient</h2>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                     </div>
-                    <div class="button-header">
+                    <div class="button-header">  <!--bouton de recherche-->
                         <button>
                             <span>Explorer nos restaurants</span>
                         </button>
                     </div>
                 </div>
-                <div class="color-functioning">
+                <div class="color-functioning">  <!--la partie Fonctionnement-->
                     <h2 class="functioning-title">Fonctionnement</h2>
                     <div class="functioning">
                         <button>
@@ -84,10 +84,10 @@
                 </div>
             </header>
 
-            <div class="restaurant">
+            <div class="restaurant">  <!--la partie Restaurants-->
                 <h2 class="restaurant-title">Restaurants</h2>
                 <div class="links-restaurant">
-                    <a href="#" class="bloc-restaurant">
+                    <a href="palette.html" class="bloc-restaurant">  <!--menu palette-->
                         <span class="float-new">Nouveau</span>
                         <img src="images/restaurants/palette.jpg" alt="photo palette"/>
                         <div class="restaurant-text">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="bloc-restaurant">
+                    <a href="note.html" class="bloc-restaurant">  <!--menu note-->
                         <span class="float-new">Nouveau</span>
                         <img src="images/restaurants/note.jpg" alt="photo note"/>
                         <div class="restaurant-text">
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="bloc-restaurant">
+                    <a href="française.html" class="bloc-restaurant">  <!--menu française-->
                         <img src="images/restaurants/francaise.jpg" alt="photo française"/>
                         <div class="restaurant-text">
                             <div class="txt">
@@ -128,7 +128,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="bloc-restaurant">
+                    <a href="delice.html" class="bloc-restaurant">  <!--menu délice-->
                         <img src="images/restaurants/delice.jpg" alt="photo délice"/>
                         <div class="restaurant-text">
                             <div class="txt">
