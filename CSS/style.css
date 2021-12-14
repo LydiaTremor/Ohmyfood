@@ -475,7 +475,6 @@ Le contenu : les grands blocs
   padding: 2px;
   font-size: 10px;
   width: 15px;
-  /*peut-être à supprimer*/
   height: 15px;
   margin: 0;
   display: flex;
@@ -686,22 +685,31 @@ Le contenu : les grands blocs
 /*****************************************************\
       transition: apparition des plats différée
 \*****************************************************/
-/*.delay-entrees {
-  animation: bloc .5s ease-out;
-  animation-fill-mode: forwards;
+.delay-entrees {
+  -webkit-animation: bloc 0.5s ease-out;
+          animation: bloc 0.5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 .delay-meals {
-  animation: bloc .7s ease-out 1200ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: bloc 0.7s ease-out 1200ms;
+          animation: bloc 0.7s ease-out 1200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 .delay-desserts {
-  animation: bloc .7s ease-out 2100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: bloc 0.7s ease-out 2100ms;
+          animation: bloc 0.7s ease-out 2100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
-@keyframes bloc {
+
+@-webkit-keyframes bloc {
   0% {
     transform: translateY(-30%);
     opacity: 0;
@@ -712,56 +720,105 @@ Le contenu : les grands blocs
   }
 }
 
+@keyframes bloc {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 a.advent-one {
-  animation: advent .6s linear;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear;
+          animation: advent 0.6s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 1;
 }
+
 a.advent-two {
-  animation: advent .6s linear .6s;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 0.6s;
+          animation: advent 0.6s linear 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-three {
-  animation: advent .6s linear 900ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 900ms;
+          animation: advent 0.6s linear 900ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-four {
-  animation: advent .6s linear 1100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 1100ms;
+          animation: advent 0.6s linear 1100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-five {
-  animation: advent .6s linear 1500ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 1500ms;
+          animation: advent 0.6s linear 1500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-six {
-  animation: advent .6s linear 1800ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 1800ms;
+          animation: advent 0.6s linear 1800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-seven {
-  animation: advent .6s linear 2100ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 2100ms;
+          animation: advent 0.6s linear 2100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-eight {
-  animation: advent .6s linear 2500ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 2500ms;
+          animation: advent 0.6s linear 2500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-nine {
-  animation: advent .6s linear 3000ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 3000ms;
+          animation: advent 0.6s linear 3000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
 a.advent-ten {
-  animation: advent .6s linear 3400ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: advent 0.6s linear 3400ms;
+          animation: advent 0.6s linear 3400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   opacity: 0;
 }
+
+@-webkit-keyframes advent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes advent {
   0% {
     opacity: 0;
@@ -769,7 +826,7 @@ a.advent-ten {
   100% {
     opacity: 1;
   }
-}*/
+}
 /*******************************************************/
 /*Image spécifique au menu proposé*/
 .img-resto-menu {
@@ -851,7 +908,6 @@ h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
   min-width: 0;
-  padding: 5px;
   cursor: pointer;
 }
 .card .delay-entrees a:hover > .check, .card .delay-meals a:hover > .check, .card .delay-desserts a:hover > .check {
@@ -917,7 +973,6 @@ h4 {
     transform: translateX(0);
   }
   100% {
-    /*transform: translateX(-200px);*/
     transform: translateX(-40px);
   }
 }
@@ -927,7 +982,6 @@ h4 {
     transform: translateX(0);
   }
   100% {
-    /*transform: translateX(-200px);*/
     transform: translateX(-40px);
   }
 }

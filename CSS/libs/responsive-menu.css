@@ -488,7 +488,6 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding: 5px;
     min-width: 0;
   }
 
@@ -505,7 +504,6 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding: 5px;
     min-width: 0;
   }
 
