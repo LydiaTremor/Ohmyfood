@@ -877,64 +877,87 @@ h4 {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 6px 9px 3px 9px;
-  display: flex;
-  justify-content: flex-start;
 }
 
 /*Englobe la transition et les liens des plats proposés*/
-.card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.card .delay-entrees, .card .delay-meals, .card .delay-desserts {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 .card .delay-entrees a, .card .delay-meals a, .card .delay-desserts a {
-  margin: 0 10px 11px 10px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-right: 50px;
+  transition: all 0.5s ease;
+  margin: 10px;
   border-radius: 11px;
   box-shadow: 15px 15px 20px #CCCDD0;
   border: none 2px white;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  min-width: 0;
   cursor: pointer;
 }
-.card .delay-entrees a:hover > .check, .card .delay-meals a:hover > .check, .card .delay-desserts a:hover > .check {
-  -webkit-animation: check 0.7s ease;
-          animation: check 0.7s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.card .delay-entrees a:hover, .card .delay-meals a:hover, .card .delay-desserts a:hover {
+  padding-right: 100px;
 }
-.card .delay-entrees a:hover > .check > .fa-check-circle, .card .delay-meals a:hover > .check > .fa-check-circle, .card .delay-desserts a:hover > .check > .fa-check-circle {
-  -webkit-animation: validation 0.5s ease;
-          animation: validation 0.5s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.card .delay-entrees a:hover .right, .card .delay-meals a:hover .right, .card .delay-desserts a:hover .right {
+  right: 0;
 }
-.card .delay-entrees a:hover > .price, .card .delay-meals a:hover > .price, .card .delay-desserts a:hover > .price {
-  -webkit-animation: price-slide 0.7s ease;
-          animation: price-slide 0.7s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.card .delay-entrees a p, .card .delay-meals a p, .card .delay-desserts a p {
-  font-family: "Roboto", sans-serif;
+.card .delay-entrees p, .card .delay-meals p, .card .delay-desserts p {
   font-size: 12px;
   padding: 0 10px 7px 10px;
   margin: 0;
+}
+
+a .left p, a .left h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+a .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -50px;
   display: flex;
-  justify-content: flex-start;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+
+a .right div {
+  width: 50px;
+  text-align: center;
+}
+
+a .new_check {
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 11px 11px 0;
+  position: absolute;
+}
+
+/*Tarif*/
+a .new_price span {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: black;
+  font-size: 12px;
+}
+
+a .new_check i {
+  transition: all 0.5s ease;
+}
+
+a:hover .new_price {
+  transform: translateX(-50px);
+}
+
+a:hover .new_check i {
+  transform: rotate(360deg);
 }
 
 /*p en gras sur la page "A la française"*/
@@ -942,134 +965,12 @@ h4 {
   font-weight: bold;
 }
 
-/******************************************************/
-/*******************************\
-      transition: coches
-/*******************************/
-/*Tarif*/
-.price {
-  display: flex;
-  justify-content: flex-end;
-}
-.price:hover {
-  -webkit-animation: price-slide 0.7s ease;
-          animation: price-slide 0.7s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.price span {
-  position: relative;
-  font-weight: bold;
-  padding: 15px 15px 0 15px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  opacity: 1;
-  color: black;
-  font-size: 12px;
-}
-
-@-webkit-keyframes price-slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-40px);
-  }
-}
-
-@keyframes price-slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-40px);
-  }
-}
-/*forme cyan*/
-.check {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  cursor: pointer;
-  background-color: #99E2D0;
-  width: 40px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 11px 11px 0;
-  position: absolute;
-  opacity: 0;
-}
-.check:hover {
-  -webkit-animation: check 0.7s ease;
-          animation: check 0.7s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes check {
-  0% {
-    transform: translateX(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes check {
-  0% {
-    transform: translateX(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 /*icône check*/
 .fa-check-circle {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
   color: white;
-  opacity: 0;
   font-size: 20px;
-  left: 10px;
-  position: absolute;
-}
-.fa-check-circle:hover {
-  -webkit-animation: validation 0.5s ease;
-          animation: validation 0.5s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes validation {
-  0% {
-    transform: translateX(100%) rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0) rotate(360deg);
-    opacity: 1;
-  }
-}
-
-@keyframes validation {
-  0% {
-    transform: translateX(100%) rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0) rotate(360deg);
-    opacity: 1;
-  }
-}
 /*******************************************************/
 /****Le bouton Commander****/
 /*Englobe le bouton et la span Commander*/

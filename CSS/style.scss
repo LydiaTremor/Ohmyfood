@@ -773,60 +773,86 @@ h4 {
   font-family: $police-second;
   margin: 0;
   padding: 6px 9px 3px 9px;
-  display: flex;
-  justify-content: flex-start;
 }
 
 /*Englobe la transition et les liens des plats proposés*/
 .card { 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
   .delay-entrees,.delay-meals,.delay-desserts {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
     a {
-      margin: 0 10px 11px 10px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      padding-right: 50px;
+      transition: all 0.5s ease;
+      margin: 10px;
       border-radius: 11px;
       box-shadow: $dark-shadow;
       border: none 2px white;
       background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      min-width: 0;
       cursor: pointer;
-      &:hover { 
-        & > .check { 
-          animation: check .7s ease;
-          animation-fill-mode: forwards;
-          & > .fa-check-circle {
-            animation: validation .5s ease;
-            animation-fill-mode: forwards;
-          }
-        }
-        & > .price {
-          animation: price-slide .7s ease;
-          animation-fill-mode: forwards;
-        }
-      }
-      p {
-        font-family: $police-second;
-        font-size: 12px;
-        padding: 0 10px 7px 10px;
-        margin: 0;
-        display: flex;
-        justify-content: flex-start;
-      }
     }
+    a:hover {
+        padding-right: 100px;
+    }
+    a:hover .right {
+        right: 0;
+    }
+    p {
+      font-size: 12px;
+      padding: 0 10px 7px 10px;
+      margin: 0;
+    }
+  }    
+}
+
+a .left p, a .left h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  font-family: $police-second;
+}
+a .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -50px;
+  display: flex;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+a .right div {
+  width: 50px;
+  text-align: center;
+}
+a .new_check {
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 11px 11px 0;
+  position: absolute; 
+}
+/*Tarif*/
+a .new_price {
+  span {
+    font-weight: bold;
+    font-family: $police-second;
+    font-style: normal;
+    color: black;
+    font-size: 12px;
   }
+}
+a .new_check i {
+  transition: all 0.5s ease;
+}
+a:hover .new_price {
+  transform: translateX(-50px);
+}
+a:hover .new_check i {
+  transform: rotate(360deg);
 }
 
 /*p en gras sur la page "A la française"*/
@@ -834,100 +860,14 @@ h4 {
   font-weight: bold;
 }
 
-/******************************************************/
-
-/*******************************\
-      transition: coches
-/*******************************/
-
-/*Tarif*/
-.price { 
-  display: flex;
-  justify-content: flex-end;
-  &:hover {
-    animation: price-slide .7s ease;
-    animation-fill-mode: forwards;
-  }
-  span {
-    position: relative;
-    font-weight: bold;
-    padding: 15px 15px 0 15px;
-    font-family: $police-second;
-    font-style: normal;
-    opacity: 1;
-    color: black;
-    font-size: 12px;
-  }
-}
-@keyframes price-slide {
-  0% {
-    transform:translateX(0);
-  }
-  100% {
-    transform: translateX(-40px);
-  }
-}
-
-/*forme cyan*/
-.check {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  cursor: pointer;
-  background-color: #99E2D0;
-  width: 40px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 11px 11px 0;
-  position: absolute;
-  opacity: 0;
-  &:hover {
-    animation: check .7s ease;
-    animation-fill-mode: forwards;
-  }
-}
-@keyframes check {
-  0% {
-    transform:translateX(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 /*icône check*/
 .fa-check-circle {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
   color: white;
-  opacity: 0;
   font-size: 20px;
-  left: 10px;
-  position: absolute;
-  &:hover  {
-    animation: validation .5s ease;
-    animation-fill-mode: forwards;
-  }
-}
-@keyframes validation {
-  0% {
-    transform: translateX(100%) rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0) rotate(360deg);
-    opacity: 1;
-  }
 }
 
 /*******************************************************/
+
 
 /****Le bouton Commander****/
 
