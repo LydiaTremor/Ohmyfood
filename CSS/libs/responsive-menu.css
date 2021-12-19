@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @media screen and (min-width: 400px) {
   /********************** Le logo : 400px *********************/
-  .logo button a .fa-arrow-left {
+  .logo a .button .fa-arrow-left {
     font-size: 15px;
     left: 20px;
     top: 15px;
@@ -32,7 +32,7 @@
 }
 @media screen and (min-width: 500px) {
   /********************** Le logo : 500px *********************/
-  .logo button a .fa-arrow-left {
+  .logo a .button .fa-arrow-left {
     font-size: 18px;
     left: 20px;
     top: 15px;
@@ -131,7 +131,7 @@
   .logo {
     padding: 13px 0 18px 0;
   }
-  .logo button a .fa-arrow-left {
+  .logo a .button .fa-arrow-left {
     font-size: 23px;
     left: 30px;
     top: 18px;
@@ -164,7 +164,7 @@
   .logo .logo-menus {
     width: 270px;
   }
-  .logo button a .fa-arrow-left {
+  .logo a .button .fa-arrow-left {
     font-size: 30px;
     left: 35px;
     top: 25px;
@@ -287,7 +287,7 @@
   }
 
   /********************** Le logo : 1000px *********************/
-  .logo button a .fa-arrow-left {
+  .logo a .button .fa-arrow-left {
     font-size: 35px;
     left: 40px;
   }

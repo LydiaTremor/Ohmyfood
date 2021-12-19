@@ -1,11 +1,7 @@
 @charset "UTF-8";
-/*********************Bibliothèques********************/
-/*@function brightness {
-    ()
-}*/
 /******************Polices d'écriture*******************/
-@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300 & display=swap");
-@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /**********************Variables************************/
 body {
   margin: 0;
@@ -439,6 +435,80 @@ Le contenu : les grands blocs
 }
 
 /*La div des 3 boutons de la section Fonctionnement*/
+/*.functioning {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 270px;*/
+/*Le boutons de la section Fonctionnement x3*/
+/*button {
+  margin: 0 20px 20px 20px;
+  border-radius: 18px;
+  padding: 21px 0 21px 0;
+  box-shadow: 5px 5px 15px #cdcdcf;
+  border: $color-primary none 2px;
+  cursor: pointer;
+  justify-content: flex-start;*/
+/*Le texte du bouton*/
+/*span {
+  font-weight: bold;
+  font-size: 13px;
+}
+&:hover {
+  color: $color-button;
+}*/
+/*Le chiffre*/
+/*strong {
+  background-color: blueviolet;
+  color: white;
+  border: blueviolet 1px none;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 10px;
+  width: 15px; 
+  height: 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translate(-49%, -13%);
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+}*/
+/*icône d'un téléphone*/
+/*.fa-mobile-alt {
+  padding-right: 20px;
+  padding-left: 30px;
+  font-size: 15px;
+  color: gray;
+}*/
+/*icône d'une liste*/
+/*.fa-list-ul {
+  padding-right: 20px;
+  padding-left: 30px;
+  font-size: 15px;
+  color: gray;
+}*/
+/*icône d'une boutique*/
+/*.fa-store {
+      padding-right: 20px;
+      padding-left: 30px;
+      font-size: 12px;
+      color: blueviolet;
+    }
+    &:hover {
+      background-color: hsla(210, 4%, 93%, .6);
+      box-shadow: $light-shadow;
+    }
+  }
+}*/
+/*Englobe l'icône et le texte des boutons dans functioning*/
+/*.align-button {
+  display: flex;
+  align-items: center;
+}*/
+/*La div des 3 boutons de la section Fonctionnement*/
 .functioning {
   display: flex;
   flex-direction: column;
@@ -446,12 +516,12 @@ Le contenu : les grands blocs
   min-height: 270px;
   /*Le boutons de la section Fonctionnement x3*/
 }
-.functioning button {
+.functioning .elements-functioning {
   margin: 0 20px 20px 20px;
   border-radius: 18px;
   padding: 21px 0 21px 0;
   box-shadow: 5px 5px 15px #cdcdcf;
-  border: #e9e9e9 none 2px;
+  background-color: #E6E7E9;
   cursor: pointer;
   justify-content: flex-start;
   /*Le texte du bouton*/
@@ -460,14 +530,14 @@ Le contenu : les grands blocs
   /*icône d'une liste*/
   /*icône d'une boutique*/
 }
-.functioning button span {
+.functioning .elements-functioning span {
   font-weight: bold;
   font-size: 13px;
 }
-.functioning button:hover {
+.functioning .elements-functioning:hover {
   color: linear-gradient(to bottom, #ff79da, #9356dc);
 }
-.functioning button strong {
+.functioning .elements-functioning strong {
   background-color: blueviolet;
   color: white;
   border: blueviolet 1px none;
@@ -485,25 +555,25 @@ Le contenu : les grands blocs
   display: flex;
   justify-content: center;
 }
-.functioning button .fa-mobile-alt {
+.functioning .elements-functioning .fa-mobile-alt {
   padding-right: 20px;
   padding-left: 30px;
   font-size: 15px;
   color: gray;
 }
-.functioning button .fa-list-ul {
+.functioning .elements-functioning .fa-list-ul {
   padding-right: 20px;
   padding-left: 30px;
   font-size: 15px;
   color: gray;
 }
-.functioning button .fa-store {
+.functioning .elements-functioning .fa-store {
   padding-right: 20px;
   padding-left: 30px;
   font-size: 12px;
   color: blueviolet;
 }
-.functioning button:hover {
+.functioning .elements-functioning:hover {
   background-color: rgba(236, 237, 238, 0.6);
   box-shadow: 5px 5px 5px #E6E7E9;
 }
@@ -640,17 +710,18 @@ header {
   justify-content: center;
   width: 30%;
 }
-.logo button {
+.logo a {
+  color: #030303;
+  text-decoration: none;
+  cursor: pointer;
+}
+.logo a .button {
+  /*Icône d'une flèche*/
   border: white none 1px;
   background-color: white;
   cursor: pointer;
 }
-.logo button a {
-  color: black;
-  text-decoration: none;
-  /*Icône d'une flèche*/
-}
-.logo button a .fa-arrow-left {
+.logo a .button .fa-arrow-left {
   font-size: 13px;
   display: flex;
   justify-content: flex-start;
@@ -658,7 +729,7 @@ header {
   left: 10px;
   top: 9px;
 }
-.logo button a .fa-arrow-left:hover {
+.logo a .button .fa-arrow-left:hover {
   color: blueviolet;
 }
 
@@ -957,7 +1028,7 @@ a:hover .new_price {
 }
 
 a:hover .new_check i {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
 }
 
 /*p en gras sur la page "A la française"*/

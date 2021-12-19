@@ -47,29 +47,29 @@
   .functioning {
     min-height: 310px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 20px 22px 20px;
     padding: 25px 0 25px 0;
     justify-content: flex-start;
   }
-  .functioning button span {
+  .functioning .elements-functioning span {
     font-size: 14px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     padding: 3px;
     font-size: 13px;
     width: 16px;
     height: 16px;
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     padding-left: 0;
     font-size: 17px;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     padding-left: 0;
     font-size: 16px;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     padding-left: 0;
     font-size: 15px;
   }
@@ -170,24 +170,24 @@
   .functioning {
     min-height: 350px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 20px 25px 20px;
     padding: 28px 0 28px 0;
   }
-  .functioning button span {
+  .functioning .elements-functioning span {
     font-size: 17px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     padding: 5px;
     font-size: 15px;
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     font-size: 19px;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     font-size: 18px;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     font-size: 17px;
   }
 
@@ -277,27 +277,27 @@
   .functioning {
     min-height: 410px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 20px 30px 20px;
     padding: 33px 0 33px 0;
     border-radius: 30px;
   }
-  .functioning button span {
+  .functioning .elements-functioning span {
     font-size: 20px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     padding: 7px;
     font-size: 18px;
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     font-size: 23px;
     padding-right: 40px;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     font-size: 22px;
     padding-right: 40px;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     font-size: 21px;
     padding-right: 40px;
   }
@@ -418,27 +418,27 @@
   .functioning {
     min-height: 490px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 25px 35px 25px;
     padding: 38px 0 38px 0;
     border-radius: 35px;
   }
-  .functioning button span {
+  .functioning .elements-functioning span {
     font-size: 25px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     padding: 10px;
     font-size: 23px;
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     font-size: 25px;
     padding-right: 40px;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     font-size: 24px;
     padding-right: 40px;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     font-size: 23px;
     padding-right: 40px;
   }
@@ -558,25 +558,25 @@
   .functioning {
     min-height: 550px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 30px 40px 30px;
     padding: 42px 0 42px 0;
     border-radius: 38px;
   }
-  .functioning button span {
+  .functioning .elements-functioning span {
     font-size: 28px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     padding: 12px;
     font-size: 26px;
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     font-size: 28px;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     font-size: 27px;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     font-size: 26px;
   }
 
@@ -687,25 +687,25 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 20px 130px 20px;
     padding: 40px 60px 40px 60px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     font-size: 26px;
     transform: translate(-190%, 80%);
   }
-  .functioning button .fa-mobile-alt {
+  .functioning .elements-functioning .fa-mobile-alt {
     font-size: 35px;
     padding-bottom: 30px;
     padding-right: 0;
   }
-  .functioning button .fa-list-ul {
+  .functioning .elements-functioning .fa-list-ul {
     font-size: 35px;
     padding-bottom: 30px;
     padding-right: 0;
   }
-  .functioning button .fa-store {
+  .functioning .elements-functioning .fa-store {
     font-size: 35px;
     padding-bottom: 30px;
     padding-right: 0;
@@ -765,7 +765,7 @@
   .functioning {
     min-height: 100px;
   }
-  .functioning button {
+  .functioning .elements-functioning {
     margin: 0 20px 130px 20px;
     padding: 50px 65px 50px 65px;
   }
@@ -778,10 +778,10 @@
 }
 @media screen and (min-width: 1600px) {
   /********************* Fonctionnement : 1600px ***********************/
-  .functioning button {
+  .functioning .elements-functioning {
     padding: 60px 80px 60px 80px;
   }
-  .functioning button strong {
+  .functioning .elements-functioning strong {
     transform: translate(-240%, 80%);
   }
 }/*# sourceMappingURL=responsive-index.css.map */

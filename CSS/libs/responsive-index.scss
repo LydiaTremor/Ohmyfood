@@ -59,7 +59,7 @@
     
     .functioning {
         min-height: 310px;
-        button {
+        .elements-functioning {
             margin: 0 20px 22px 20px;
             padding: 25px 0 25px 0;
             justify-content: flex-start;
@@ -206,7 +206,7 @@
     
   .functioning {
     min-height: 350px;
-    button {
+    .elements-functioning {
         margin: 0 20px 25px 20px;
         padding: 28px 0 28px 0;
         span {
@@ -334,7 +334,7 @@
       
     .functioning {
         min-height: 410px;
-        button {
+        .elements-functioning {
             margin: 0 20px 30px 20px;
             padding: 33px 0 33px 0;
             border-radius: 30px;
@@ -499,7 +499,7 @@
       
     .functioning {
         min-height: 490px;
-        button {
+        .elements-functioning {
             margin: 0 25px 35px 25px;
             padding: 38px 0 38px 0;
             border-radius: 35px;
@@ -660,7 +660,7 @@
       
     .functioning {
         min-height: 550px;
-        button {
+        .elements-functioning {
             margin: 0 30px 40px 30px;
             padding: 42px 0 42px 0;
             border-radius: 38px;
@@ -820,7 +820,7 @@
       justify-content: center;
       padding-left: 20px;
       padding-right: 20px;
-      button {
+      .elements-functioning {
           margin: 0 20px 130px 20px;
           padding: 40px 60px 40px 60px;
           strong {
@@ -911,7 +911,7 @@
     
   .functioning {
       min-height: 100px;
-      button {
+      .elements-functioning {
           margin: 0 20px 130px 20px;
           padding: 50px 65px 50px 65px;
       }
@@ -931,7 +931,7 @@
   /********************* Fonctionnement : 1600px ***********************/
     
   .functioning {
-      button {
+      .elements-functioning {
           padding: 60px 80px 60px 80px;
           strong {
             transform: translate(-240%, 80%);
