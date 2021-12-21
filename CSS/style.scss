@@ -152,7 +152,7 @@ Le header
 \*****************************************/
 
 /*Loader du la page d'accueil*/
-.loading-spinner {
+/*.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -261,7 +261,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}
+}*/
 
 /********************************************/
 /*** 598px*****/
@@ -281,36 +281,54 @@ Le header
   }
 }
 
-/****localisation****/
-
-/*localisation des restaurants*/
-.localization {
-  width: 100%;
+/*formulaire*/
+.form {
   cursor: pointer;
-  /*div grise plus foncé au-dessus de la div "localization-elements*/
   .bar-grey {
     background-color: #c9cbcd;
     height: 3px;
-    width: 100%;
   }
-  /*L'icône et le texte*/
-  .localization-elements {
+  form {
     display: flex;
-    align-items: center;
     justify-content: center;
+    position: relative;
     height: 35px;
+    width: 100%;
     background-color: $color-second;
-    /*Icône maps*/
-    .fa-map-marker-alt {
-      font-size: 12px;
+    &:focus {
+      border-style: none;
     }
-    /*Ville*/
-    p {
+    .country {
       font-family: $police-second;
       font-size: 12px;
       font-weight: bold;
       color: black;
-      padding-left: 15px;
+      border: none 1px #e9e9e9;
+      background-color: #e9e9e9;
+      text-align: center;
+      background-color: $color-second;
+      cursor: pointer;
+      width: 100%;
+      &:active {
+        border-style: none;
+        background-color: #dfdfdf;
+      }
+      &:hover {
+        background-color: #dfdfdf;
+      }
+    }
+    .fa-map-marker-alt {
+      font-size: 12px;
+      position: absolute;
+      left: 80px;
+      top: 10px;
+      &:active {
+        border-style: none;
+        background-color: #dfdfdf;
+      }
+      &:hover {
+        background-color: #dfdfdf;
+      }
     }
   }
 }
