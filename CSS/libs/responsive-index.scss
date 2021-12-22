@@ -10,16 +10,17 @@
 
     /******************** Localisation : 400px **********************/
 
-    .localization {
-        .localization-elements {
-            height: 45px;
-            .fa-map-marker-alt {
-              font-size: 14px;
-            }
-            p {
-              font-size: 14px;
-            }
+    .form {
+      form {
+        height: 45px;
+        .country {
+          font-size: 14px;
         }
+        .fa-map-marker-alt {
+          font-size: 14px;
+          top: 14px;
+        }
+      }
     }
 
     /********************** Le texte du header : 400px *********************/
@@ -165,13 +166,12 @@
 
   /******************** Localisation : 500px **********************/
 
-  .localization {
-    .localization-elements {
-      height: 45px;
-      .fa-map-marker-alt {
+  .form {
+    form {
+      .country {
         font-size: 15px;
       }
-      p {
+      .fa-map-marker-alt {
         font-size: 15px;
       }
     }
@@ -296,6 +296,16 @@
     .logo-acc {
       .image-omf {  
         padding: 13px 0 18px 0;
+      }
+    }
+
+    /******************** Localisation : 650px **********************/
+
+    .form {
+      form {
+        .fa-map-marker-alt {
+          left: 38%;
+        }
       }
     }
 
@@ -449,17 +459,18 @@
 
     /******************** Localisation : 750px **********************/
 
-    .localization {
+    .form {
       .bar-grey {
         height: 5px;
       }
-      .localization-elements {
+      form {
         height: 55px;
-        .fa-map-marker-alt {
+        .country {
           font-size: 19px;
         }
-        p {
+        .fa-map-marker-alt {
           font-size: 19px;
+          top: 16px;
         }
       }
     }
@@ -607,20 +618,20 @@
 
 @media screen and (min-width: 1000px) {
 
-
     /******************** Localisation : 1000px **********************/
 
-    .localization {
+    .form {
       .bar-grey {
         height: 7px;
       }
-      .localization-elements {
+      form {
         height: 65px;
-        .fa-map-marker-alt {
+        .country {
           font-size: 23px;
         }
-        p {
+        .fa-map-marker-alt {
           font-size: 23px;
+          top: 18px;
         }
       }
     }
@@ -773,12 +784,12 @@
 
   /******************** Localisation : 1200px **********************/
 
-  .localization {
-    .localization-elements {
-      .fa-map-marker-alt {
+  .form {
+    form {
+      .country {
         font-size: 25px;
       }
-      p {
+      .fa-map-marker-alt {
         font-size: 25px;
       }
     }
@@ -897,6 +908,16 @@
 
 @media screen and (min-width: 1500px) {
 
+  /******************** Localisation : 1500px **********************/
+
+  .form {
+    form {
+      .fa-map-marker-alt {
+        left: 39%;
+      }
+    }
+  }
+
   /******************** Le bouton du header : 1500px **********************/
   .button-header {
       span {
@@ -937,6 +958,19 @@
             transform: translate(-240%, 80%);
           }
       }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+
+  /******************** Localisation : 1800px **********************/
+
+  .form {
+    form {
+      .fa-map-marker-alt {
+        left: 40%;
+      }
+    }
   }
 }
 

@@ -6,14 +6,15 @@
   }
 
   /******************** Localisation : 400px **********************/
-  .localization .localization-elements {
+  .form form {
     height: 45px;
   }
-  .localization .localization-elements .fa-map-marker-alt {
+  .form form .country {
     font-size: 14px;
   }
-  .localization .localization-elements p {
+  .form form .fa-map-marker-alt {
     font-size: 14px;
+    top: 14px;
   }
 
   /********************** Le texte du header : 400px *********************/
@@ -136,13 +137,10 @@
 }
 @media screen and (min-width: 500px) {
   /******************** Localisation : 500px **********************/
-  .localization .localization-elements {
-    height: 45px;
-  }
-  .localization .localization-elements .fa-map-marker-alt {
+  .form form .country {
     font-size: 15px;
   }
-  .localization .localization-elements p {
+  .form form .fa-map-marker-alt {
     font-size: 15px;
   }
 
@@ -243,6 +241,11 @@
   /********************** Le logo : 650px *********************/
   .logo-acc .image-omf {
     padding: 13px 0 18px 0;
+  }
+
+  /******************** Localisation : 650px **********************/
+  .form form .fa-map-marker-alt {
+    left: 38%;
   }
 
   /********************** Le texte du header : 650px *********************/
@@ -373,17 +376,18 @@
   }
 
   /******************** Localisation : 750px **********************/
-  .localization .bar-grey {
+  .form .bar-grey {
     height: 5px;
   }
-  .localization .localization-elements {
+  .form form {
     height: 55px;
   }
-  .localization .localization-elements .fa-map-marker-alt {
+  .form form .country {
     font-size: 19px;
   }
-  .localization .localization-elements p {
+  .form form .fa-map-marker-alt {
     font-size: 19px;
+    top: 16px;
   }
 
   /********************** Le texte du header : 750px *********************/
@@ -513,17 +517,18 @@
 }
 @media screen and (min-width: 1000px) {
   /******************** Localisation : 1000px **********************/
-  .localization .bar-grey {
+  .form .bar-grey {
     height: 7px;
   }
-  .localization .localization-elements {
+  .form form {
     height: 65px;
   }
-  .localization .localization-elements .fa-map-marker-alt {
+  .form form .country {
     font-size: 23px;
   }
-  .localization .localization-elements p {
+  .form form .fa-map-marker-alt {
     font-size: 23px;
+    top: 18px;
   }
 
   /********************** Le texte du header : 1000px *********************/
@@ -649,10 +654,10 @@
 }
 @media screen and (min-width: 1200px) {
   /******************** Localisation : 1200px **********************/
-  .localization .localization-elements .fa-map-marker-alt {
+  .form form .country {
     font-size: 25px;
   }
-  .localization .localization-elements p {
+  .form form .fa-map-marker-alt {
     font-size: 25px;
   }
 
@@ -753,6 +758,11 @@
   }
 }
 @media screen and (min-width: 1500px) {
+  /******************** Localisation : 1500px **********************/
+  .form form .fa-map-marker-alt {
+    left: 39%;
+  }
+
   /******************** Le bouton du header : 1500px **********************/
   .button-header span {
     font-size: 35px;
@@ -783,5 +793,11 @@
   }
   .functioning .elements-functioning strong {
     transform: translate(-240%, 80%);
+  }
+}
+@media screen and (min-width: 1800px) {
+  /******************** Localisation : 1800px **********************/
+  .form form .fa-map-marker-alt {
+    left: 40%;
   }
 }/*# sourceMappingURL=responsive-index.css.map */

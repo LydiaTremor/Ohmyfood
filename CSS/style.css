@@ -307,7 +307,7 @@ Le header
 .form form .fa-map-marker-alt {
   font-size: 12px;
   position: absolute;
-  left: 80px;
+  left: 32%;
   top: 10px;
 }
 .form form .fa-map-marker-alt:active {
