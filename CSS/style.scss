@@ -152,7 +152,7 @@ Le header
 \*****************************************/
 
 /*Loader du la page d'accueil*/
-/*.loading-spinner {
+.loading-spinner {
   animation: hide 4s linear;
   animation-fill-mode: forwards;
   .loader {
@@ -261,7 +261,7 @@ Le header
       opacity: 1;
       overflow: visible;
   } 
-}*/
+}
 
 /********************************************/
 /*** 598px*****/
@@ -837,7 +837,7 @@ a .right {
   align-items: center;
 }
 a .right div {
-  width: 50px;
+  /*width: 50px;*/
   text-align: center;
 }
 a .new_check {
@@ -848,7 +848,9 @@ a .new_check {
   top: 0;
   bottom: 0;
   border-radius: 0 11px 11px 0;
-  position: absolute; 
+  /*position: absolute;*/
+  width: 50px;
+  height: 50px;
 }
 /*Tarif*/
 a .new_price {
@@ -858,14 +860,15 @@ a .new_price {
     font-style: normal;
     color: black;
     font-size: 12px;
+    padding-right: 15px;
   }
 }
 a .new_check i {
   transition: all 0.5s ease;
 }
-a:hover .new_price {
+/*a:hover .new_price {
   transform: translateX(-50px);
-}
+}*/
 a:hover .new_check i {
   transform: rotate(-360deg);
 }
@@ -958,7 +961,7 @@ footer {
       /*icône des mains*/
       .fa-hands-helping {
         padding-right: 10px;
-        font-size: 8px;
+        font-size: 8px; 
       }
     }
   }

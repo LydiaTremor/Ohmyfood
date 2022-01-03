@@ -17,7 +17,7 @@
     /***************** Tarif : 400px *****************/
 
     a:hover .new_price {
-        transform: translateX(-70px);
+        transform: translateX(-20px);
     }
 
     /******************** Le footer : 400px *********************/
@@ -121,13 +121,22 @@
     /***************** Tarif : 600px *****************/
 
     a:hover .new_price {
-        transform: translateX(-80px);
+        transform: translateX(-40px);
     }
 
     a .new_price { 
         span {
           font-size: 15px;
         }
+    }
+
+    a .new_check {
+        height: 70px;
+        width: 60px;
+    }
+
+    a .right {
+        right: -60px;
     }
 
     /****************** coches : 600px *********************/
@@ -320,6 +329,10 @@
         }
     }
 
+    a .new_check {
+        height: 90px;
+    }
+
     /****************** coches : 800px *********************/
       
     .fa-check-circle {
@@ -429,6 +442,10 @@
 
     a .right {
         right: -100px;
+    }
+
+    a .new_check {
+        height: 110px;
     }
 
     /****************** coches : 1000px *********************/
@@ -566,7 +583,7 @@
     /***************** Tarif : 1400px *****************/
 
     a:hover .new_price {
-        transform: translateX(-90px);
+        transform: translateX(-10px);
     }
 
     a .right {
@@ -622,6 +639,12 @@
         padding-right: 80px;
         padding-left: 80px;
         padding-top: 40px;
+    }
+
+    /***************** Tarif : 1000px *****************/
+
+    a .new_check {
+        height: 130px;
     }
 }
 

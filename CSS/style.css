@@ -138,116 +138,174 @@ Le header
       transition: loading spinner
 \*****************************************/
 /*Loader du la page d'accueil*/
-/*.loading-spinner {
-  animation: hide 4s linear;
-  animation-fill-mode: forwards;
-  .loader {
-    margin: auto;
-    position: relative; 
-    top: 0;
-    bottom:0;
-    right: 0;
-    left: 0;
-  }
-  .circle {
-    border-radius: 50%;
-    border: 15px solid #fff;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-  }
-  .circle:after {
-    content:'';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 15px solid transparent;
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    opacity: 0.6;
-    animation: spin 1s linear 0s infinite;
-  }
-  .circle:before {
-    content:'';
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 8px solid transparent;
-    border-radius: 50%;
-    border-top-color: #ff9ff3;
-    opacity: 0.6;
-    animation: spin .6s linear 0s infinite;
-  }
+.loading-spinner {
+  -webkit-animation: hide 4s linear;
+          animation: hide 4s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-@keyframes hide {
+.loading-spinner .loader {
+  margin: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.loading-spinner .circle {
+  border-radius: 50%;
+  border: 15px solid #fff;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.loading-spinner .circle:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 15px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  opacity: 0.6;
+  -webkit-animation: spin 1s linear 0s infinite;
+          animation: spin 1s linear 0s infinite;
+}
+.loading-spinner .circle:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  border-top-color: #ff9ff3;
+  opacity: 0.6;
+  -webkit-animation: spin 0.6s linear 0s infinite;
+          animation: spin 0.6s linear 0s infinite;
+}
+
+@-webkit-keyframes hide {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-  } 
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 @keyframes spin-reverse {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.page {
+  color: black;
+  -webkit-animation: visible 6s linear -0.6s;
+          animation: visible 6s linear -0.6s;
+  opacity: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  50% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  75% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  90% {
+    opacity: 0.8;
+    overflow: visible;
+  }
+  100% {
+    opacity: 1;
+    overflow: visible;
   }
 }
 
-.page {
-  color: black;
-  animation: visible 6s linear -.6s;
-  opacity: 1;
-  animation-fill-mode: forwards;
-}
 @keyframes visible {
   0% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   50% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   75% {
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
   }
   90% {
-      opacity: .8;
-      overflow: visible;
+    opacity: 0.8;
+    overflow: visible;
   }
   100% {
-      opacity: 1;
-      overflow: visible;
-  } 
-}*/
+    opacity: 1;
+    overflow: visible;
+  }
+}
 /********************************************/
 /*** 598px*****/
 /****Le logo****/
@@ -882,7 +940,7 @@ a .right {
 }
 
 a .right div {
-  width: 50px;
+  /*width: 50px;*/
   text-align: center;
 }
 
@@ -894,7 +952,9 @@ a .new_check {
   top: 0;
   bottom: 0;
   border-radius: 0 11px 11px 0;
-  position: absolute;
+  /*position: absolute;*/
+  width: 50px;
+  height: 50px;
 }
 
 /*Tarif*/
@@ -904,16 +964,16 @@ a .new_price span {
   font-style: normal;
   color: black;
   font-size: 12px;
+  padding-right: 15px;
 }
 
 a .new_check i {
   transition: all 0.5s ease;
 }
 
-a:hover .new_price {
+/*a:hover .new_price {
   transform: translateX(-50px);
-}
-
+}*/
 a:hover .new_check i {
   transform: rotate(-360deg);
 }
